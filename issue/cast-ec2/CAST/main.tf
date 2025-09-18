@@ -35,6 +35,17 @@ data "aws_subnet" "cast_vpc_default_subnet" {
     values = ["${local.region}a"] # Use first AZ in the region
   }
 }
+
+# TODO Document On-Prem to VPC traffic
+# On-Prem (10.60.0.0/14, 10.160.0.0/14)
+#    <->
+# Direct Connect Gateway (DXGW)
+#    <->
+# Transit Gateway (tgw-070334cf083fca7cc)
+#    <->
+# Transit Gateway Route Table (tgw-rtb-00cb37f6985c2442e)
+#    <->
+# Attached VPCs (e.g., your CAST VPC 10.62.20.0/24)
 resource "aws_security_group" "cast_ec2_sg" {
   name_prefix = "cast-ec2-sg-"
   description = "Security group for CAST EC2 instance - allows SSH, RDP, HTTP, and HTTPS access"
