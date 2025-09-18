@@ -1,0 +1,54 @@
+# Cursor Rules for this workspace
+
+## MANDATORY: Fix Guidance Requirements
+When providing fixes, explanations, or quick fixes (Cmd+. or Problems panel), ALWAYS follow these requirements:
+
+### 1. What the problem is in plain language
+- Explain the issue clearly and simply
+- Don't use jargon without explanation
+
+### 2. Why it's happening in Terraform/AWS terms
+- Provide technical context
+- Explain the root cause
+- Reference relevant Terraform/AWS concepts
+
+### 3. The implications of the issue
+- What could break if not fixed
+- Why this issue matters
+- Impact on the project/iteration
+
+### 4. The fix, shown clearly
+- Provide working code examples
+- Show the corrected version
+- Make it actionable
+
+### 5. Broader learning context
+- Best practices and alternatives
+- How this fits into larger patterns
+- Additional considerations for production
+
+## Teaching Style Required
+- NEVER give minimal fixes or single-line corrections
+- ALWAYS provide educational explanations
+- Include context and learning opportunities
+- Use a teaching approach, not just problem-solving
+
+## File References
+- ALWAYS check .cursor/instructions/ before responding
+- Follow fix_guidance.yaml for all quick fixes
+- Reference relevant instruction files when applicable
+
+## Response Quality
+- Be thorough and educational
+- Help the user learn and understand
+- Provide context beyond just the immediate fix
+- Make responses valuable for future reference
+
+## Project Context
+- This workspace contains cast-ec2 project (iteration 1.0)
+- User prefers detailed, educational responses
+- Follow established workflow patterns
+- Reference iteration files when relevant
+
+
+

@@ -27,6 +27,14 @@ Feel free to add your own one-off scripts and utilities here. Please include:
 - Usage instructions
 - Any dependencies or requirements
 
-## License
+## Prompts
+Example prompts for cast-ec2:
+'where are we at in iteration 1 of project cast-ec2?'
+'give me the execution plan for iteration 1 of project cast-ec2'
+'update my checklist for iteration 1 of project cast-ec2'
+All-in-one example:
+'Give me a complete iteration status for 1 of project cast-ec2, including current progress, next steps execution plan, checklist updates based on codebase, and relevant MCP capabilities that can help with this work.'
 
-MIT License - feel free to use these scripts as needed.
+# Show project-specific prompts
+make project-prompts PROJECT=aft-account-customizations
+make project-prompts PROJECT=cast-ec2
