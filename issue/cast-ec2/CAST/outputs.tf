@@ -17,17 +17,17 @@ output "region" {
 # VPC Information
 output "vpc_id" {
   description = "ID of the VPC where CAST EC2 instance is deployed"
-  value       = data.aws_vpc.cast_vpc.id
+  value       = data.aws_vpc.default_vpc.id
 }
 
 output "vpc_cidr_block" {
   description = "CIDR block of the CAST VPC"
-  value       = data.aws_vpc.cast_vpc.cidr_block
+  value       = data.aws_vpc.default_vpc.cidr_block
 }
 
 output "vpc_name" {
   description = "Name tag of the CAST VPC"
-  value       = data.aws_vpc.cast_vpc.tags.Name
+  value       = data.aws_vpc.default_vpc.tags.Name
 }
 
 # =============================================================================
@@ -91,12 +91,26 @@ output "instance_subnet_id" {
 
 output "subnet_cidr_block" {
   description = "CIDR block of the subnet where the CAST EC2 instance is deployed"
-  value       = data.aws_subnet.cast_vpc_default_subnet.cidr_block
+  value       = data.aws_subnet.selected_subnet.cidr_block
 }
 
 output "subnet_availability_zone" {
   description = "Availability zone of the subnet where the CAST EC2 instance is deployed"
-  value       = data.aws_subnet.cast_vpc_default_subnet.availability_zone
+  value       = data.aws_subnet.selected_subnet.availability_zone
+}
+
+# Subnet Selection Information
+output "subnet_selection_info" {
+  description = "Information about the selected subnet"
+  value = {
+    selected_subnet_id = data.aws_subnet.selected_subnet.id
+    selection_method   = "FIRST_AVAILABLE"
+    availability_zone  = data.aws_subnet.selected_subnet.availability_zone
+    cidr_block         = data.aws_subnet.selected_subnet.cidr_block
+    available_ips      = data.aws_subnet.selected_subnet.available_ip_address_count
+    vpc_id             = data.aws_vpc.default_vpc.id
+    region             = local.region
+  }
 }
 
 # =============================================================================
@@ -229,7 +243,7 @@ output "deployment_summary" {
     environment          = local.env
     account_id           = data.aws_caller_identity.current.account_id
     region               = local.region
-    vpc_id               = data.aws_vpc.cast_vpc.id
+    vpc_id               = data.aws_vpc.default_vpc.id
     instance_id          = aws_instance.example.id
     instance_type        = aws_instance.example.instance_type
     security_group_id    = aws_security_group.cast_ec2_sg.id

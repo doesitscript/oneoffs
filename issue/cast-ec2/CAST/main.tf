@@ -15,55 +15,61 @@ locals {
   }
 }
 
-# debug: sanity check get current caller 
+#TODO for debugging
 data "aws_caller_identity" "current" {}
 
-# grabbing default vpc for the account
-data "aws_vpc" "cast_vpc" {
+data "aws_vpc" "default_vpc" {
   filter {
     name   = "tag:Name"
     values = ["${local.app}${local.env}"]
   }
 }
 
-# Get the first available subnet in the VPC
-data "aws_subnet" "cast_vpc_default_subnet" {
-  vpc_id = data.aws_vpc.cast_vpc.id
-
+data "aws_subnets" "default_vpc_subnets" {
   filter {
-    name   = "availability-zone"
-    values = ["${local.region}a"] # Use first AZ in the region
+    name   = "vpc-id"
+    values = [data.aws_vpc.default_vpc.id]
   }
 }
 
-# TODO Document On-Prem to VPC traffic
-# On-Prem (10.60.0.0/14, 10.160.0.0/14)
-#    <->
-# Direct Connect Gateway (DXGW)
-#    <->
-# Transit Gateway (tgw-070334cf083fca7cc)
-#    <->
-# Transit Gateway Route Table (tgw-rtb-00cb37f6985c2442e)
-#    <->
-# Attached VPCs (e.g., your CAST VPC 10.62.20.0/24)
+# Get details of the selected subnet
+data "aws_subnet" "selected_subnet" {
+  id = local.default_vpc_subnet_id
+}
+
+locals {
+  # There's an open issue on aft-account-request track what we need to implement in aws (ie set default subnet at account vending )
+  # or we could select subnet by az
+  default_vpc_subnet_id = data.aws_subnets.default_vpc_subnets.ids[0]
+
+}
+
 resource "aws_security_group" "cast_ec2_sg" {
   name_prefix = "cast-ec2-sg-"
   description = "Security group for CAST EC2 instance - allows SSH, RDP, HTTP, and HTTPS access"
-  vpc_id      = data.aws_vpc.cast_vpc.id
+  vpc_id      = data.aws_vpc.default_vpc.id
   ingress = [
     {
-      description = "SSH access from CAST allowed IPs"
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      cidr_blocks = var.allowed_cidr_blocks
+      description      = "SSH access from CAST allowed IPs"
+      from_port        = 22
+      to_port          = 22
+      protocol         = "tcp"
+      ipv6_cidr_blocks = []
+      prefix_list_ids  = []
+      security_groups  = []
+      self             = false
+      cidr_blocks      = var.allowed_cidr_blocks
     },
     {
-      description = "RDP access from CAST allowed IPs"
-      from_port   = 3389
-      to_port     = 3389
-      protocol    = "tcp"
-      cidr_blocks = var.allowed_cidr_blocks
+      description      = "RDP access from CAST allowed IPs"
+      from_port        = 3389
+      to_port          = 3389
+      protocol         = "tcp"
+      ipv6_cidr_blocks = []
+      prefix_list_ids  = []
+      security_groups  = []
+      self             = false
+      cidr_blocks      = var.allowed_cidr_blocks
     }
   ]
   # ingress = [
@@ -90,7 +96,7 @@ resource "aws_instance" "example" {
   ami                    = "ami-0684b1bd72f4b0d55" # Amazon Linux 2 AMI (us-east-1)
   instance_type          = "r5a.24xlarge"
   vpc_security_group_ids = [aws_security_group.cast_ec2_sg.id]
-  subnet_id              = data.aws_subnet.cast_vpc_default_subnet.id
+  subnet_id              = local.default_vpc_subnet_id
 
   # Enable EBS optimization for better performance
   ebs_optimized = true
