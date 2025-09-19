@@ -36,57 +36,57 @@ output "vpc_name" {
 
 output "instance_id" {
   description = "ID of the CAST EC2 instance"
-  value       = aws_instance.example.id
+  value       = aws_instance.cast_ec2.id
 }
 
 output "instance_arn" {
   description = "ARN of the CAST EC2 instance"
-  value       = aws_instance.example.arn
+  value       = aws_instance.cast_ec2.arn
 }
 
 output "instance_public_ip" {
   description = "Public IP address of the CAST EC2 instance (if applicable)"
-  value       = aws_instance.example.public_ip
+  value       = aws_instance.cast_ec2.public_ip
 }
 
 output "instance_private_ip" {
   description = "Private IP address of the CAST EC2 instance"
-  value       = aws_instance.example.private_ip
+  value       = aws_instance.cast_ec2.private_ip
 }
 
 output "instance_public_dns" {
   description = "Public DNS name of the CAST EC2 instance (if applicable)"
-  value       = aws_instance.example.public_dns
+  value       = aws_instance.cast_ec2.public_dns
 }
 
 output "instance_private_dns" {
   description = "Private DNS name of the CAST EC2 instance"
-  value       = aws_instance.example.private_dns
+  value       = aws_instance.cast_ec2.private_dns
 }
 
 output "instance_state" {
   description = "Current state of the CAST EC2 instance"
-  value       = aws_instance.example.instance_state
+  value       = aws_instance.cast_ec2.instance_state
 }
 
 output "instance_type" {
   description = "Instance type of the CAST EC2 instance"
-  value       = aws_instance.example.instance_type
+  value       = aws_instance.cast_ec2.instance_type
 }
 
 output "instance_ami" {
   description = "AMI ID used for the CAST EC2 instance"
-  value       = aws_instance.example.ami
+  value       = aws_instance.cast_ec2.ami
 }
 
 output "instance_availability_zone" {
   description = "Availability zone where the CAST EC2 instance is deployed"
-  value       = aws_instance.example.availability_zone
+  value       = aws_instance.cast_ec2.availability_zone
 }
 
 output "instance_subnet_id" {
   description = "Subnet ID where the CAST EC2 instance is deployed"
-  value       = aws_instance.example.subnet_id
+  value       = aws_instance.cast_ec2.subnet_id
 }
 
 output "subnet_cidr_block" {
@@ -119,17 +119,17 @@ output "subnet_selection_info" {
 
 output "security_group_id" {
   description = "ID of the security group attached to the CAST EC2 instance"
-  value       = aws_security_group.cast_ec2_sg.id
+  value       = aws_security_group.aft_default_customization_compatibility.id
 }
 
 output "security_group_arn" {
   description = "ARN of the security group attached to the CAST EC2 instance"
-  value       = aws_security_group.cast_ec2_sg.arn
+  value       = aws_security_group.aft_default_customization_compatibility.arn
 }
 
 output "security_group_name" {
   description = "Name of the security group attached to the CAST EC2 instance"
-  value       = aws_security_group.cast_ec2_sg.name
+  value       = aws_security_group.aft_default_customization_compatibility.name
 }
 
 # =============================================================================
@@ -139,19 +139,19 @@ output "security_group_name" {
 output "root_volume_info" {
   description = "Information about the root EBS volume"
   value = {
-    volume_id   = aws_instance.example.root_block_device[0].volume_id
-    volume_type = aws_instance.example.root_block_device[0].volume_type
-    volume_size = aws_instance.example.root_block_device[0].volume_size
-    iops        = aws_instance.example.root_block_device[0].iops
-    throughput  = aws_instance.example.root_block_device[0].throughput
-    encrypted   = aws_instance.example.root_block_device[0].encrypted
+    volume_id   = aws_instance.cast_ec2.root_block_device[0].volume_id
+    volume_type = aws_instance.cast_ec2.root_block_device[0].volume_type
+    volume_size = aws_instance.cast_ec2.root_block_device[0].volume_size
+    iops        = aws_instance.cast_ec2.root_block_device[0].iops
+    throughput  = aws_instance.cast_ec2.root_block_device[0].throughput
+    encrypted   = aws_instance.cast_ec2.root_block_device[0].encrypted
   }
 }
 
 output "data_volume_info" {
   description = "Information about the additional data EBS volume"
   value = [
-    for device in aws_instance.example.ebs_block_device : {
+    for device in aws_instance.cast_ec2.ebs_block_device : {
       volume_id   = device.volume_id
       device_name = device.device_name
       volume_type = device.volume_type
@@ -170,21 +170,21 @@ output "data_volume_info" {
 output "rdp_connection_info" {
   description = "RDP connection information for the CAST EC2 instance"
   value = {
-    public_ip          = aws_instance.example.public_ip
-    private_ip         = aws_instance.example.private_ip
+    public_ip          = aws_instance.cast_ec2.public_ip
+    private_ip         = aws_instance.cast_ec2.private_ip
     port               = 3389
     username           = "Administrator" # Default Windows Administrator
-    connection_command = aws_instance.example.public_ip != "" ? "mstsc /v:${aws_instance.example.public_ip}" : "Use SSM Session Manager or VPN to access ${aws_instance.example.private_ip}"
+    connection_command = aws_instance.cast_ec2.public_ip != "" ? "mstsc /v:${aws_instance.cast_ec2.public_ip}" : "Use SSM Session Manager or VPN to access ${aws_instance.cast_ec2.private_ip}"
   }
 }
 
 output "ssh_connection_info" {
   description = "SSH connection information (if applicable)"
   value = {
-    public_ip          = aws_instance.example.public_ip
-    private_ip         = aws_instance.example.private_ip
+    public_ip          = aws_instance.cast_ec2.public_ip
+    private_ip         = aws_instance.cast_ec2.private_ip
     port               = 22
-    connection_command = aws_instance.example.public_ip != "" ? "ssh -i <key-file> ec2-user@${aws_instance.example.public_ip}" : "Use SSM Session Manager to access ${aws_instance.example.private_ip}"
+    connection_command = aws_instance.cast_ec2.public_ip != "" ? "ssh -i <key-file> ec2-user@${aws_instance.cast_ec2.public_ip}" : "Use SSM Session Manager to access ${aws_instance.cast_ec2.private_ip}"
   }
 }
 
@@ -194,12 +194,12 @@ output "ssh_connection_info" {
 
 output "cloudwatch_log_group" {
   description = "CloudWatch log group for CAST EC2 instance (if configured)"
-  value       = "cast-ec2-${aws_instance.example.id}"
+  value       = "cast-ec2-${aws_instance.cast_ec2.id}"
 }
 
 output "ssm_session_manager_command" {
   description = "AWS CLI command to start SSM Session Manager session"
-  value       = "aws ssm start-session --target ${aws_instance.example.id} --region ${local.region}"
+  value       = "aws ssm start-session --target ${aws_instance.cast_ec2.id} --region ${local.region}"
 }
 
 # =============================================================================
@@ -209,7 +209,7 @@ output "ssm_session_manager_command" {
 output "estimated_hourly_cost" {
   description = "Estimated hourly cost for the CAST EC2 instance"
   value = {
-    instance_type           = aws_instance.example.instance_type
+    instance_type           = aws_instance.cast_ec2.instance_type
     estimated_cost_per_hour = "$5.424" # r5a.24xlarge pricing as of documentation
     note                    = "Cost may vary based on region and current AWS pricing"
   }
@@ -222,9 +222,9 @@ output "estimated_hourly_cost" {
 output "connectivity_test_commands" {
   description = "Commands to test connectivity to the CAST EC2 instance"
   value = {
-    ping_test = "ping ${aws_instance.example.public_ip != "" ? aws_instance.example.public_ip : aws_instance.example.private_ip}"
-    rdp_test  = "telnet ${aws_instance.example.public_ip != "" ? aws_instance.example.public_ip : aws_instance.example.private_ip} 3389"
-    ssh_test  = "telnet ${aws_instance.example.public_ip != "" ? aws_instance.example.public_ip : aws_instance.example.private_ip} 22"
+    ping_test = "ping ${aws_instance.cast_ec2.public_ip != "" ? aws_instance.cast_ec2.public_ip : aws_instance.cast_ec2.private_ip}"
+    rdp_test  = "telnet ${aws_instance.cast_ec2.public_ip != "" ? aws_instance.cast_ec2.public_ip : aws_instance.cast_ec2.private_ip} 3389"
+    ssh_test  = "telnet ${aws_instance.cast_ec2.public_ip != "" ? aws_instance.cast_ec2.public_ip : aws_instance.cast_ec2.private_ip} 22"
   }
 }
 
@@ -244,9 +244,9 @@ output "deployment_summary" {
     account_id           = data.aws_caller_identity.current.account_id
     region               = local.region
     vpc_id               = data.aws_vpc.default_vpc.id
-    instance_id          = aws_instance.example.id
-    instance_type        = aws_instance.example.instance_type
-    security_group_id    = aws_security_group.cast_ec2_sg.id
+    instance_id          = aws_instance.cast_ec2.id
+    instance_type        = aws_instance.cast_ec2.instance_type
+    security_group_id    = aws_security_group.aft_default_customization_compatibility.id
     deployment_timestamp = timestamp()
   }
 }

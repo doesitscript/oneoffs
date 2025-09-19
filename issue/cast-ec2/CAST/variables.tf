@@ -76,3 +76,145 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+# =============================================================================
+# ADDITIONAL VARIABLES FOR CAST EC2
+# =============================================================================
+
+variable "account_id" {
+  description = "AWS Account ID"
+  type        = string
+  default     = "925774240130"
+}
+
+variable "profile" {
+  description = "AWS Profile to use"
+  type        = string
+  default     = "CASTSoftware_dev_925774240130_admin"
+}
+
+variable "region" {
+  description = "AWS Region"
+  type        = string
+  default     = "us-east-2"
+}
+
+variable "region_short" {
+  description = "Short region identifier"
+  type        = string
+  default     = "u2e"
+}
+
+variable "app" {
+  description = "Application name"
+  type        = string
+  default     = "castsoftware"
+}
+
+variable "env" {
+  description = "Environment name"
+  type        = string
+  default     = "dev"
+}
+
+variable "ami_id" {
+  description = "AMI ID for the EC2 instance"
+  type        = string
+  default     = "ami-0684b1bd72f4b0d55"
+}
+
+variable "cast_allowed_ips" {
+  description = "List of IP addresses allowed to access CAST instance (deprecated, use allowed_cidr_blocks)"
+  type        = list(string)
+  default     = []
+}
+
+variable "aft_allowed_cidr_blocks" {
+  description = "List of CIDR blocks for AFT accounts that default traffic to firewall"
+  type        = list(string)
+  default     = []
+}
+
+variable "root_volume_type" {
+  description = "Type of root volume (gp2, gp3, io1, io2)"
+  type        = string
+  default     = "gp3"
+
+  validation {
+    condition     = contains(["gp2", "gp3", "io1", "io2"], var.root_volume_type)
+    error_message = "Root volume type must be one of: gp2, gp3, io1, io2."
+  }
+}
+
+variable "root_volume_iops" {
+  description = "IOPS for root volume (only applicable for io1, io2, gp3)"
+  type        = number
+  default     = 3000
+
+  validation {
+    condition     = var.root_volume_iops >= 100 && var.root_volume_iops <= 16000
+    error_message = "Root volume IOPS must be between 100 and 16000."
+  }
+}
+
+variable "root_volume_throughput" {
+  description = "Throughput for root volume in MiB/s (only applicable for gp3)"
+  type        = number
+  default     = 125
+
+  validation {
+    condition     = var.root_volume_throughput >= 125 && var.root_volume_throughput <= 1000
+    error_message = "Root volume throughput must be between 125 and 1000 MiB/s."
+  }
+}
+
+variable "data_volume_type" {
+  description = "Type of data volume (gp2, gp3, io1, io2)"
+  type        = string
+  default     = "gp3"
+
+  validation {
+    condition     = contains(["gp2", "gp3", "io1", "io2"], var.data_volume_type)
+    error_message = "Data volume type must be one of: gp2, gp3, io1, io2."
+  }
+}
+
+variable "data_volume_iops" {
+  description = "IOPS for data volume (only applicable for io1, io2, gp3)"
+  type        = number
+  default     = 4000
+
+  validation {
+    condition     = var.data_volume_iops >= 100 && var.data_volume_iops <= 16000
+    error_message = "Data volume IOPS must be between 100 and 16000."
+  }
+}
+
+variable "data_volume_throughput" {
+  description = "Throughput for data volume in MiB/s (only applicable for gp3)"
+  type        = number
+  default     = 250
+
+  validation {
+    condition     = var.data_volume_throughput >= 125 && var.data_volume_throughput <= 1000
+    error_message = "Data volume throughput must be between 125 and 1000 MiB/s."
+  }
+}
+
+variable "data_volume_device_name" {
+  description = "Device name for the data volume"
+  type        = string
+  default     = "/dev/sdf"
+}
+
+variable "enable_ebs_optimization" {
+  description = "Enable EBS optimization for the instance"
+  type        = bool
+  default     = true
+}
+
+variable "enable_encryption" {
+  description = "Enable encryption for EBS volumes"
+  type        = bool
+  default     = true
+}
