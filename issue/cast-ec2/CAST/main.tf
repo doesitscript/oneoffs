@@ -54,7 +54,7 @@ resource "aws_security_group" "base" {
   description = "Security group for allowing all corporate originated traffic"
   vpc_id      = data.aws_vpc.default_vpc.id
 
-  # RDP access from allowed CIDR blocks
+  # All inbound traffic from on-premises networks
   ingress {
     description = "Bread network traffic"
     from_port   = 0
@@ -63,7 +63,7 @@ resource "aws_security_group" "base" {
     cidr_blocks = ["10.0.0.0/8"]
   }
 
-  # All outbound traffic
+  # All outbound traffic to the internet
   egress {
     description = "All outbound traffic"
     from_port   = 0
@@ -116,7 +116,7 @@ resource "aws_security_group" "aft_default_customization_compatibility" {
   name_prefix = "cast-ec2-sg-aft-default-customization-compatibility"
   description = "Security group for vpcs  that have default configuration directing traffic to firewall by default."
   vpc_id      = data.aws_vpc.default_vpc.id
-  # SSH access from allowed CIDR blocks
+
   dynamic "egress" {
     for_each = local.all_allowed_cidr_blocks
     content {
@@ -127,6 +127,7 @@ resource "aws_security_group" "aft_default_customization_compatibility" {
       cidr_blocks = [egress.value]
     }
   }
+
   dynamic "ingress" {
     for_each = local.all_allowed_cidr_blocks
     content {
@@ -141,48 +142,49 @@ resource "aws_security_group" "aft_default_customization_compatibility" {
 }
 
 # TODO: document The r5a.24xlarge instance is in the Memory optimized family with 96 vCPUs, 768 GiB of memory and 20 Gibps of bandwidth starting at $5.424 per hour.
-resource "aws_instance" "cast_ec2" {
-  ami                         = var.ami_id
-  instance_type               = var.instance_type
-  vpc_security_group_ids      = [aws_security_group.aft_default_customization_compatibility.id]
-  subnet_id                   = local.default_vpc_subnet_id
-  associate_public_ip_address = var.enable_public_ip
+# resource "aws_instance" "cast_ec2" {
+#   # count                       = 0
+#   ami                         = var.ami_id
+#   instance_type               = var.instance_type
+#   vpc_security_group_ids      = [aws_security_group.aft_default_customization_compatibility.id]
+#   subnet_id                   = local.default_vpc_subnet_id
+#   associate_public_ip_address = var.enable_public_ip
 
-  # Enable EBS optimization for better performance
-  ebs_optimized = var.enable_ebs_optimization
+#   # Enable EBS optimization for better performance
+#   ebs_optimized = var.enable_ebs_optimization
 
-  # Root volume configuration
-  root_block_device {
-    volume_type           = var.root_volume_type
-    volume_size           = var.root_volume_size
-    iops                  = var.root_volume_iops
-    throughput            = var.root_volume_throughput
-    encrypted             = var.enable_encryption
-    delete_on_termination = true
+#   # Root volume configuration
+#   root_block_device {
+#     volume_type           = var.root_volume_type
+#     volume_size           = var.root_volume_size
+#     iops                  = var.root_volume_iops
+#     throughput            = var.root_volume_throughput
+#     encrypted             = var.enable_encryption
+#     delete_on_termination = true
 
-    tags = merge(local.common_tags, {
-      Name = "cast-ec2-root-volume"
-      Type = "Root"
-    })
-  }
+#     tags = merge(local.common_tags, {
+#       Name = "cast-ec2-root-volume"
+#       Type = "Root"
+#     })
+#   }
 
-  # Additional data volume
-  ebs_block_device {
-    device_name = var.data_volume_device_name
-    volume_type = var.data_volume_type
-    volume_size = var.data_volume_size
-    iops        = var.data_volume_iops
-    throughput  = var.data_volume_throughput
-    encrypted   = var.enable_encryption
+#   # Additional data volume
+#   ebs_block_device {
+#     device_name = var.data_volume_device_name
+#     volume_type = var.data_volume_type
+#     volume_size = var.data_volume_size
+#     iops        = var.data_volume_iops
+#     throughput  = var.data_volume_throughput
+#     encrypted   = var.enable_encryption
 
-    tags = merge(local.common_tags, {
-      Name = "cast-ec2-data-volume"
-      Type = "Data"
-    })
-  }
+#     tags = merge(local.common_tags, {
+#       Name = "cast-ec2-data-volume"
+#       Type = "Data"
+#     })
+#   }
 
-  tags = merge(local.common_tags, {
-    Name = "${local.app}-${local.env}-ec2"
-    Type = "EC2-Instance"
-  })
-}
+#   tags = merge(local.common_tags, {
+#     Name = "${local.app}-${local.env}-ec2"
+#     Type = "EC2-Instance"
+#   })
+# }
