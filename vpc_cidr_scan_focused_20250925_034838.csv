@@ -1,0 +1,5 @@
+Account,Region,VPC_ID,VPC_Name,Primary_CIDR,Secondary_CIDRs,Inside_14_Range,Matches_16_Range,Overlaps_OnPrem,Notes
+"925774240130","us-east-2","vpc-0d2bbb511a006f67e","aws-controltower-VPC","172.31.0.0/16","None","Yes","Yes","Yes","Overlaps with on-prem range"
+"925774240130","us-east-2","vpc-030d39057ed8fa1b5","castsoftwaredev","10.62.20.0/24","10.62.17.64/26","Yes","Yes","Yes","Overlaps with on-prem range; Secondary CIDR overlaps on-prem"
+"925774240130","us-west-2","vpc-0eece5fb16ec70c77","aws-controltower-VPC","172.31.0.0/16","None","Yes","Yes","Yes","Overlaps with on-prem range"
+"925774240130","us-west-2","vpc-08aa3d75bc3e6e815","castsoftwaredev","10.162.20.0/24","10.162.17.64/26","Yes","Yes","Yes","Overlaps with on-prem range; Secondary CIDR overlaps on-prem"

@@ -1,0 +1,31 @@
+# =============================================================================
+# CAST EC2 TERRAFORM VARIABLES EXAMPLE
+# =============================================================================
+# Copy this file to terraform.tfvars and customize the values
+
+# IP addresses allowed to access the CAST EC2 instance
+# Leave empty to automatically use your current public IP
+allowed_cidr_blocks = [
+  # "203.0.113.0/24",    # Example: CAST office network
+  # "198.51.100.0/24",   # Example: CAST VPN network
+  # "192.0.2.0/24"       # Example: Additional network
+]
+
+# EC2 instance configuration
+instance_type = "r5a.24xlarge"  # Memory optimized instance
+root_volume_size = 100          # Root volume size in GB
+data_volume_size = 500          # Additional data volume size in GB
+
+# Network configuration
+enable_public_ip = false        # Set to true if you need public IP access
+
+# Environment and project settings
+environment = "dev"             # dev, staging, or prod
+project_name = "cast-ec2"
+
+# Additional tags
+tags = {
+  CostCenter = "Engineering"
+  Team       = "CAST Software"
+  Purpose    = "Application Development"
+}
