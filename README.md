@@ -37,4 +37,4 @@ All-in-one example:
 
 # Show project-specific prompts
 make project-prompts PROJECT=aft-account-customizations
-make project-prompts PROJECT=cast-ec2
+make project-prompts PROJECT=cast-ec2# Test autocommit functionality
