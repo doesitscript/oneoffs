@@ -1,8 +1,3 @@
-# =============================================================================
-# DEVELOPMENT VARIABLES FOR CAST EC2
-# =============================================================================
-
-# Account Configuration
 account_id   = "925774240130"
 profile      = "CASTSoftware_dev_925774240130_admin"
 region       = "us-east-2"
