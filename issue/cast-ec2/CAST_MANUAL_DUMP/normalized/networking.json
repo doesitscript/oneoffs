@@ -1,0 +1,27 @@
+{
+    "eni_ids": [
+        "eni-0a7e212b506550555"
+    ],
+    "security_group_ids": [
+        "sg-053b41f329207cd48"
+    ],
+    "ingress_rules": [
+        {
+            "sg_id": "sg-053b41f329207cd48",
+            "from_port": 3389,
+            "to_port": 3389,
+            "protocol": "tcp",
+            "source": "163.116.249.49/32"
+        }
+    ],
+    "egress_rules": [
+        {
+            "sg_id": "sg-053b41f329207cd48",
+            "from_port": 0,
+            "to_port": 0,
+            "protocol": "-1",
+            "destination": "0.0.0.0/0"
+        }
+    ],
+    "associate_public_ip": false
+}

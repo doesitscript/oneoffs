@@ -1,0 +1,28 @@
+{
+    "Role": {
+        "Path": "/",
+        "RoleName": "bf-global-devonly-AmazonSSMManagedInstanceCore",
+        "RoleId": "AROA5PDDR3GBH6BDQC3IG",
+        "Arn": "arn:aws:iam::925774240130:role/bf-global-devonly-AmazonSSMManagedInstanceCore",
+        "CreateDate": "2025-10-08T13:00:22+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Sid": "",
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "ec2.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole"
+                }
+            ]
+        },
+        "Description": "Allows EC2 instances to call AWS services like CloudWatch and Systems Manager on your behalf.",
+        "MaxSessionDuration": 3600,
+        "RoleLastUsed": {
+            "LastUsedDate": "2025-10-22T10:30:50+00:00",
+            "Region": "us-east-2"
+        }
+    }
+}

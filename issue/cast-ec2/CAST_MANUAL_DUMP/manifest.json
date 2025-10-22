@@ -1,0 +1,40 @@
+{
+    "generated_at": "2025-10-22T10:38:07Z",
+    "account_id": "925774240130",
+    "region": "us-east-2",
+    "instance_id": "i-00a3cb5faf95c6561",
+    "raw_files": [
+        "instance_description.json",
+        "ami_description.json",
+        "security_groups.json",
+        "iam_instance_profile.json",
+        "iam_role.json",
+        "iam_role_policies.json",
+        "ebs_volumes.json",
+        "subnet.json",
+        "vpc.json",
+        "network_interfaces.json",
+        "launch_template.json",
+        "user_data.txt",
+        "console_output.txt",
+        "ssm_inventory.json",
+        "tags.json"
+    ],
+    "normalized_files": [
+        "instance.json",
+        "storage.json",
+        "networking.json",
+        "iam.json",
+        "bootstrap.json",
+        "tags.json",
+        "launch_template.json"
+    ],
+    "notes": [
+        "Instance is Windows-based with SSM agent installed and online",
+        "No launch template used - manually launched instance",
+        "Two EBS volumes: root (80GB gp2) and additional (500GB gp3)",
+        "Single security group with RDP access from specific IP",
+        "No public IP assigned - private instance only",
+        "User data contains PowerShell script for SSH and RDP setup"
+    ]
+}

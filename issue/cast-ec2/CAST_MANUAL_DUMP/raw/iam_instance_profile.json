@@ -1,0 +1,32 @@
+{
+    "InstanceProfile": {
+        "Path": "/",
+        "InstanceProfileName": "bf-global-devonly-AmazonSSMManagedInstanceCore",
+        "InstanceProfileId": "AIPA5PDDR3GBIFXDGCUCR",
+        "Arn": "arn:aws:iam::925774240130:instance-profile/bf-global-devonly-AmazonSSMManagedInstanceCore",
+        "CreateDate": "2025-10-08T13:00:22+00:00",
+        "Roles": [
+            {
+                "Path": "/",
+                "RoleName": "bf-global-devonly-AmazonSSMManagedInstanceCore",
+                "RoleId": "AROA5PDDR3GBH6BDQC3IG",
+                "Arn": "arn:aws:iam::925774240130:role/bf-global-devonly-AmazonSSMManagedInstanceCore",
+                "CreateDate": "2025-10-08T13:00:22+00:00",
+                "AssumeRolePolicyDocument": {
+                    "Version": "2012-10-17",
+                    "Statement": [
+                        {
+                            "Sid": "",
+                            "Effect": "Allow",
+                            "Principal": {
+                                "Service": "ec2.amazonaws.com"
+                            },
+                            "Action": "sts:AssumeRole"
+                        }
+                    ]
+                }
+            }
+        ],
+        "Tags": []
+    }
+}

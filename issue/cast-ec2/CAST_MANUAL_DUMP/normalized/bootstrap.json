@@ -1,0 +1,6 @@
+{
+    "user_data_present": true,
+    "user_data_file": "../raw/user_data.txt",
+    "ssm_managed": true,
+    "cloudwatch_agent_detected": false
+}

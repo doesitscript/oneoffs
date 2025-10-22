@@ -1,0 +1,23 @@
+{
+    "instance_profile": "bf-global-devonly-AmazonSSMManagedInstanceCore",
+    "role": "bf-global-devonly-AmazonSSMManagedInstanceCore",
+    "assume_role_policy": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Sid": "",
+                "Effect": "Allow",
+                "Principal": {
+                    "Service": "ec2.amazonaws.com"
+                },
+                "Action": "sts:AssumeRole"
+            }
+        ]
+    },
+    "attached_policies": [
+        {
+            "name": "AmazonSSMManagedInstanceCore",
+            "arn": "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+        }
+    ]
+}

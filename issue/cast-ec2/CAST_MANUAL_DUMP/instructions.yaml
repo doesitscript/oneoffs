@@ -1,0 +1,193 @@
+Task
+Use my MCP AWS access to collect a complete, read-only snapshot of one manually-deployed EC2 instance in account 925774240130 (CAST), region us-east-2. Save both raw AWS outputs and normalized, Terraform-ready JSON. Do not make any changes. Do not do Part 2 yet.
+
+Inputs I will provide
+- Either the instance-id, or a screenshot/name tag to identify it.
+- A writable folder on my machine: /Users/a805120/develop/oneoffs/issue/cast-ec2/CAST_manual/
+
+
+Mode and rules
+- Read-only: use Describe*, Get*, List* calls only.
+- Use my configured AWS profile/credentials in Cursor.
+- Save files under two subfolders:
+  - /Users/a805120/develop/oneoffs/issue/cast-ec2/CAST_manual/raw/
+  - /Users/a805120/develop/oneoffs/issue/cast-ec2/CAST_manual/normalized/
+- Include a manifest.json at the root.
+- If a thing doesn’t exist (e.g., no launch template), still create an empty JSON with {} so the set is complete.
+
+Step 1 — Identify target instance
+- Resolve the instance-id from my input (id or Name tag from the screenshot) in 925774240130, us-east-2.
+- Confirm the instance exists and is running or stopped.
+
+Step 2 — Collect raw AWS outputs (full JSON, unedited)
+Write each file to /Users/a805120/develop/oneoffs/issue/cast-ec2/CAST_manual/raw/
+1) instance_description.json       ← ec2:DescribeInstances for the target instance-id
+2) ami_description.json            ← ec2:DescribeImages for the instance’s ImageId
+3) security_groups.json            ← ec2:DescribeSecurityGroups for all SGs on the instance ENIs
+4) iam_instance_profile.json       ← iam:GetInstanceProfile for the attached profile (if any)
+5) iam_role.json                   ← iam:GetRole for the role in the profile (if any)
+6) iam_role_policies.json          ← iam:ListAttachedRolePolicies + iam:GetPolicyVersion (summarize)
+7) ebs_volumes.json                ← ec2:DescribeVolumes filtered by attachment.instance-id
+8) subnet.json                     ← ec2:DescribeSubnets for the instance’s subnet
+9) vpc.json                        ← ec2:DescribeVpcs for the instance’s VPC
+10) network_interfaces.json        ← ec2:DescribeNetworkInterfaces filtered by attachment.instance-id
+11) launch_template.json           ← ec2:DescribeLaunchTemplates + DescribeLaunchTemplateVersions (if used)
+12) user_data.txt                  ← ec2:DescribeInstanceAttribute(userData) decoded to plain text
+13) console_output.txt             ← ec2:GetConsoleOutput (optional if empty)
+14) ssm_inventory.json             ← ssm:DescribeInstanceInformation for the instance (if managed)
+15) tags.json                      ← ec2:DescribeTags for instance, volumes, and ENIs (consolidate raw)
+
+Step 3 — Produce normalized, Terraform-ready JSON
+Create minimal, consistent JSON that is easy to map into variables/locals. Save to /Users/a805120/develop/oneoffs/issue/cast-ec2/CAST_manual/normalized/
+
+A) instance.json
+{
+    "account_id": "925774240130",
+    "region": "us-east-2",
+    "instance_id": "...",
+    "name": "...", // from tag Name
+    "instance_type": "...",
+    "ami_id": "...",
+    "key_name": "...",
+    "iam_instance_profile": "...", // name
+    "iam_role": "...", // name
+    "subnet_id": "...",
+    "vpc_id": "...",
+    "private_ip": "...",
+    "public_ip": null | "...",
+    "availability_zone": "...",
+    "platform": "windows" | "linux"
+}
+
+B) storage.json
+{
+    "root_volume": {
+        "device_name": "...",
+        "size_gb": 123,
+        "type": "gp3",
+        "encrypted": true,
+        "kms_key_id": "arn:aws:kms:us-east-2:...:key/..."
+    },
+    "additional_volumes": [
+        {
+            "device_name": "...",
+            "size_gb": 200,
+            "type": "gp3",
+            "encrypted": true,
+            "kms_key_id": "..."
+        }
+    ]
+}
+
+C) networking.json
+{
+    "eni_ids": [
+        "eni-...",
+        "eni-..."
+    ],
+    "security_group_ids": [
+        "sg-...",
+        "sg-..."
+    ],
+    "ingress_rules": [
+        {
+            "sg_id": "sg-...",
+            "from_port": 3389,
+            "to_port": 3389,
+            "protocol": "tcp",
+            "source": "10.0.0.0/8"
+        }
+    ],
+    "egress_rules": [
+        {
+            "sg_id": "sg-...",
+            "from_port": 0,
+            "to_port": 0,
+            "protocol": "-1",
+            "destination": "0.0.0.0/0"
+        }
+    ],
+    "associate_public_ip": true | false
+}
+
+D) iam.json
+{
+    "instance_profile": "name-or-null",
+    "role": "name-or-null",
+    "assume_role_policy": { ...
+    }, // JSON object
+    "attached_policies": [
+        {
+            "name": "AmazonSSMManagedInstanceCore",
+            "arn": "arn:aws:iam::aws:policy/..."
+        },
+        {
+            "name": "CustomPolicyX",
+            "arn": "arn:aws:iam::925774240130:policy/CustomPolicyX"
+        }
+    ]
+}
+
+E) bootstrap.json
+{
+    "user_data_present": true | false,
+    "user_data_file": "../raw/user_data.txt",
+    "ssm_managed": true | false,
+    "cloudwatch_agent_detected": true | false
+}
+
+F) tags.json
+{
+    "instance": {
+        "Name": "...",
+        "Owner": "...",
+        "CostCenter": "..."
+    },
+    "volumes": {
+        "vol-xxxx": {
+            "Name": "..."
+        },
+        "vol-yyyy": {
+            "Backup": "..."
+        }
+    },
+    "enis": {
+        "eni-xxxx": {
+            "Purpose": "..."
+        }
+    }
+}
+
+G) launch_template.json
+{
+    "used": true | false,
+    "name": "lt-name-or-null",
+    "id": "lt-...",
+    "version": "1"
+}
+
+Step 4 — Create manifest and quick validation
+- Save /Users/a805120/develop/oneoffs/issue/cast-ec2/CAST_manual/manifest.json with: {
+    "generated_at": "ISO-8601",
+    "account_id": "925774240130",
+    "region": "us-east-2",
+    "instance_id": "...",
+    "raw_files": [
+        "instance_description.json",
+        "..."
+    ],
+    "normalized_files": [
+        "instance.json",
+        "storage.json",
+        "..."
+    ],
+    "notes": [
+        "any permission denials or missing data"
+    ]
+}
+- Also render a short Markdown table (manifest.md) listing each file and what it feeds in Terraform (e.g., instance_type → variables.tf, sg_ids → module input).
+
+Step 5 — Report back
+- Confirm folder is fully populated.
+- Call out any missing permissions or empty datasets.
+- Do not do any comparison or code changes yet. Stop after data collection and validation.

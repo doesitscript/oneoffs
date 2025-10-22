@@ -1,0 +1,17 @@
+{
+    "account_id": "925774240130",
+    "region": "us-east-2",
+    "instance_id": "i-00a3cb5faf95c6561",
+    "name": "ec2-ecs-cast-02",
+    "instance_type": "r5a.2xlarge",
+    "ami_id": "ami-0684b1bd72f4b0d55",
+    "key_name": "ec2-ecs-cast-02-kp",
+    "iam_instance_profile": "bf-global-devonly-AmazonSSMManagedInstanceCore",
+    "iam_role": "bf-global-devonly-AmazonSSMManagedInstanceCore",
+    "subnet_id": "subnet-0900c846fdabad701",
+    "vpc_id": "vpc-030d39057ed8fa1b5",
+    "private_ip": "10.62.20.5",
+    "public_ip": null,
+    "availability_zone": "us-east-2a",
+    "platform": "windows"
+}

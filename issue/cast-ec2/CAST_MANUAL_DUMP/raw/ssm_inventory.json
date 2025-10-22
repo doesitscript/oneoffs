@@ -1,0 +1,19 @@
+{
+    "InstanceInformationList": [
+        {
+            "InstanceId": "i-00a3cb5faf95c6561",
+            "PingStatus": "Online",
+            "LastPingDateTime": "2025-10-22T05:31:50.946000-05:00",
+            "AgentVersion": "3.3.3050.0",
+            "IsLatestVersion": false,
+            "PlatformType": "Windows",
+            "PlatformName": "Microsoft Windows Server 2022 Datacenter",
+            "PlatformVersion": "10.0.20348",
+            "ResourceType": "EC2Instance",
+            "IPAddress": "10.62.20.5",
+            "ComputerName": "EC2AMAZ-80KRP9T.WORKGROUP",
+            "SourceId": "i-00a3cb5faf95c6561",
+            "SourceType": "AWS::EC2::Instance"
+        }
+    ]
+}

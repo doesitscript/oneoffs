@@ -1,0 +1,44 @@
+{
+    "Subnets": [
+        {
+            "AvailabilityZoneId": "use2-az1",
+            "MapCustomerOwnedIpOnLaunch": false,
+            "OwnerId": "925774240130",
+            "AssignIpv6AddressOnCreation": false,
+            "Ipv6CidrBlockAssociationSet": [],
+            "Tags": [
+                {
+                    "Key": "bfh:support-group",
+                    "Value": "bfh.awsinfrastructure"
+                },
+                {
+                    "Key": "bfh:environment",
+                    "Value": "prd"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "castsoftwaredev-castsoftwaredev-subnet-us-east-2a"
+                }
+            ],
+            "SubnetArn": "arn:aws:ec2:us-east-2:925774240130:subnet/subnet-0900c846fdabad701",
+            "EnableDns64": false,
+            "Ipv6Native": false,
+            "PrivateDnsNameOptionsOnLaunch": {
+                "HostnameType": "ip-name",
+                "EnableResourceNameDnsARecord": false,
+                "EnableResourceNameDnsAAAARecord": false
+            },
+            "BlockPublicAccessStates": {
+                "InternetGatewayBlockMode": "off"
+            },
+            "SubnetId": "subnet-0900c846fdabad701",
+            "State": "available",
+            "VpcId": "vpc-030d39057ed8fa1b5",
+            "CidrBlock": "10.62.20.0/26",
+            "AvailableIpAddressCount": 57,
+            "AvailabilityZone": "us-east-2a",
+            "DefaultForAz": false,
+            "MapPublicIpOnLaunch": false
+        }
+    ]
+}

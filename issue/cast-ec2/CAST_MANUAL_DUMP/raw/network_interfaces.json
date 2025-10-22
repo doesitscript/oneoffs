@@ -1,0 +1,48 @@
+{
+    "NetworkInterfaces": [
+        {
+            "Attachment": {
+                "AttachTime": "2025-10-07T19:12:25+00:00",
+                "AttachmentId": "eni-attach-0a660d164e4d14b02",
+                "DeleteOnTermination": true,
+                "DeviceIndex": 0,
+                "NetworkCardIndex": 0,
+                "InstanceId": "i-00a3cb5faf95c6561",
+                "InstanceOwnerId": "925774240130",
+                "Status": "attached"
+            },
+            "AvailabilityZone": "us-east-2a",
+            "Description": "",
+            "Groups": [
+                {
+                    "GroupId": "sg-053b41f329207cd48",
+                    "GroupName": "launch-wizard-3"
+                }
+            ],
+            "InterfaceType": "interface",
+            "Ipv6Addresses": [],
+            "MacAddress": "02:59:a5:14:62:b7",
+            "NetworkInterfaceId": "eni-0a7e212b506550555",
+            "OwnerId": "925774240130",
+            "PrivateDnsName": "ip-10-62-20-5.us-east-2.compute.internal",
+            "PublicDnsName": "",
+            "PrivateIpAddress": "10.62.20.5",
+            "PrivateIpAddresses": [
+                {
+                    "Primary": true,
+                    "PrivateDnsName": "ip-10-62-20-5.us-east-2.compute.internal",
+                    "PrivateIpAddress": "10.62.20.5"
+                }
+            ],
+            "RequesterManaged": false,
+            "SourceDestCheck": true,
+            "Status": "in-use",
+            "SubnetId": "subnet-0900c846fdabad701",
+            "TagSet": [],
+            "VpcId": "vpc-030d39057ed8fa1b5",
+            "Operator": {
+                "Managed": false
+            }
+        }
+    ]
+}

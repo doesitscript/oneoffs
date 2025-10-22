@@ -1,0 +1,13 @@
+{
+    "Tags": [
+        {
+            "Key": "Name",
+            "ResourceId": "i-00a3cb5faf95c6561",
+            "ResourceType": "instance",
+            "Value": "ec2-ecs-cast-02"
+        }
+    ]
+}
+{
+    "Tags": []
+}

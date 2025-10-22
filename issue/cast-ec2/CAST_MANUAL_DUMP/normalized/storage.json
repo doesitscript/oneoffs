@@ -1,0 +1,18 @@
+{
+    "root_volume": {
+        "device_name": "/dev/sda1",
+        "size_gb": 80,
+        "type": "gp2",
+        "encrypted": true,
+        "kms_key_id": "arn:aws:kms:us-east-2:925774240130:key/6c3e42f8-da99-42ab-b5da-69628aa8c94b"
+    },
+    "additional_volumes": [
+        {
+            "device_name": "xvdb",
+            "size_gb": 500,
+            "type": "gp3",
+            "encrypted": true,
+            "kms_key_id": "arn:aws:kms:us-east-2:925774240130:key/6c3e42f8-da99-42ab-b5da-69628aa8c94b"
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "Vpcs": [
+        {
+            "OwnerId": "925774240130",
+            "InstanceTenancy": "default",
+            "CidrBlockAssociationSet": [
+                {
+                    "AssociationId": "vpc-cidr-assoc-09a8b62e20859aeee",
+                    "CidrBlock": "10.62.20.0/24",
+                    "CidrBlockState": {
+                        "State": "associated"
+                    }
+                },
+                {
+                    "AssociationId": "vpc-cidr-assoc-08c389387e7c0e3d6",
+                    "CidrBlock": "10.62.17.64/26",
+                    "CidrBlockState": {
+                        "State": "associated"
+                    }
+                }
+            ],
+            "IsDefault": false,
+            "Tags": [
+                {
+                    "Key": "bfh:environment",
+                    "Value": "prd"
+                },
+                {
+                    "Key": "bfh:support-group",
+                    "Value": "bfh.awsinfrastructure"
+                },
+                {
+                    "Key": "Name",
+                    "Value": "castsoftwaredev"
+                }
+            ],
+            "BlockPublicAccessStates": {
+                "InternetGatewayBlockMode": "off"
+            },
+            "VpcId": "vpc-030d39057ed8fa1b5",
+            "State": "available",
+            "CidrBlock": "10.62.20.0/24",
+            "DhcpOptionsId": "dopt-0e38dbb2e9b30e65d"
+        }
+    ]
+}

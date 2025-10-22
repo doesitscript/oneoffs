@@ -1,0 +1,59 @@
+{
+    "Volumes": [
+        {
+            "AvailabilityZoneId": "use2-az1",
+            "Iops": 240,
+            "VolumeType": "gp2",
+            "MultiAttachEnabled": false,
+            "Operator": {
+                "Managed": false
+            },
+            "VolumeId": "vol-09f78882646608450",
+            "Size": 80,
+            "SnapshotId": "snap-0ae8fbd0085d0e63a",
+            "AvailabilityZone": "us-east-2a",
+            "State": "in-use",
+            "CreateTime": "2025-10-07T19:12:25.921000+00:00",
+            "Attachments": [
+                {
+                    "DeleteOnTermination": true,
+                    "VolumeId": "vol-09f78882646608450",
+                    "InstanceId": "i-00a3cb5faf95c6561",
+                    "Device": "/dev/sda1",
+                    "State": "attached",
+                    "AttachTime": "2025-10-07T19:12:25+00:00"
+                }
+            ],
+            "Encrypted": true,
+            "KmsKeyId": "arn:aws:kms:us-east-2:925774240130:key/6c3e42f8-da99-42ab-b5da-69628aa8c94b"
+        },
+        {
+            "AvailabilityZoneId": "use2-az1",
+            "Iops": 3000,
+            "VolumeType": "gp3",
+            "MultiAttachEnabled": false,
+            "Throughput": 125,
+            "Operator": {
+                "Managed": false
+            },
+            "VolumeId": "vol-0fb20895271cf364a",
+            "Size": 500,
+            "SnapshotId": "",
+            "AvailabilityZone": "us-east-2a",
+            "State": "in-use",
+            "CreateTime": "2025-10-21T16:13:38.448000+00:00",
+            "Attachments": [
+                {
+                    "DeleteOnTermination": false,
+                    "VolumeId": "vol-0fb20895271cf364a",
+                    "InstanceId": "i-00a3cb5faf95c6561",
+                    "Device": "xvdb",
+                    "State": "attached",
+                    "AttachTime": "2025-10-21T16:15:05+00:00"
+                }
+            ],
+            "Encrypted": true,
+            "KmsKeyId": "arn:aws:kms:us-east-2:925774240130:key/6c3e42f8-da99-42ab-b5da-69628aa8c94b"
+        }
+    ]
+}
