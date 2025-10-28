@@ -1,0 +1,1350 @@
+{
+  "account_requests": [
+    {
+      "module_name": "aft-backup-vault",
+      "filename": "backup-vault-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+CentralBackupVault@breadfinancial.com",
+        "AccountName": "Central Backup Vault",
+        "ManagedOrganizationalUnit": "Centralized Backup (ou-uieo-vx72sxln)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "CentralBackupVault",
+        "SSOUserLastName": "Management"
+      },
+      "account_tags": {
+        "account_type": "Backup\",",
+        "account_name": "Central-Backup-Vault"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Sanjeev Prakasam",
+        "change_reason": "Central Backup Vault Account"
+      }
+    },
+    {
+      "module_name": "centralized_secrets_management",
+      "filename": "Centralized-Secret-Management.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+Secrets-Management@breadfinancial.com",
+        "AccountName": "Secrets-Management",
+        "ManagedOrganizationalUnit": "Operations (ou-uieo-b2ip9ve0)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "Secrets",
+        "SSOUserLastName": "Management"
+      },
+      "account_tags": {
+        "Account": "Secrets-Management"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Stephen Smith",
+        "change_reason": "Account Creation-Secrets Management"
+      }
+    },
+    {
+      "module_name": "aft-kms-vault",
+      "filename": "kms-vault-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+CentralKMSVault@breadfinancial.com",
+        "AccountName": "Central KMS Vault",
+        "ManagedOrganizationalUnit": "Centralized Key Management (ou-uieo-z24s1pgl)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "CentralKMSVault",
+        "SSOUserLastName": "Management"
+      },
+      "account_tags": {
+        "account_type": "KMS\",",
+        "account_name": "Central-KMS-Vault"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Sanjeev Prakasam",
+        "change_reason": "Central KMS Vault"
+      }
+    },
+    {
+      "module_name": "sdlc_uat_account",
+      "filename": "sdlc-uat-nwtesting-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+sdlc-uat-testing@breadfinancial.com",
+        "AccountName": "SDLC-UAT-Testing",
+        "ManagedOrganizationalUnit": "UAT (ou-uieo-zpp585sb)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "UAT-SDLC",
+        "SSOUserLastName": "Testing"
+      },
+      "account_tags": {
+        "Account": "sdlc-uat-testing"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Sanjeev Prakasam",
+        "change_reason": "SDLC UAT Account Creation,Account will be removed post tesing and validation"
+      }
+    },
+    {
+      "module_name": "aft-import-logarchiveaccount",
+      "filename": "ct-logarchive-account-import.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+LogArchive@breadfinancial.com",
+        "AccountName": "Log Archive",
+        "ManagedOrganizationalUnit": "Security",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "CT",
+        "SSOUserLastName": "Management"
+      },
+      "account_tags": {
+        "account": "Log Archive"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Sanjeev Prakasam",
+        "change_reason": "Import Log Archive account in AFT"
+      }
+    },
+    {
+      "module_name": "awsome_hackathon_2025_account",
+      "filename": "awsome-hackathon-2025-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+awsome-hackathon-2025@breadfinancial.com",
+        "AccountName": "AWSome-Hackathon-2025",
+        "ManagedOrganizationalUnit": "Sandbox (ou-uieo-7akhobg8)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "AWSome-Hackathon2025",
+        "SSOUserLastName": "AWSome-Hackathon2025"
+      },
+      "account_tags": {
+        "Account": "AWSome-Hackathon-2025"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Stephen Smith",
+        "change_reason": "Account Creation-AWSome Hackathon 2025"
+      }
+    },
+    {
+      "module_name": "aft-import-network-hub",
+      "filename": "network-hub.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+NetworkHub@breadfinancial.com",
+        "AccountName": "Network Hub",
+        "ManagedOrganizationalUnit": "Network Hub (ou-uieo-bj9yp3ux)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "Network",
+        "SSOUserLastName": "Hub"
+      },
+      "account_tags": {
+        "Account": "Network Hub"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Network Hub",
+        "change_reason": "Network Hub Account vending using AFT"
+      }
+    },
+    {
+      "module_name": "aft-import-auditaccount",
+      "filename": "ct-audit-account-import.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+Audit@breadfinancial.com",
+        "AccountName": "Audit",
+        "ManagedOrganizationalUnit": "Security",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "CT",
+        "SSOUserLastName": "Management"
+      },
+      "account_tags": {
+        "account": "Audit"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Sanjeev Prakasam",
+        "change_reason": "Import Audit Account in AFT"
+      }
+    },
+    {
+      "module_name": "governance_wellarchitectedframework_account",
+      "filename": "governance-wellarchitectedframework-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+wellarchitectedframework@breadfinancial.com",
+        "AccountName": "WellArchitectedFramework",
+        "ManagedOrganizationalUnit": "Governance (ou-uieo-xg2kigsc)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "WellArchitectedFramework",
+        "SSOUserLastName": "WellArchitectedFramework"
+      },
+      "account_tags": {
+        "Account": "WellArchitectedFramework",
+        "LastReprovision": "2025-08-20"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Josh Castillo",
+        "change_reason": "Create account for WellArchitectedFramework"
+      }
+    },
+    {
+      "module_name": "aft-create-sectooling",
+      "filename": "securitytooling-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+SecurityTooling@breadfinancial.com",
+        "AccountName": "Security Tooling",
+        "ManagedOrganizationalUnit": "Security Services (ou-uieo-7g45gukd)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "SecurityTooling",
+        "SSOUserLastName": "Management"
+      },
+      "account_tags": {
+        "Account": "SecurityTooling"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Sanjeev Prakasam",
+        "change_reason": "Create Security Tooling Account"
+      }
+    },
+    {
+      "module_name": "aft-import-aftaccount",
+      "filename": "ct-aft-account-import.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+AFT@breadfinancial.com",
+        "AccountName": "AFT",
+        "ManagedOrganizationalUnit": "AFT (ou-uieo-qvrtqpdl)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "CT",
+        "SSOUserLastName": "Management"
+      },
+      "account_tags": {
+        "account": "AFT"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Sanjeev Prakasam",
+        "change_reason": "Import AFT account in AFT"
+      }
+    },
+    {
+      "module_name": "enterprise_architecture_sandbox_account",
+      "filename": "enterprise-architecture-sandbox-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+EnterpriseArchitecture-sandbox@breadfinancial.com",
+        "AccountName": "EnterpriseArchitecture-sandbox",
+        "ManagedOrganizationalUnit": "Sandbox (ou-uieo-7akhobg8)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "EnterpriseArchitecture",
+        "SSOUserLastName": "Sandbox"
+      },
+      "account_tags": {
+        "Account": "EnterpriseArchitecture-sandbox"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Will Gunadi",
+        "change_reason": "Account Creation-EnterpriseArchitecture Sandbox"
+      }
+    },
+    {
+      "module_name": "aft-import-ctmgmt",
+      "filename": "ct-mgmt-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "AccountName": "bfh-mgmt",
+        "ManagedOrganizationalUnit": "Root",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "CT",
+        "SSOUserLastName": "Management"
+      },
+      "account_tags": {
+        "Account": "CT management"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Sanjeev Prakasam",
+        "change_reason": "Import a CT management in AFT"
+      }
+    },
+    {
+      "module_name": "aws_infrastructure_sandbox_account",
+      "filename": "awsinfrastructure-sandbox-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+AwsInfrastructure-sandbox@breadfinancial.com",
+        "AccountName": "AwsInfrastructure-sandbox",
+        "ManagedOrganizationalUnit": "Sandbox (ou-uieo-7akhobg8)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "AwsInfrastructure",
+        "SSOUserLastName": "Sandbox"
+      },
+      "account_tags": {
+        "Account": "AwsInfrastructure-sandbox"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Stephen Smith",
+        "change_reason": "Account Creation-AwsInfrastructure Sandbox"
+      }
+    },
+    {
+      "module_name": "oras-sandbox-account",
+      "filename": "oras-sandbox-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+oras-sandbox-sjs@breadfinancial.com",
+        "AccountName": "ORAS-Sandbox-SJS",
+        "ManagedOrganizationalUnit": "Sandbox (ou-uieo-7akhobg8)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "ORAS",
+        "SSOUserLastName": "Sandbox"
+      },
+      "account_tags": {
+        "account_type": "Sandbox\",",
+        "account_name": "ORAS-Sandbox-SJS"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Stephen J. Smith",
+        "change_reason": "sandbox account for exploring ORAS with ECR and Harness"
+      }
+    },
+    {
+      "module_name": "stackset-integrations-account",
+      "filename": "stackset-integrations-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+stackset-integrations@breadfinancial.com",
+        "AccountName": "StackSet Integrations",
+        "ManagedOrganizationalUnit": "Infrastructure (ou-uieo-oj5cr2m0)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "StackSet",
+        "SSOUserLastName": "Integrations"
+      },
+      "account_tags": {
+        "account_name": "StackSet Integrations"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Stephen J. Smith",
+        "change_reason": "Account for deploying stack sets via delegated admin"
+      }
+    },
+    {
+      "module_name": "aft-backup-admin",
+      "filename": "backup-admin-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+BackupAdmin@breadfinancial.com",
+        "AccountName": "Backup-Admin",
+        "ManagedOrganizationalUnit": "Centralized Backup (ou-uieo-vx72sxln)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "BackupAdmin",
+        "SSOUserLastName": "Management"
+      },
+      "account_tags": {
+        "account_type": "Backup\",",
+        "account_name": "Backup-Admin"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Sanjeev Prakasam",
+        "change_reason": "request backup admin account"
+      }
+    },
+    {
+      "module_name": "account_cloud_operations",
+      "filename": "cloud-operations.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+cloud-operations@breadfinancial.com",
+        "AccountName": "CloudOperations",
+        "ManagedOrganizationalUnit": "Operations (ou-uieo-b2ip9ve0)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "CloudOperations",
+        "SSOUserLastName": "Management"
+      },
+      "account_tags": {
+        "account_name": "CloudOperations"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Josh Castillo",
+        "change_reason": "CloudOperations Account Creation"
+      }
+    },
+    {
+      "module_name": "aft-create-identitycenter",
+      "filename": "identitycenter-account.tf",
+      "control_tower_parameters": {
+        "AccountEmail": "AwsAccount+IdentityCenter@breadfinancial.com",
+        "AccountName": "Identity Center",
+        "ManagedOrganizationalUnit": "Identity Management (ou-uieo-ggfx2i59)",
+        "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+        "SSOUserFirstName": "IdentityCenter",
+        "SSOUserLastName": "Management"
+      },
+      "account_tags": {
+        "Account": "IdentityCenter"
+      },
+      "change_management_parameters": {
+        "change_requested_by": "Sanjeev Prakasam",
+        "change_reason": "Create IdentityCenter Account"
+      }
+    }
+  ],
+  "comparison": {
+    "matched_accounts": [
+      {
+        "aft_request": {
+          "module_name": "aft-backup-vault",
+          "filename": "backup-vault-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+CentralBackupVault@breadfinancial.com",
+            "AccountName": "Central Backup Vault",
+            "ManagedOrganizationalUnit": "Centralized Backup (ou-uieo-vx72sxln)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "CentralBackupVault",
+            "SSOUserLastName": "Management"
+          },
+          "account_tags": {
+            "account_type": "Backup\",",
+            "account_name": "Central-Backup-Vault"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Sanjeev Prakasam",
+            "change_reason": "Central Backup Vault Account"
+          }
+        },
+        "aws_account": {
+          "id": "443370695612",
+          "name": "Central_Backup_Vault",
+          "profile": "Central_Backup_Vault_443370695612_admin",
+          "email": "AwsAccount+Central_Backup_Vault@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "centralized_secrets_management",
+          "filename": "Centralized-Secret-Management.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+Secrets-Management@breadfinancial.com",
+            "AccountName": "Secrets-Management",
+            "ManagedOrganizationalUnit": "Operations (ou-uieo-b2ip9ve0)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "Secrets",
+            "SSOUserLastName": "Management"
+          },
+          "account_tags": {
+            "Account": "Secrets-Management"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Stephen Smith",
+            "change_reason": "Account Creation-Secrets Management"
+          }
+        },
+        "aws_account": {
+          "id": "556180171418",
+          "name": "Secrets_Management",
+          "profile": "Secrets_Management_556180171418_admin",
+          "email": "AwsAccount+Secrets_Management@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "aft-kms-vault",
+          "filename": "kms-vault-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+CentralKMSVault@breadfinancial.com",
+            "AccountName": "Central KMS Vault",
+            "ManagedOrganizationalUnit": "Centralized Key Management (ou-uieo-z24s1pgl)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "CentralKMSVault",
+            "SSOUserLastName": "Management"
+          },
+          "account_tags": {
+            "account_type": "KMS\",",
+            "account_name": "Central-KMS-Vault"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Sanjeev Prakasam",
+            "change_reason": "Central KMS Vault"
+          }
+        },
+        "aws_account": {
+          "id": "976193251493",
+          "name": "Central_KMS_Vault",
+          "profile": "Central_KMS_Vault_976193251493_admin",
+          "email": "AwsAccount+Central_KMS_Vault@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "sdlc_uat_account",
+          "filename": "sdlc-uat-nwtesting-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+sdlc-uat-testing@breadfinancial.com",
+            "AccountName": "SDLC-UAT-Testing",
+            "ManagedOrganizationalUnit": "UAT (ou-uieo-zpp585sb)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "UAT-SDLC",
+            "SSOUserLastName": "Testing"
+          },
+          "account_tags": {
+            "Account": "sdlc-uat-testing"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Sanjeev Prakasam",
+            "change_reason": "SDLC UAT Account Creation,Account will be removed post tesing and validation"
+          }
+        },
+        "aws_account": {
+          "id": "805124255242",
+          "name": "SDLC_UAT_Testing",
+          "profile": "SDLC_UAT_Testing_805124255242_admin",
+          "email": "AwsAccount+SDLC_UAT_Testing@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "aft-import-logarchiveaccount",
+          "filename": "ct-logarchive-account-import.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+LogArchive@breadfinancial.com",
+            "AccountName": "Log Archive",
+            "ManagedOrganizationalUnit": "Security",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "CT",
+            "SSOUserLastName": "Management"
+          },
+          "account_tags": {
+            "account": "Log Archive"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Sanjeev Prakasam",
+            "change_reason": "Import Log Archive account in AFT"
+          }
+        },
+        "aws_account": {
+          "id": "463470955493",
+          "name": "Log_Archive",
+          "profile": "Log_Archive_463470955493_admin",
+          "email": "AwsAccount+Log_Archive@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "awsome_hackathon_2025_account",
+          "filename": "awsome-hackathon-2025-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+awsome-hackathon-2025@breadfinancial.com",
+            "AccountName": "AWSome-Hackathon-2025",
+            "ManagedOrganizationalUnit": "Sandbox (ou-uieo-7akhobg8)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "AWSome-Hackathon2025",
+            "SSOUserLastName": "AWSome-Hackathon2025"
+          },
+          "account_tags": {
+            "Account": "AWSome-Hackathon-2025"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Stephen Smith",
+            "change_reason": "Account Creation-AWSome Hackathon 2025"
+          }
+        },
+        "aws_account": {
+          "id": "071126865178",
+          "name": "AWSome_Hackathon_2025",
+          "profile": "AWSome_Hackathon_2025_071126865178_admin",
+          "email": "AwsAccount+AWSome_Hackathon_2025@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "aft-import-network-hub",
+          "filename": "network-hub.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+NetworkHub@breadfinancial.com",
+            "AccountName": "Network Hub",
+            "ManagedOrganizationalUnit": "Network Hub (ou-uieo-bj9yp3ux)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "Network",
+            "SSOUserLastName": "Hub"
+          },
+          "account_tags": {
+            "Account": "Network Hub"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Network Hub",
+            "change_reason": "Network Hub Account vending using AFT"
+          }
+        },
+        "aws_account": {
+          "id": "207567762220",
+          "name": "Network_Hub",
+          "profile": "Network_Hub_207567762220_admin",
+          "email": "AwsAccount+Network_Hub@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "aft-import-auditaccount",
+          "filename": "ct-audit-account-import.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+Audit@breadfinancial.com",
+            "AccountName": "Audit",
+            "ManagedOrganizationalUnit": "Security",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "CT",
+            "SSOUserLastName": "Management"
+          },
+          "account_tags": {
+            "account": "Audit"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Sanjeev Prakasam",
+            "change_reason": "Import Audit Account in AFT"
+          }
+        },
+        "aws_account": {
+          "id": "825765384428",
+          "name": "Audit",
+          "profile": "Audit_825765384428_admin",
+          "email": "AwsAccount+Audit@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "governance_wellarchitectedframework_account",
+          "filename": "governance-wellarchitectedframework-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+wellarchitectedframework@breadfinancial.com",
+            "AccountName": "WellArchitectedFramework",
+            "ManagedOrganizationalUnit": "Governance (ou-uieo-xg2kigsc)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "WellArchitectedFramework",
+            "SSOUserLastName": "WellArchitectedFramework"
+          },
+          "account_tags": {
+            "Account": "WellArchitectedFramework",
+            "LastReprovision": "2025-08-20"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Josh Castillo",
+            "change_reason": "Create account for WellArchitectedFramework"
+          }
+        },
+        "aws_account": {
+          "id": "860829110296",
+          "name": "WellArchitectedFramework",
+          "profile": "WellArchitectedFramework_860829110296_admin",
+          "email": "AwsAccount+WellArchitectedFramework@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "aft-create-sectooling",
+          "filename": "securitytooling-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+SecurityTooling@breadfinancial.com",
+            "AccountName": "Security Tooling",
+            "ManagedOrganizationalUnit": "Security Services (ou-uieo-7g45gukd)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "SecurityTooling",
+            "SSOUserLastName": "Management"
+          },
+          "account_tags": {
+            "Account": "SecurityTooling"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Sanjeev Prakasam",
+            "change_reason": "Create Security Tooling Account"
+          }
+        },
+        "aws_account": {
+          "id": "794038215373",
+          "name": "Security_Tooling",
+          "profile": "Security_Tooling_794038215373_admin",
+          "email": "AwsAccount+Security_Tooling@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "aft-import-aftaccount",
+          "filename": "ct-aft-account-import.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+AFT@breadfinancial.com",
+            "AccountName": "AFT",
+            "ManagedOrganizationalUnit": "AFT (ou-uieo-qvrtqpdl)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "CT",
+            "SSOUserLastName": "Management"
+          },
+          "account_tags": {
+            "account": "AFT"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Sanjeev Prakasam",
+            "change_reason": "Import AFT account in AFT"
+          }
+        },
+        "aws_account": {
+          "id": "474668427263",
+          "name": "AFT",
+          "profile": "AFT_474668427263_admin",
+          "email": "AwsAccount+AFT@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "enterprise_architecture_sandbox_account",
+          "filename": "enterprise-architecture-sandbox-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+EnterpriseArchitecture-sandbox@breadfinancial.com",
+            "AccountName": "EnterpriseArchitecture-sandbox",
+            "ManagedOrganizationalUnit": "Sandbox (ou-uieo-7akhobg8)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "EnterpriseArchitecture",
+            "SSOUserLastName": "Sandbox"
+          },
+          "account_tags": {
+            "Account": "EnterpriseArchitecture-sandbox"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Will Gunadi",
+            "change_reason": "Account Creation-EnterpriseArchitecture Sandbox"
+          }
+        },
+        "aws_account": {
+          "id": "503837496436",
+          "name": "EnterpriseArchitecture_sandbox",
+          "profile": "EnterpriseArchitecture_sandbox_503837496436_admin",
+          "email": "AwsAccount+EnterpriseArchitecture_sandbox@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "aft-import-ctmgmt",
+          "filename": "ct-mgmt-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "AccountName": "bfh-mgmt",
+            "ManagedOrganizationalUnit": "Root",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "CT",
+            "SSOUserLastName": "Management"
+          },
+          "account_tags": {
+            "Account": "CT management"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Sanjeev Prakasam",
+            "change_reason": "Import a CT management in AFT"
+          }
+        },
+        "aws_account": {
+          "id": "739275453939",
+          "name": "bfh_mgmt",
+          "profile": "bfh_mgmt_739275453939_admin",
+          "email": "AwsAccount+bfh_mgmt@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "aws_infrastructure_sandbox_account",
+          "filename": "awsinfrastructure-sandbox-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+AwsInfrastructure-sandbox@breadfinancial.com",
+            "AccountName": "AwsInfrastructure-sandbox",
+            "ManagedOrganizationalUnit": "Sandbox (ou-uieo-7akhobg8)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "AwsInfrastructure",
+            "SSOUserLastName": "Sandbox"
+          },
+          "account_tags": {
+            "Account": "AwsInfrastructure-sandbox"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Stephen Smith",
+            "change_reason": "Account Creation-AwsInfrastructure Sandbox"
+          }
+        },
+        "aws_account": {
+          "id": "960682159332",
+          "name": "AwsInfrastructure_sandbox",
+          "profile": "AwsInfrastructure_sandbox_960682159332_admin",
+          "email": "AwsAccount+AwsInfrastructure_sandbox@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "oras-sandbox-account",
+          "filename": "oras-sandbox-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+oras-sandbox-sjs@breadfinancial.com",
+            "AccountName": "ORAS-Sandbox-SJS",
+            "ManagedOrganizationalUnit": "Sandbox (ou-uieo-7akhobg8)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "ORAS",
+            "SSOUserLastName": "Sandbox"
+          },
+          "account_tags": {
+            "account_type": "Sandbox\",",
+            "account_name": "ORAS-Sandbox-SJS"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Stephen J. Smith",
+            "change_reason": "sandbox account for exploring ORAS with ECR and Harness"
+          }
+        },
+        "aws_account": {
+          "id": "037038093176",
+          "name": "ORAS_Sandbox_SJS",
+          "profile": "ORAS_Sandbox_SJS_037038093176_admin",
+          "email": "AwsAccount+ORAS_Sandbox_SJS@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "stackset-integrations-account",
+          "filename": "stackset-integrations-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+stackset-integrations@breadfinancial.com",
+            "AccountName": "StackSet Integrations",
+            "ManagedOrganizationalUnit": "Infrastructure (ou-uieo-oj5cr2m0)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "StackSet",
+            "SSOUserLastName": "Integrations"
+          },
+          "account_tags": {
+            "account_name": "StackSet Integrations"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Stephen J. Smith",
+            "change_reason": "Account for deploying stack sets via delegated admin"
+          }
+        },
+        "aws_account": {
+          "id": "239658749012",
+          "name": "StackSet_Integrations",
+          "profile": "StackSet_Integrations_239658749012_admin",
+          "email": "AwsAccount+StackSet_Integrations@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "aft-backup-admin",
+          "filename": "backup-admin-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+BackupAdmin@breadfinancial.com",
+            "AccountName": "Backup-Admin",
+            "ManagedOrganizationalUnit": "Centralized Backup (ou-uieo-vx72sxln)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "BackupAdmin",
+            "SSOUserLastName": "Management"
+          },
+          "account_tags": {
+            "account_type": "Backup\",",
+            "account_name": "Backup-Admin"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Sanjeev Prakasam",
+            "change_reason": "request backup admin account"
+          }
+        },
+        "aws_account": {
+          "id": "448049813044",
+          "name": "Backup_Admin",
+          "profile": "Backup_Admin_448049813044_admin",
+          "email": "AwsAccount+Backup_Admin@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "account_cloud_operations",
+          "filename": "cloud-operations.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+cloud-operations@breadfinancial.com",
+            "AccountName": "CloudOperations",
+            "ManagedOrganizationalUnit": "Operations (ou-uieo-b2ip9ve0)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "CloudOperations",
+            "SSOUserLastName": "Management"
+          },
+          "account_tags": {
+            "account_name": "CloudOperations"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Josh Castillo",
+            "change_reason": "CloudOperations Account Creation"
+          }
+        },
+        "aws_account": {
+          "id": "920411896753",
+          "name": "CloudOperations",
+          "profile": "CloudOperations_920411896753_admin",
+          "email": "AwsAccount+CloudOperations@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      },
+      {
+        "aft_request": {
+          "module_name": "aft-create-identitycenter",
+          "filename": "identitycenter-account.tf",
+          "control_tower_parameters": {
+            "AccountEmail": "AwsAccount+IdentityCenter@breadfinancial.com",
+            "AccountName": "Identity Center",
+            "ManagedOrganizationalUnit": "Identity Management (ou-uieo-ggfx2i59)",
+            "SSOUserEmail": "AwsAccount+MGMT@breadfinancial.com",
+            "SSOUserFirstName": "IdentityCenter",
+            "SSOUserLastName": "Management"
+          },
+          "account_tags": {
+            "Account": "IdentityCenter"
+          },
+          "change_management_parameters": {
+            "change_requested_by": "Sanjeev Prakasam",
+            "change_reason": "Create IdentityCenter Account"
+          }
+        },
+        "aws_account": {
+          "id": "717279730613",
+          "name": "Identity_Center",
+          "profile": "Identity_Center_717279730613_admin",
+          "email": "AwsAccount+Identity_Center@breadfinancial.com"
+        },
+        "match_type": "name_normalized"
+      }
+    ],
+    "unmatched_requests": [],
+    "unmatched_aws_accounts": [
+      {
+        "id": "925774240130",
+        "name": "CASTSoftware_dev",
+        "profile": "CASTSoftware_dev_925774240130_admin",
+        "email": "AwsAccount+CASTSoftware_dev@breadfinancial.com"
+      },
+      {
+        "id": "373317459136",
+        "name": "Certificates_Mgmt",
+        "profile": "Certificates_Mgmt_373317459136_admin",
+        "email": "AwsAccount+Certificates_Mgmt@breadfinancial.com"
+      },
+      {
+        "id": "285529797488",
+        "name": "DataAnalyticsDev",
+        "profile": "DataAnalyticsDev_285529797488_admin",
+        "email": "AwsAccount+DataAnalyticsDev@breadfinancial.com"
+      },
+      {
+        "id": "203236040739",
+        "name": "FinOps",
+        "profile": "FinOps_203236040739_admin",
+        "email": "AwsAccount+FinOps@breadfinancial.com"
+      },
+      {
+        "id": "273268177664",
+        "name": "IgelUmsDev",
+        "profile": "IgelUmsDev_273268177664_admin",
+        "email": "AwsAccount+IgelUmsDev@breadfinancial.com"
+      },
+      {
+        "id": "486295461085",
+        "name": "IgelUmsProd",
+        "profile": "IgelUmsProd_486295461085_admin",
+        "email": "AwsAccount+IgelUmsProd@breadfinancial.com"
+      },
+      {
+        "id": "837098208196",
+        "name": "InfrastructureObservability",
+        "profile": "InfrastructureObservability_837098208196_admin",
+        "email": "AwsAccount+InfrastructureObservability@breadfinancial.com"
+      },
+      {
+        "id": "836217041434",
+        "name": "InfrastructureObservabilityDev",
+        "profile": "InfrastructureObservabilityDev_836217041434_admin",
+        "email": "AwsAccount+InfrastructureObservabilityDev@breadfinancial.com"
+      },
+      {
+        "id": "185869891420",
+        "name": "InfrastructureSharedServices",
+        "profile": "InfrastructureSharedServices_185869891420_admin",
+        "email": "AwsAccount+InfrastructureSharedServices@breadfinancial.com"
+      },
+      {
+        "id": "015647311640",
+        "name": "InfrastructureSharedServicesDev",
+        "profile": "InfrastructureSharedServicesDev_015647311640_admin",
+        "email": "AwsAccount+InfrastructureSharedServicesDev@breadfinancial.com"
+      },
+      {
+        "id": "981686515035",
+        "name": "MasterDataManagement_dev",
+        "profile": "MasterDataManagement_dev_981686515035_admin",
+        "email": "AwsAccount+MasterDataManagement_dev@breadfinancial.com"
+      },
+      {
+        "id": "210519480272",
+        "name": "Migration_Tooling",
+        "profile": "Migration_Tooling_210519480272_admin",
+        "email": "AwsAccount+Migration_Tooling@breadfinancial.com"
+      },
+      {
+        "id": "397505358192",
+        "name": "SDLC_DEV_Analytics",
+        "profile": "SDLC_DEV_Analytics_397505358192_admin",
+        "email": "AwsAccount+SDLC_DEV_Analytics@breadfinancial.com"
+      },
+      {
+        "id": "204620195111",
+        "name": "SDLC_DEV_CAPEX_REQUESTS",
+        "profile": "SDLC_DEV_CAPEX_REQUESTS_204620195111_admin",
+        "email": "AwsAccount+SDLC_DEV_CAPEX_REQUESTS@breadfinancial.com"
+      },
+      {
+        "id": "121899786920",
+        "name": "SDLC_DEV_Cbc_Api",
+        "profile": "SDLC_DEV_Cbc_Api_121899786920_admin",
+        "email": "AwsAccount+SDLC_DEV_Cbc_Api@breadfinancial.com"
+      },
+      {
+        "id": "164722634029",
+        "name": "SDLC_DEV_Certificates_Mgmt",
+        "profile": "SDLC_DEV_Certificates_Mgmt_164722634029_admin",
+        "email": "AwsAccount+SDLC_DEV_Certificates_Mgmt@breadfinancial.com"
+      },
+      {
+        "id": "883922753412",
+        "name": "SDLC_DEV_EasyPay",
+        "profile": "SDLC_DEV_EasyPay_883922753412_admin",
+        "email": "AwsAccount+SDLC_DEV_EasyPay@breadfinancial.com"
+      },
+      {
+        "id": "913508319555",
+        "name": "SDLC_DEV_Legaldocs",
+        "profile": "SDLC_DEV_Legaldocs_913508319555_admin",
+        "email": "AwsAccount+SDLC_DEV_Legaldocs@breadfinancial.com"
+      },
+      {
+        "id": "981476178331",
+        "name": "SDLC_DEV_Ngac",
+        "profile": "SDLC_DEV_Ngac_981476178331_admin",
+        "email": "AwsAccount+SDLC_DEV_Ngac@breadfinancial.com"
+      },
+      {
+        "id": "081130952466",
+        "name": "SDLC_DEV_OnsiteCardIssuance",
+        "profile": "SDLC_DEV_OnsiteCardIssuance_081130952466_admin",
+        "email": "AwsAccount+SDLC_DEV_OnsiteCardIssuance@breadfinancial.com"
+      },
+      {
+        "id": "742858819787",
+        "name": "SDLC_DEV_Prescreen",
+        "profile": "SDLC_DEV_Prescreen_742858819787_admin",
+        "email": "AwsAccount+SDLC_DEV_Prescreen@breadfinancial.com"
+      },
+      {
+        "id": "995673420311",
+        "name": "SDLC_DEV_RTI",
+        "profile": "SDLC_DEV_RTI_995673420311_admin",
+        "email": "AwsAccount+SDLC_DEV_RTI@breadfinancial.com"
+      },
+      {
+        "id": "064197590150",
+        "name": "SDLC_DEV_Rewards_Api",
+        "profile": "SDLC_DEV_Rewards_Api_064197590150_admin",
+        "email": "AwsAccount+SDLC_DEV_Rewards_Api@breadfinancial.com"
+      },
+      {
+        "id": "246881155048",
+        "name": "SDLC_DEV_SMARTMART",
+        "profile": "SDLC_DEV_SMARTMART_246881155048_admin",
+        "email": "AwsAccount+SDLC_DEV_SMARTMART@breadfinancial.com"
+      },
+      {
+        "id": "893061506494",
+        "name": "SDLC_DEV_Testing",
+        "profile": "SDLC_DEV_Testing_893061506494_admin",
+        "email": "AwsAccount+SDLC_DEV_Testing@breadfinancial.com"
+      },
+      {
+        "id": "381293814657",
+        "name": "SDLC_QA_CAPEX_REQUESTS",
+        "profile": "SDLC_QA_CAPEX_REQUESTS_381293814657_admin",
+        "email": "AwsAccount+SDLC_QA_CAPEX_REQUESTS@breadfinancial.com"
+      },
+      {
+        "id": "269855572980",
+        "name": "SDLC_QA_CBC_API",
+        "profile": "SDLC_QA_CBC_API_269855572980_admin",
+        "email": "AwsAccount+SDLC_QA_CBC_API@breadfinancial.com"
+      },
+      {
+        "id": "627073650258",
+        "name": "SDLC_QA_EASYPAY",
+        "profile": "SDLC_QA_EASYPAY_627073650258_admin",
+        "email": "AwsAccount+SDLC_QA_EASYPAY@breadfinancial.com"
+      },
+      {
+        "id": "145411223045",
+        "name": "SDLC_QA_LEGALDOCS",
+        "profile": "SDLC_QA_LEGALDOCS_145411223045_admin",
+        "email": "AwsAccount+SDLC_QA_LEGALDOCS@breadfinancial.com"
+      },
+      {
+        "id": "465733921982",
+        "name": "SDLC_QA_NgAC",
+        "profile": "SDLC_QA_NgAC_465733921982_admin",
+        "email": "AwsAccount+SDLC_QA_NgAC@breadfinancial.com"
+      },
+      {
+        "id": "327903111215",
+        "name": "SDLC_QA_OnsiteCardIssuance",
+        "profile": "SDLC_QA_OnsiteCardIssuance_327903111215_admin",
+        "email": "AwsAccount+SDLC_QA_OnsiteCardIssuance@breadfinancial.com"
+      },
+      {
+        "id": "972067303227",
+        "name": "SDLC_QA_Prescreen",
+        "profile": "SDLC_QA_Prescreen_972067303227_admin",
+        "email": "AwsAccount+SDLC_QA_Prescreen@breadfinancial.com"
+      },
+      {
+        "id": "804055905587",
+        "name": "SDLC_QA_REWARDS_API",
+        "profile": "SDLC_QA_REWARDS_API_804055905587_admin",
+        "email": "AwsAccount+SDLC_QA_REWARDS_API@breadfinancial.com"
+      },
+      {
+        "id": "149731129395",
+        "name": "SDLC_QA_RTI",
+        "profile": "SDLC_QA_RTI_149731129395_admin",
+        "email": "AwsAccount+SDLC_QA_RTI@breadfinancial.com"
+      },
+      {
+        "id": "075318387613",
+        "name": "SDLC_QA_SMARTMART",
+        "profile": "SDLC_QA_SMARTMART_075318387613_admin",
+        "email": "AwsAccount+SDLC_QA_SMARTMART@breadfinancial.com"
+      },
+      {
+        "id": "333053098962",
+        "name": "SDLC_SIT_EASYPAY",
+        "profile": "SDLC_SIT_EASYPAY_333053098962_admin",
+        "email": "AwsAccount+SDLC_SIT_EASYPAY@breadfinancial.com"
+      },
+      {
+        "id": "425495132039",
+        "name": "SDLC_SIT_LEGALDOCS",
+        "profile": "SDLC_SIT_LEGALDOCS_425495132039_admin",
+        "email": "AwsAccount+SDLC_SIT_LEGALDOCS@breadfinancial.com"
+      },
+      {
+        "id": "979130301917",
+        "name": "SDLC_SIT_NgAC",
+        "profile": "SDLC_SIT_NgAC_979130301917_admin",
+        "email": "AwsAccount+SDLC_SIT_NgAC@breadfinancial.com"
+      },
+      {
+        "id": "838220668029",
+        "name": "SDLC_UAT_CAPEX_REQUESTS",
+        "profile": "SDLC_UAT_CAPEX_REQUESTS_838220668029_admin",
+        "email": "AwsAccount+SDLC_UAT_CAPEX_REQUESTS@breadfinancial.com"
+      },
+      {
+        "id": "926303510289",
+        "name": "SDLC_UAT_CBC_API",
+        "profile": "SDLC_UAT_CBC_API_926303510289_admin",
+        "email": "AwsAccount+SDLC_UAT_CBC_API@breadfinancial.com"
+      },
+      {
+        "id": "980104891822",
+        "name": "SDLC_UAT_EASYPAY",
+        "profile": "SDLC_UAT_EASYPAY_980104891822_admin",
+        "email": "AwsAccount+SDLC_UAT_EASYPAY@breadfinancial.com"
+      },
+      {
+        "id": "273265662812",
+        "name": "SDLC_UAT_LEGALDOCS",
+        "profile": "SDLC_UAT_LEGALDOCS_273265662812_admin",
+        "email": "AwsAccount+SDLC_UAT_LEGALDOCS@breadfinancial.com"
+      },
+      {
+        "id": "402314752012",
+        "name": "SDLC_UAT_NgAC",
+        "profile": "SDLC_UAT_NgAC_402314752012_admin",
+        "email": "AwsAccount+SDLC_UAT_NgAC@breadfinancial.com"
+      },
+      {
+        "id": "852100867763",
+        "name": "SDLC_UAT_OnsiteCardIssuance",
+        "profile": "SDLC_UAT_OnsiteCardIssuance_852100867763_admin",
+        "email": "AwsAccount+SDLC_UAT_OnsiteCardIssuance@breadfinancial.com"
+      },
+      {
+        "id": "927311782752",
+        "name": "SDLC_UAT_PRESCREEN",
+        "profile": "SDLC_UAT_PRESCREEN_927311782752_admin",
+        "email": "AwsAccount+SDLC_UAT_PRESCREEN@breadfinancial.com"
+      },
+      {
+        "id": "587210148123",
+        "name": "SDLC_UAT_REWARDS_API",
+        "profile": "SDLC_UAT_REWARDS_API_587210148123_admin",
+        "email": "AwsAccount+SDLC_UAT_REWARDS_API@breadfinancial.com"
+      },
+      {
+        "id": "717058204145",
+        "name": "SDLC_UAT_RTI",
+        "profile": "SDLC_UAT_RTI_717058204145_admin",
+        "email": "AwsAccount+SDLC_UAT_RTI@breadfinancial.com"
+      },
+      {
+        "id": "399605429009",
+        "name": "SDLC_UAT_SMARTMART",
+        "profile": "SDLC_UAT_SMARTMART_399605429009_admin",
+        "email": "AwsAccount+SDLC_UAT_SMARTMART@breadfinancial.com"
+      },
+      {
+        "id": "807379992595",
+        "name": "SharedServices_Harness",
+        "profile": "SharedServices_Harness_807379992595_admin",
+        "email": "AwsAccount+SharedServices_Harness@breadfinancial.com"
+      },
+      {
+        "id": "795438191304",
+        "name": "SharedServices_SRE",
+        "profile": "SharedServices_SRE_795438191304_admin",
+        "email": "AwsAccount+SharedServices_SRE@breadfinancial.com"
+      },
+      {
+        "id": "422228628991",
+        "name": "SharedServices_imagemanagement",
+        "profile": "SharedServices_imagemanagement_422228628991_admin",
+        "email": "AwsAccount+SharedServices_imagemanagement@breadfinancial.com"
+      },
+      {
+        "id": "042417219076",
+        "name": "confluent_prod",
+        "profile": "confluent_prod_042417219076_admin",
+        "email": "AwsAccount+confluent_prod@breadfinancial.com"
+      },
+      {
+        "id": "081047269091",
+        "name": "confluent_nonprod",
+        "profile": "confluent_nonprod_081047269091_admin",
+        "email": "AwsAccount+confluent_nonprod@breadfinancial.com"
+      },
+      {
+        "id": "206578774674",
+        "name": "confluent_dev",
+        "profile": "confluent_dev_206578774674_admin",
+        "email": "AwsAccount+confluent_dev@breadfinancial.com"
+      },
+      {
+        "id": "553455761466",
+        "name": "MasterDataManagement_prd",
+        "profile": "MasterDataManagement_prd_553455761466_admin",
+        "email": "AwsAccount+MasterDataManagement_prd@breadfinancial.com"
+      },
+      {
+        "id": "603470018084",
+        "name": "MasterDataManagement_preprd",
+        "profile": "MasterDataManagement_preprd_603470018084_admin",
+        "email": "AwsAccount+MasterDataManagement_preprd@breadfinancial.com"
+      },
+      {
+        "id": "728671796370",
+        "name": "MasterDataManagement_sit",
+        "profile": "MasterDataManagement_sit_728671796370_admin",
+        "email": "AwsAccount+MasterDataManagement_sit@breadfinancial.com"
+      },
+      {
+        "id": "770353437842",
+        "name": "CentralizedBackup_CommvaultArchives",
+        "profile": "CentralizedBackup_CommvaultArchives_770353437842_admin",
+        "email": "AwsAccount+CentralizedBackup_CommvaultArchives@breadfinancial.com"
+      },
+      {
+        "id": "967660016041",
+        "name": "StrongDM",
+        "profile": "StrongDM_967660016041_admin",
+        "email": "AwsAccount+StrongDM@breadfinancial.com"
+      }
+    ],
+    "naming_patterns": {
+      "exact_matches": 4,
+      "case_differences": 0,
+      "format_differences": 15,
+      "examples": [
+        {
+          "aft": "Central Backup Vault",
+          "aws": "Central_Backup_Vault",
+          "type": "format_difference"
+        },
+        {
+          "aft": "Secrets-Management",
+          "aws": "Secrets_Management",
+          "type": "format_difference"
+        },
+        {
+          "aft": "Central KMS Vault",
+          "aws": "Central_KMS_Vault",
+          "type": "format_difference"
+        },
+        {
+          "aft": "SDLC-UAT-Testing",
+          "aws": "SDLC_UAT_Testing",
+          "type": "format_difference"
+        },
+        {
+          "aft": "Log Archive",
+          "aws": "Log_Archive",
+          "type": "format_difference"
+        },
+        {
+          "aft": "AWSome-Hackathon-2025",
+          "aws": "AWSome_Hackathon_2025",
+          "type": "format_difference"
+        },
+        {
+          "aft": "Network Hub",
+          "aws": "Network_Hub",
+          "type": "format_difference"
+        },
+        {
+          "aft": "Security Tooling",
+          "aws": "Security_Tooling",
+          "type": "format_difference"
+        },
+        {
+          "aft": "EnterpriseArchitecture-sandbox",
+          "aws": "EnterpriseArchitecture_sandbox",
+          "type": "format_difference"
+        },
+        {
+          "aft": "bfh-mgmt",
+          "aws": "bfh_mgmt",
+          "type": "format_difference"
+        },
+        {
+          "aft": "AwsInfrastructure-sandbox",
+          "aws": "AwsInfrastructure_sandbox",
+          "type": "format_difference"
+        },
+        {
+          "aft": "ORAS-Sandbox-SJS",
+          "aws": "ORAS_Sandbox_SJS",
+          "type": "format_difference"
+        },
+        {
+          "aft": "StackSet Integrations",
+          "aws": "StackSet_Integrations",
+          "type": "format_difference"
+        },
+        {
+          "aft": "Backup-Admin",
+          "aws": "Backup_Admin",
+          "type": "format_difference"
+        },
+        {
+          "aft": "Identity Center",
+          "aws": "Identity_Center",
+          "type": "format_difference"
+        }
+      ]
+    }
+  }
+}
