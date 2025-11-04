@@ -1,0 +1,45 @@
+aws imagebuilder list-image-pipeline-images \
+  --image-pipeline-arn "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022" \
+  --region us-east-2 \
+  --profile SharedServices_imagemanagement_422228628991_admin \
+  --query 'imageSummaryList[*].{ARN:arn,Version:version,Status:imageStatus}' \
+  --output json
+
+Output:
+[
+    {
+        "ARN": "arn:aws:imagebuilder:us-east-2:422228628991:image/winserver2022/1.0.1/1",
+        "Version": "1.0.1/1",
+        "Status": null
+    },
+    {
+        "ARN": "arn:aws:imagebuilder:us-east-2:422228628991:image/winserver2022/1.0.2/1",
+        "Version": "1.0.2/1",
+        "Status": null
+    },
+    {
+        "ARN": "arn:aws:imagebuilder:us-east-2:422228628991:image/winserver2022/1.0.2/2",
+        "Version": "1.0.2/2",
+        "Status": null
+    },
+    {
+        "ARN": "arn:aws:imagebuilder:us-east-2:422228628991:image/winserver2022/1.0.2/3",
+        "Version": "1.0.2/3",
+        "Status": null
+    },
+    {
+        "ARN": "arn:aws:imagebuilder:us-east-2:422228628991:image/winserver2022/1.0.3/1",
+        "Version": "1.0.3/1",
+        "Status": null
+    },
+    {
+        "ARN": "arn:aws:imagebuilder:us-east-2:422228628991:image/winserver2022/1.0.3/2",
+        "Version": "1.0.3/2",
+        "Status": null
+    },
+    {
+        "ARN": "arn:aws:imagebuilder:us-east-2:422228628991:image/winserver2022/1.0.3/3",
+        "Version": "1.0.3/3",
+        "Status": null
+    }
+]

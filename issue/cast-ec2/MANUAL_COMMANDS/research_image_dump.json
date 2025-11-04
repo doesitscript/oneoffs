@@ -1,0 +1,574 @@
+/opt/homebrew/bin/aws imagebuilder get-image --image-build-version-arn "arn:aws:imagebuilder:us-east-2:422228628991:image/winserver2022/1.0.3/3" --region "us-east-2" --output json
+
+/opt/homebrew/Cellar/awscli/2.31.3/libexec/lib/python3.13/site-packages/urllib3/connectionpool.py: 1064: InsecureRequestWarning: Unverified HTTPS requ
+est is being made to host 'imagebuilder.us-east-2.amazonaws.com'. Adding certificate verification is strongly advised. See: https: //urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings                                                                                                       warnings.warn(
+aws imagebuilder get-image --image-build-version-arn "arn:aws:imagebuilder:us-east-2:422228628991:image/winserver2022/1.0.3/3" --region "us-east-2" --output json
+{
+    "requestId": "423db9cc-6d47-45d6-aed1-9f7e86c7d131",
+    "image": {
+        "arn": "arn:aws:imagebuilder:us-east-2:422228628991:image/winserver2022/1.0.3/3",
+        "type": "AMI",
+        "name": "WinServer2022",
+        "version": "1.0.3/3",
+        "platform": "Windows",
+        "enhancedImageMetadataEnabled": true,
+        "osVersion": "Microsoft Windows Server 2022",
+        "state": {
+            "status": "AVAILABLE"
+        },
+        "imageRecipe": {
+            "arn": "arn:aws:imagebuilder:us-east-2:422228628991:image-recipe/winserver2022/1.0.3",
+            "name": "WinServer2022",
+            "description": "WinServer2022-Ec2 Image Recipe",
+            "platform": "Windows",
+            "version": "1.0.3",
+            "components": [
+                {
+                    "componentArn": "arn:aws:imagebuilder:us-east-2:aws:component/amazon-cloudwatch-agent-windows/1.0.0/1"
+                },
+                {
+                    "componentArn": "arn:aws:imagebuilder:us-east-2:aws:component/aws-cli-version-2-windows/1.0.0/1"
+                },
+                {
+                    "componentArn": "arn:aws:imagebuilder:us-east-2:422228628991:component/step1-setup-workingdirectory-windows/1.0.2/1"
+                },
+                {
+                    "componentArn": "arn:aws:imagebuilder:us-east-2:422228628991:component/step2-s3-download-windows/1.0.3/1"
+                },
+                {
+                    "componentArn": "arn:aws:imagebuilder:us-east-2:422228628991:component/step3-crowdstrike-installation-windows/1.0.1/1"
+                },
+                {
+                    "componentArn": "arn:aws:imagebuilder:us-east-2:422228628991:component/step4-qualys-installation-windows/1.0.2/1"
+                },
+                {
+                    "componentArn": "arn:aws:imagebuilder:us-east-2:422228628991:component/step5-mecm-staging-windows/1.0.0/1"
+                },
+                {
+                    "componentArn": "arn:aws:imagebuilder:us-east-2:422228628991:component/step6-startup-job-setup-windows/1.0.2/1"
+                }
+            ],
+            "parentImage": "arn:aws:imagebuilder:us-east-2:aws:image/windows-server-2022-english-full-base-x86/2025.10.15/1",
+            "blockDeviceMappings": [
+                {
+                    "deviceName": "/dev/sda1",
+                    "ebs": {
+                        "encrypted": true,
+                        "deleteOnTermination": true,
+                        "iops": 3000,
+                        "kmsKeyId": "arn:aws:kms:us-east-2:422228628991:alias/image-key",
+                        "volumeSize": 100,
+                        "volumeType": "gp3",
+                        "throughput": 125
+                    }
+                }
+            ],
+            "dateCreated": "2025-10-10T18:31:17.073Z",
+            "tags": {
+                "bfh:environment": "prd",
+                "bfh:support-group": "bfh.awsinfrastructure"
+            },
+            "workingDirectory": "C:/",
+            "additionalInstanceConfiguration": {}
+        },
+        "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+        "infrastructureConfiguration": {
+            "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+            "name": "ec2-image-builder",
+            "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+            "instanceTypes": [
+                "t3.medium"
+            ],
+            "instanceProfileName": "ec2-image-builder-instance-profile",
+            "securityGroupIds": [
+                "sg-0abb038a635a6127e"
+            ],
+            "subnetId": "subnet-0696ffc1ce55e5839",
+            "keyPair": "image-builder-keypair",
+            "terminateInstanceOnFailure": false,
+            "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+            "dateCreated": "2025-09-02T15:53:52.625Z",
+            : "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+            "infrastructureConfiguration": {
+                "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                "name": "ec2-image-builder",
+                "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                "instanceTypes": [
+                    "t3.medium"
+                ],
+                "instanceProfileName": "ec2-image-builder-instance-profile",
+                "securityGroupIds": [
+                    "sg-0abb038a635a6127e"
+                ],
+                "subnetId": "subnet-0696ffc1ce55e5839",
+                "keyPair": "image-builder-keypair",
+                "terminateInstanceOnFailure": false,
+                "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                "dateCreated": "2025-09-02T15:53:52.625Z",
+                "dateUpdated": "2025-09-03T18:12:23.581Z",
+                : "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                "infrastructureConfiguration": {
+                    "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                    "name": "ec2-image-builder",
+                    "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                    "instanceTypes": [
+                        "t3.medium"
+                    ],
+                    "instanceProfileName": "ec2-image-builder-instance-profile",
+                    "securityGroupIds": [
+                        "sg-0abb038a635a6127e"
+                    ],
+                    "subnetId": "subnet-0696ffc1ce55e5839",
+                    "keyPair": "image-builder-keypair",
+                    "terminateInstanceOnFailure": false,
+                    "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                    "dateCreated": "2025-09-02T15:53:52.625Z",
+                    "dateUpdated": "2025-09-03T18:12:23.581Z",
+                    "tags": {
+                        : "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                        "infrastructureConfiguration": {
+                            "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                            "name": "ec2-image-builder",
+                            "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                            "instanceTypes": [
+                                "t3.medium"
+                            ],
+                            "instanceProfileName": "ec2-image-builder-instance-profile",
+                            "securityGroupIds": [
+                                "sg-0abb038a635a6127e"
+                            ],
+                            "subnetId": "subnet-0696ffc1ce55e5839",
+                            "keyPair": "image-builder-keypair",
+                            "terminateInstanceOnFailure": false,
+                            "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                            "dateCreated": "2025-09-02T15:53:52.625Z",
+                            "dateUpdated": "2025-09-03T18:12:23.581Z",
+                            "tags": {
+                                "bfh:environment": "prd",
+                                : "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                                "infrastructureConfiguration": {
+                                    "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                    "name": "ec2-image-builder",
+                                    "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                    "instanceTypes": [
+                                        "t3.medium"
+                                    ],
+                                    "instanceProfileName": "ec2-image-builder-instance-profile",
+                                    "securityGroupIds": [
+                                        "sg-0abb038a635a6127e"
+                                    ],
+                                    "subnetId": "subnet-0696ffc1ce55e5839",
+                                    "keyPair": "image-builder-keypair",
+                                    "terminateInstanceOnFailure": false,
+                                    "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                    "dateCreated": "2025-09-02T15:53:52.625Z",
+                                    "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                    "tags": {
+                                        "bfh:environment": "prd",
+                                        "bfh:support-group": "bfh.awsinfrastructure": "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                                        "infrastructureConfiguration": {
+                                            "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                            "name": "ec2-image-builder",
+                                            "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                            "instanceTypes": [
+                                                "t3.medium"
+                                            ],
+                                            "instanceProfileName": "ec2-image-builder-instance-profile",
+                                            "securityGroupIds": [
+                                                "sg-0abb038a635a6127e"
+                                            ],
+                                            "subnetId": "subnet-0696ffc1ce55e5839",
+                                            "keyPair": "image-builder-keypair",
+                                            "terminateInstanceOnFailure": false,
+                                            "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                            "dateCreated": "2025-09-02T15:53:52.625Z",
+                                            "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                            "tags": {
+                                                "bfh:environment": "prd",
+                                                "bfh:support-group": "bfh.awsinfrastructure"
+                                            }
+                                        },
+                                        "distributionConfiguration": {
+                                            : "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                                            "infrastructureConfiguration": {
+                                                "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                                "name": "ec2-image-builder",
+                                                "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                                "instanceTypes": [
+                                                    "t3.medium"
+                                                ],
+                                                "instanceProfileName": "ec2-image-builder-instance-profile",
+                                                "securityGroupIds": [
+                                                    "sg-0abb038a635a6127e"
+                                                ],
+                                                "subnetId": "subnet-0696ffc1ce55e5839",
+                                                "keyPair": "image-builder-keypair",
+                                                "terminateInstanceOnFailure": false,
+                                                "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                                "dateCreated": "2025-09-02T15:53:52.625Z",
+                                                "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                                "tags": {
+                                                    "bfh:environment": "prd",
+                                                    "bfh:support-group": "bfh.awsinfrastructure"
+                                                }
+                                            },
+                                            "distributionConfiguration": {
+                                                "arn": "arn:aws:imagebuilder:us-east-2:422228628991:distribution-configuration/ec2-image-builder",
+                                                : "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                                                "infrastructureConfiguration": {
+                                                    "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                                    "name": "ec2-image-builder",
+                                                    "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                                    "instanceTypes": [
+                                                        "t3.medium"
+                                                    ],
+                                                    "instanceProfileName": "ec2-image-builder-instance-profile",
+                                                    "securityGroupIds": [
+                                                        "sg-0abb038a635a6127e"
+                                                    ],
+                                                    "subnetId": "subnet-0696ffc1ce55e5839",
+                                                    "keyPair": "image-builder-keypair",
+                                                    "terminateInstanceOnFailure": false,
+                                                    "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                                    "dateCreated": "2025-09-02T15:53:52.625Z",
+                                                    "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                                    "tags": {
+                                                        "bfh:environment": "prd",
+                                                        "bfh:support-group": "bfh.awsinfrastructure"
+                                                    }
+                                                },
+                                                "distributionConfiguration": {
+                                                    "arn": "arn:aws:imagebuilder:us-east-2:422228628991:distribution-configuration/ec2-image-builder",
+                                                    "name": "ec2-image-builder",
+                                                    : "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                                                    "infrastructureConfiguration": {
+                                                        "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                                        "name": "ec2-image-builder",
+                                                        "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                                        "instanceTypes": [
+                                                            "t3.medium"
+                                                        ],
+                                                        "instanceProfileName": "ec2-image-builder-instance-profile",
+                                                        "securityGroupIds": [
+                                                            "sg-0abb038a635a6127e"
+                                                        ],
+                                                        "subnetId": "subnet-0696ffc1ce55e5839",
+                                                        "keyPair": "image-builder-keypair",
+                                                        "terminateInstanceOnFailure": false,
+                                                        "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                                        "dateCreated": "2025-09-02T15:53:52.625Z",
+                                                        "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                                        "tags": {
+                                                            "bfh:environment": "prd",
+                                                            "bfh:support-group": "bfh.awsinfrastructure"
+                                                        }
+                                                    },
+                                                    "distributionConfiguration": {
+                                                        "arn": "arn:aws:imagebuilder:us-east-2:422228628991:distribution-configuration/ec2-image-builder",
+                                                        "name": "ec2-image-builder",
+                                                        "description": "Image Builder Distribution Configuration for ec2-image-builder and all organization accounts and regions specified at dep: "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2: 422228628991:image-pipeline/ec2-image-builder-win2022","infrastructureConfiguration": {
+                                                            "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                                            "name": "ec2-image-builder",
+                                                            "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                                            "instanceTypes": [
+                                                                "t3.medium"
+                                                            ],
+                                                            "instanceProfileName": "ec2-image-builder-instance-profile",
+                                                            "securityGroupIds": [
+                                                                "sg-0abb038a635a6127e"
+                                                            ],
+                                                            "subnetId": "subnet-0696ffc1ce55e5839",
+                                                            "keyPair": "image-builder-keypair",
+                                                            "terminateInstanceOnFailure": false,
+                                                            "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                                            "dateCreated": "2025-09-02T15:53:52.625Z",
+                                                            "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                                            "tags": {
+                                                                "bfh:environment": "prd",
+                                                                "bfh:support-group": "bfh.awsinfrastructure"
+                                                            }
+                                                        },
+                                                        "distributionConfiguration": {
+                                                            "arn": "arn:aws:imagebuilder:us-east-2:422228628991:distribution-configuration/ec2-image-builder",
+                                                            "name": "ec2-image-builder",
+                                                            "description": "Image Builder Distribution Configuration for ec2-image-builder and all organization accounts and regions specified at dep
+loyment",                                                                                                                                            :"sourcePipelineArn": "arn:aws:imagebuilder:us-east-2: 422228628991:image-pipeline/ec2-image-builder-win2022","infrastructureConfiguration": {
+                                                                "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                                                "name": "ec2-image-builder",
+                                                                "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                                                "instanceTypes": [
+                                                                    "t3.medium"
+                                                                ],
+                                                                "instanceProfileName": "ec2-image-builder-instance-profile",
+                                                                "securityGroupIds": [
+                                                                    "sg-0abb038a635a6127e"
+                                                                ],
+                                                                "subnetId": "subnet-0696ffc1ce55e5839",
+                                                                "keyPair": "image-builder-keypair",
+                                                                "terminateInstanceOnFailure": false,
+                                                                "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                                                "dateCreated": "2025-09-02T15:53:52.625Z",
+                                                                "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                                                "tags": {
+                                                                    "bfh:environment": "prd",
+                                                                    "bfh:support-group": "bfh.awsinfrastructure"
+                                                                }
+                                                            },
+                                                            "distributionConfiguration": {
+                                                                "arn": "arn:aws:imagebuilder:us-east-2:422228628991:distribution-configuration/ec2-image-builder",
+                                                                "name": "ec2-image-builder",
+                                                                "description": "Image Builder Distribution Configuration for ec2-image-builder and all organization accounts and regions specified at dep
+loyment",                                                                                                                                                        "distributions": [: "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2: 422228628991:image-pipeline/ec2-image-builder-win2022","infrastructureConfiguration": {
+                                                                    "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                                                    "name": "ec2-image-builder",
+                                                                    "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                                                    "instanceTypes": [
+                                                                        "t3.medium"
+                                                                    ],
+                                                                    "instanceProfileName": "ec2-image-builder-instance-profile",
+                                                                    "securityGroupIds": [
+                                                                        "sg-0abb038a635a6127e"
+                                                                    ],
+                                                                    "subnetId": "subnet-0696ffc1ce55e5839",
+                                                                    "keyPair": "image-builder-keypair",
+                                                                    "terminateInstanceOnFailure": false,
+                                                                    "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                                                    "dateCreated": "2025-09-02T15:53:52.625Z",
+                                                                    "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                                                    "tags": {
+                                                                        "bfh:environment": "prd",
+                                                                        "bfh:support-group": "bfh.awsinfrastructure"
+                                                                    }
+                                                                },
+                                                                "distributionConfiguration": {
+                                                                    "arn": "arn:aws:imagebuilder:us-east-2:422228628991:distribution-configuration/ec2-image-builder",
+                                                                    "name": "ec2-image-builder",
+                                                                    "description": "Image Builder Distribution Configuration for ec2-image-builder and all organization accounts and regions specified at dep
+loyment",                                                                                                                                                        "distributions": [{: "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                                                                    "infrastructureConfiguration": {
+                                                                        "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                                                        "name": "ec2-image-builder",
+                                                                        "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                                                        "instanceTypes": [
+                                                                            "t3.medium"
+                                                                        ],
+                                                                        "instanceProfileName": "ec2-image-builder-instance-profile",
+                                                                        "securityGroupIds": [
+                                                                            "sg-0abb038a635a6127e"
+                                                                        ],
+                                                                        "subnetId": "subnet-0696ffc1ce55e5839",
+                                                                        "keyPair": "image-builder-keypair",
+                                                                        "terminateInstanceOnFailure": false,
+                                                                        "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                                                        "dateCreated": "2025-09-02T15:53:52.625Z",
+                                                                        "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                                                        "tags": {
+                                                                            "bfh:environment": "prd",
+                                                                            "bfh:support-group": "bfh.awsinfrastructure"
+                                                                        }
+                                                                    },
+                                                                    "distributionConfiguration": {
+                                                                        "arn": "arn:aws:imagebuilder:us-east-2:422228628991:distribution-configuration/ec2-image-builder",
+                                                                        "name": "ec2-image-builder",
+                                                                        "description": "Image Builder Distribution Configuration for ec2-image-builder and all organization accounts and regions specified at dep
+loyment",                                                                                                                                                        "distributions": [{"region": "us-west-2",
+                                                                        : "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                                                                        "infrastructureConfiguration": {
+                                                                            "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                                                            "name": "ec2-image-builder",
+                                                                            "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                                                            "instanceTypes": [
+                                                                                "t3.medium"
+                                                                            ],
+                                                                            "instanceProfileName": "ec2-image-builder-instance-profile",
+                                                                            "securityGroupIds": [
+                                                                                "sg-0abb038a635a6127e"
+                                                                            ],
+                                                                            "subnetId": "subnet-0696ffc1ce55e5839",
+                                                                            "keyPair": "image-builder-keypair",
+                                                                            "terminateInstanceOnFailure": false,
+                                                                            "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                                                            "dateCreated": "2025-09-02T15:53:52.625Z",
+                                                                            "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                                                            "tags": {
+                                                                                "bfh:environment": "prd",
+                                                                                "bfh:support-group": "bfh.awsinfrastructure"
+                                                                            }
+                                                                        },
+                                                                        "distributionConfiguration": {
+                                                                            "arn": "arn:aws:imagebuilder:us-east-2:422228628991:distribution-configuration/ec2-image-builder",
+                                                                            "name": "ec2-image-builder",
+                                                                            "description": "Image Builder Distribution Configuration for ec2-image-builder and all organization accounts and regions specified at dep
+loyment",                                                                                                                                                        "distributions": [{"region": "us-west-2",
+                                                                            "amiDistributionConfiguration": {
+                                                                                : "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                                                                                "infrastructureConfiguration": {
+                                                                                    "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                                                                    "name": "ec2-image-builder",
+                                                                                    "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                                                                    "instanceTypes": [
+                                                                                        "t3.medium"
+                                                                                    ],
+                                                                                    "instanceProfileName": "ec2-image-builder-instance-profile",
+                                                                                    "securityGroupIds": [
+                                                                                        "sg-0abb038a635a6127e"
+                                                                                    ],
+                                                                                    "subnetId": "subnet-0696ffc1ce55e5839",
+                                                                                    "keyPair": "image-builder-keypair",
+                                                                                    "terminateInstanceOnFailure": false,
+                                                                                    "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                                                                    "dateCreated": "2025-09-02T15:53:52.625Z",
+                                                                                    "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                                                                    "tags": {
+                                                                                        "bfh:environment": "prd",
+                                                                                        "bfh:support-group": "bfh.awsinfrastructure"
+                                                                                    }
+                                                                                },
+                                                                                "distributionConfiguration": {
+                                                                                    "arn": "arn:aws:imagebuilder:us-east-2:422228628991:distribution-configuration/ec2-image-builder",
+                                                                                    "name": "ec2-image-builder",
+                                                                                    "description": "Image Builder Distribution Configuration for ec2-image-builder and all organization accounts and regions specified at dep
+loyment",                                                                                                                                                        "distributions": [{"region": "us-west-2",
+                                                                                    "amiDistributionConfiguration": {
+                                                                                        "name": "amidistribution-2025-10-31T16-02-47.054Z",
+                                                                                        : "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                                                                                        "infrastructureConfiguration": {
+                                                                                            "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                                                                            "name": "ec2-image-builder",
+                                                                                            "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                                                                            "instanceTypes": [
+                                                                                                "t3.medium"
+                                                                                            ],
+                                                                                            "instanceProfileName": "ec2-image-builder-instance-profile",
+                                                                                            "securityGroupIds": [
+                                                                                                "sg-0abb038a635a6127e"
+                                                                                            ],
+                                                                                            "subnetId": "subnet-0696ffc1ce55e5839",
+                                                                                            "keyPair": "image-builder-keypair",
+                                                                                            "terminateInstanceOnFailure": false,
+                                                                                            "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                                                                            "dateCreated": "2025-09-02T15:53:52.625Z",
+                                                                                            "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                                                                            "tags": {
+                                                                                                "bfh:environment": "prd",
+                                                                                                "bfh:support-group": "bfh.awsinfrastructure"
+                                                                                            }
+                                                                                        },
+                                                                                        "distributionConfiguration": {
+                                                                                            "arn": "arn:aws:imagebuilder:us-east-2:422228628991:distribution-configuration/ec2-image-builder",
+                                                                                            "name": "ec2-image-builder",
+                                                                                            "description": "Image Builder Distribution Configuration for ec2-image-builder and all organization accounts and regions specified at dep
+loyment",                                                                                                                                                        "distributions": [{"region": "us-west-2",
+                                                                                            "amiDistributionConfiguration": {
+                                                                                                "name": "amidistribution-2025-10-31T16-02-47.054Z",
+                                                                                                "description": "AMI distribution from Central Image Management Account",
+                                                                                                : "sourcePipelineArn": "arn:aws:imagebuilder:us-east-2:422228628991:image-pipeline/ec2-image-builder-win2022",
+                                                                                                "infrastructureConfiguration": {
+                                                                                                    "arn": "arn:aws:imagebuilder:us-east-2:422228628991:infrastructure-configuration/ec2-image-builder",
+                                                                                                    "name": "ec2-image-builder",
+                                                                                                    "description": "The infrastructure configuration for Image Builder ec2-image-builder",
+                                                                                                    "instanceTypes": [
+                                                                                                        "t3.medium"
+                                                                                                    ],
+                                                                                                    "instanceProfileName": "ec2-image-builder-instance-profile",
+                                                                                                    "securityGroupIds": [
+                                                                                                        "sg-0abb038a635a6127e"
+                                                                                                    ],
+                                                                                                    "subnetId": "subnet-0696ffc1ce55e5839",
+                                                                                                    "keyPair": "image-builder-keypair",
+                                                                                                    "terminateInstanceOnFailure": false,
+                                                                                                    "snsTopicArn": "arn:aws:sns:us-east-2:422228628991:bread-imagemanagement-alerts",
+                                                                                                    "dateCreated": "2025-09-02T15:53:52.625Z",
+                                                                                                    "dateUpdated": "2025-09-03T18:12:23.581Z",
+                                                                                                    "tags": {
+                                                                                                        "bfh:environment": "prd",
+                                                                                                        "bfh:support-group": "bfh.awsinfrastructure"
+                                                                                                    }
+                                                                                                },
+                                                                                                "distributionConfiguration": {
+                                                                                                    "arn": "arn:aws:imagebuilder:us-east-2:422228628991:distribution-configuration/ec2-image-builder",
+                                                                                                    "name": "ec2-image-builder",
+                                                                                                    "description": "Image Builder Distribution Configuration for ec2-image-builder and all organization accounts and regions specified at dep
+loyment",                                                                                                                                                        "distributions": [{"region": "us-west-2",
+                                                                                                    "amiDistributionConfiguration": {
+                                                                                                        "name": "amidistribution-2025-10-31T16-02-47.054Z",
+                                                                                                        "description": "AMI distribution from Central Image Management Account",
+                                                                                                        "targetAccountIds": [
+                                                                                                            "422228628991"
+                                                                                                        ],
+                                                                                                        "amiTags": {
+                                                                                                            "Name": "GoldenAMI"
+                                                                                                        },
+                                                                                                        "kmsKeyId": "arn:aws:kms:us-west-2:422228628991:key/mrk-6fa2ef2f323e4121a715a6a05fe1cec4",
+                                                                                                        "launchPermission": {
+                                                                                                            "organizationArns": [
+                                                                                                                "arn:aws:organizations::739275453939:organization/o-6wrht8pxbo"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    }
+                                                                                                },
+                                                                                                {
+                                                                                                    "region": "us-east-2",
+                                                                                                    "amiDistributionConfiguration": {
+                                                                                                        "name": "amidistribution-2025-10-31T16-02-47.054Z",
+                                                                                                        "description": "AMI distribution from Central Image Management Account",
+                                                                                                        "targetAccountIds": [
+                                                                                                            "422228628991"
+                                                                                                        ],
+                                                                                                        "amiTags": {
+                                                                                                            "Name": "GoldenAMI"
+                                                                                                        },
+                                                                                                        "kmsKeyId": "arn:aws:kms:us-east-2:422228628991:key/mrk-6fa2ef2f323e4121a715a6a05fe1cec4",
+                                                                                                        "launchPermission": {
+                                                                                                            "organizationArns": [
+                                                                                                                "arn:aws:organizations::739275453939:organization/o-6wrht8pxbo"
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            ],
+                                                                                            "dateCreated": "2025-09-02T15:53:45.110Z",
+                                                                                            "tags": {
+                                                                                                "bfh:environment": "prd",
+                                                                                                "bfh:support-group": "bfh.awsinfrastructure"
+                                                                                            }
+                                                                                        },
+                                                                                        "imageTestsConfiguration": {
+                                                                                            "imageTestsEnabled": true,
+                                                                                            "timeoutMinutes": 720
+                                                                                        },
+                                                                                        "dateCreated": "2025-10-31T16:02:47.106Z",
+                                                                                        "outputResources": {
+                                                                                            "amis": [
+                                                                                                {
+                                                                                                    "region": "us-east-2",
+                                                                                                    "image": "ami-0b93d33915f052230",
+                                                                                                    "name": "amidistribution-2025-10-31T16-02-47.054Z",
+                                                                                                    "description": "AMI distribution from Central Image Management Account",
+                                                                                                    "accountId": "422228628991"
+                                                                                                },
+                                                                                                {
+                                                                                                    "region": "us-west-2",
+                                                                                                    "image": "ami-0489affd6180a1962",
+                                                                                                    "name": "amidistribution-2025-10-31T16-02-47.054Z",
+                                                                                                    "description": "AMI distribution from Central Image Management Account",
+                                                                                                    "accountId": "422228628991"
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                        "tags": {},
+                                                                                        "buildType": "USER_INITIATED",
+                                                                                        "imageScanningConfiguration": {
+                                                                                            "imageScanningEnabled": false
+                                                                                        },
+                                                                                        "executionRole": "arn:aws:iam::422228628991:role/aws-service-role/imagebuilder.amazonaws.com/AWSServiceRoleForImageBuilder",
+                                                                                        "workflows": [
+                                                                                            {
+                                                                                                "workflowArn": "arn:aws:imagebuilder:us-east-2:aws:workflow/build/build-image/1.0.2/1"
+                                                                                            },
+                                                                                            {
+                                                                                                "workflowArn": "arn:aws:imagebuilder:us-east-2:aws:workflow/test/test-image/1.0.2/1"
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                }

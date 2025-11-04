@@ -1,0 +1,358 @@
+{
+  "mcpServers": {
+    "macos-automator": {
+      "disabled": true,
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@steipete/macos-automator-mcp@latest"
+      ],
+      "env": {
+        "NPX_OFFLINE": "true",
+        "npm_config_cache": "~/.npm",
+        "npm_config_prefer_offline": "true"
+      }
+    },
+    "mcp-chrome": {
+      "disabled": true,
+      "type": "streamableHttp",
+      "url": "http://127.0.0.1:12306/mcp",
+      "detail_installation": "/Users/a805120/develop/workflows/reports/mcp_chrome_bridge_setup_status.md",
+      "env": {
+        "DESCRIPTION": "Chrome MCP Server by hangwin - 30+ browser automation tools via MCP",
+        "DEPENDENCY": "Chrome Extension: MCP Chrome Extension - Source: hangwin/mcp-chrome repository",
+        "PACKAGE_NAME": "mcp-chrome",
+        "GITHUB_REPO": "https://github.com/hangwin/mcp-chrome",
+        "AUTHOR": "hangwin",
+        "PROJECT_PATH": "/Users/a805120/develop/workflows/scripts/setup/mcp-chrome",
+        "EXTENSION_PATH": "/Users/a805120/develop/workflows/scripts/setup/mcp-chrome/chrome-extension",
+        "DETAIL_INSTALLATION": "it uses nodemon --watch in /obt/homebre..postinstall... need help to stop",
+        "TRANSPORT_TYPE": "streamable-http #TODO the readme says streamableHttp for the above type",
+        "TEST_COMMAND": "mcp-chrome-bridge --help & ps -A | grep -i \"mcp-chrome|node.*12306\"",
+        "TOOLS_COUNT": "30+",
+        "WORKFLOWS_INTEGRATED": "true"
+      }
+    },
+    "custom-macos-automator": {
+      "disabled": true,
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/Users/a805120/develop/workflows/claude/servers/custom-macos-mcp-server.js"
+      ],
+      "env": {}
+    },
+    "vscode-mcp-server": {
+      "disabled": false,
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "vscode-mcp-server"
+      ],
+      "env": {
+        "NPX_OFFLINE": "true",
+        "npm_config_cache": "~/.npm",
+        "npm_config_prefer_offline": "true"
+      }
+    },
+    "make-mcp-server": {
+      "disabled": false,
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@makehq/mcp-server"
+      ],
+      "env": {
+        "NPX_OFFLINE": "true",
+        "npm_config_cache": "~/.npm",
+        "npm_config_prefer_offline": "true"
+      }
+    },
+    "mermaid": {
+      "disabled": true,
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-mermaid"
+      ],
+      "env": {}
+    },
+    "augments": {
+      "disabled": true,
+      "type": "stdio",
+      "command": "/Users/a805120/develop/workflows/claude/servers/augments-mcp-server/venv/bin/python",
+      "args": [
+        "-m",
+        "augments_mcp.server"
+      ],
+      "env": {}
+    },
+    "serena": {
+      "disabled": false,
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide-assistant"
+      ],
+      "env": {
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "PATH": "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin",
+        "REQUESTS_CA_BUNDLE": "/opt/homebrew/lib/python3.13/site-packages/certifi/cacert.pem",
+        "SSL_CERT_FILE": "/opt/homebrew/lib/python3.13/site-packages/certifi/cacert.pem",
+        "AWS_CLI_DISABLE_SSL_VERIFY": "true",
+        "UV_INSECURE": "1",
+        "PYTHONWARNINGS": "ignore:Unverified HTTPS request",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      }
+    },
+    "aws_cdk_mcp": {
+      "disabled": true,
+      "command": "uvx",
+      "args": [
+        "awslabs.cdk-mcp-server@latest"
+      ],
+      "env_dependencies": "brew install ca-certificates",
+      "env": {
+        "NPX_OFFLINE": "true",
+        "npm_config_cache": "~/.npm",
+        "npm_config_prefer_offline": "true",
+        "AWS_CLI_DISABLE_SSL_VERIFY": "true",
+        "SSL_CERT_FILE": "/etc/ssl/cert.pem",
+        "REQUESTS_CA_BUNDLE": "/etc/ssl/cert.pem",
+        "AWS_PROFILE": "bfh-mgmt_admin_739275453939",
+        "AWS_REGION": "us-east-2"
+      },
+      "autoApprove": [
+        "*"
+      ]
+    },
+    "awslabs.aws-diagram-mcp-server": {
+      "command": "uvx",
+      "args": [
+        "awslabs.aws-diagram-mcp-server"
+      ],
+      "env": {
+        "REQUESTS_CA_BUNDLE": "/opt/homebrew/lib/python3.13/site-packages/certifi/cacert.pem",
+        "SSL_CERT_FILE": "/opt/homebrew/lib/python3.13/site-packages/certifi/cacert.pem",
+        "AWS_CLI_DISABLE_SSL_VERIFY": "true",
+        "UV_INSECURE": "1",
+        "PYTHONWARNINGS": "ignore:Unverified HTTPS request",
+        "FASTMCP_LOG_LEVEL": "ERROR",
+        "UV_OFFLINE": "1"
+      },
+      "autoApprove": [
+        "*"
+      ],
+      "disabled": false
+    },
+    "awslabs.ccapi-mcp-server": {
+      "command": "uvx",
+      "args": [
+        "awslabs.ccapi-mcp-server@latest"
+      ],
+      "env": {
+        "REQUESTS_CA_BUNDLE": "/opt/homebrew/lib/python3.13/site-packages/certifi/cacert.pem",
+        "SSL_CERT_FILE": "/opt/homebrew/lib/python3.13/site-packages/certifi/cacert.pem",
+        "AWS_CLI_DISABLE_SSL_VERIFY": "true",
+        "UV_INSECURE": "1",
+        "PYTHONWARNINGS": "ignore:Unverified HTTPS request",
+        "FASTMCP_LOG_LEVEL": "ERROR",
+        "PYTHONUNBUFFERED": "1"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "*"
+      ]
+    },
+    "terraform-mcp-server": {
+      "type": "stdio",
+      "command": "/opt/homebrew/bin/terraform-mcp-server"
+    },
+    "awslabs.terraform-mcp-server": {
+      "disabled": false,
+      "command": "uvx",
+      "env": {
+        "REQUESTS_CA_BUNDLE": "/opt/homebrew/lib/python3.13/site-packages/certifi/cacert.pem",
+        "SSL_CERT_FILE": "/opt/homebrew/lib/python3.13/site-packages/certifi/cacert.pem",
+        "AWS_CLI_DISABLE_SSL_VERIFY": "true",
+        "UV_INSECURE": "1",
+        "PYTHONWARNINGS": "ignore:Unverified HTTPS request",
+        "FASTMCP_LOG_LEVEL": "ERROR",
+        "UV_OFFLINE": "1"
+      },
+      "args": [
+        "awslabs.terraform-mcp-server"
+      ],
+      "autoApprove": []
+    },
+    "mcp-pandoc": {
+      "disabled": true,
+      "command": "uvx",
+      "args": [
+        "mcp-pandoc"
+      ],
+      "env": {
+        "UV_OFFLINE": "1"
+      }
+    },
+    "github-grep": {
+      "type": "http",
+      "url": "https://grep.app/api/mcp",
+      "env": {
+        "GITHUB_TOKEN": "${MCP_GITHUB_TOKEN}"
+      }
+    },
+    "evidence-validator": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/Users/a805120/develop/workflows/claude/servers/evidence-validator-mcp-server.js"
+      ],
+      "autoApprove": [
+        "*"
+      ],
+      "env": {}
+    },
+    "MCP Guardrail": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/Users/a805120/.mcp-src/mcp-guard/dist/index.js",
+        "[{\"name\":\"MCP Memory Keeper\",\"command\":\"node\",\"args\":[\"/Users/a805120/.mcp-src/mcp-memory-keeper/dist/index.js\"]},{\"name\":\"MCP Chat History Recorder\",\"command\":\"/Users/a805120/.mcp-venv/chatrec/bin/python\",\"args\":[\"-m\",\"src.server\",\"stdio\"],\"cwd\":\"/Users/a805120/.mcp-src/chat-history-recorder-mcp\"}]"
+      ],
+      "env": {
+        "DESCRIPTION": "Proxy that wraps MCP servers; policy/rules (local build)",
+        "GITHUB_REPO": "https://github.com/General-Analysis/mcp-guard",
+        "TRANSPORT_TYPE": "stdio",
+        "RULE_FILES_PATH": "/Users/a805120/.mcp/rules",
+        "MCP_RULEGUARD_LOG_DIR": "/Users/a805120/.mcp/rule-logs"
+      }
+    },
+    "MCP Memory Keeper": {
+      "type": "stdio",
+      "disabled": true,
+      "command": "node",
+      "args": [
+        "/Users/a805120/.mcp-src/mcp-memory-keeper/dist/index.js"
+      ],
+      "env": {
+        "META_GUARDRAILS_WRAPPED": "true",
+        "META_WORKFLOWS_INTEGRATED": "true",
+        "DESCRIPTION": "Session/workspace continuity for coding (local clone)",
+        "GITHUB_REPO": "https://github.com/mkreyman/mcp-memory-keeper",
+        "TRANSPORT_TYPE": "stdio",
+        "MCP_KEEPER_STATE_DIR": "/Users/a805120/.mcp/keeper"
+      }
+    },
+    "MCP Chat History Recorder": {
+      "type": "stdio",
+      "disabled": true,
+      "command": "/Users/a805120/.mcp-venv/chatrec/bin/python",
+      "args": [
+        "-m",
+        "src.server",
+        "stdio"
+      ],
+      "cwd": "/Users/a805120/.mcp-src/chat-history-recorder-mcp",
+      "env": {
+        "META_GUARDRAILS_WRAPPED": "true",
+        "META_WORKFLOWS_INTEGRATED": "true",
+        "DESCRIPTION": "Records every exchange to local logs (venv)",
+        "GITHUB_REPO": "https://github.com/modelcontextprotocol/chat-history-recorder-mcp",
+        "TRANSPORT_TYPE": "stdio",
+        "MCP_CHAT_LOG_DIR": "/Users/a805120/.mcp/chat-logs",
+        "MCP_CHAT_ROTATE_MB": "50"
+      }
+    },
+    "Playwright": {
+      "disabled": false,
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--extension",
+        "--browser=chrome"
+      ],
+      "env": {
+        "NPX_OFFLINE": "true",
+        "npm_config_cache": "~/.npm",
+        "npm_config_prefer_offline": "true",
+        "PLAYWRIGHT_MCP_EXTENSION_TOKEN": "oconsP7I9txrlIwagRrUB4yIpTHpJgsQK_L6VwUcmYs"
+      }
+    },
+    "exa-local": {
+      "disabled": false,
+      "command": "npx",
+      "args": [
+        "-y",
+        "exa-mcp-server",
+        "--mode=local",
+        "--no-telemetry",
+        "--tools=web_search_exa,get_code_context_exa"
+      ],
+      "env": {
+        "NPX_OFFLINE": "true",
+        "npm_config_cache": "~/.npm",
+        "npm_config_prefer_offline": "true",
+        "SOURCE_MODE": "local",
+        "INDEX_PATH": "/Users/a805120/.mcp/exa-index",
+        "DISABLE_TELEMETRY": "true",
+        "EXA_API_KEY": "",
+        "DESCRIPTION": "EXA MCP in offline/local-index mode",
+        "PURPOSE": "Local semantic/file search without remote APIs",
+        "SCOPE": "local machine only",
+        "INDEX_INCLUDE": "**/*.{ts,tsx,js,jsx,py,go,rs,java,kt,swift,rb,php,cs,tf,tfvars,hcl,yaml,yml,json,toml,md,sh,bash,zsh}",
+        "INDEX_EXCLUDE": "**/{node_modules,venv,__pycache__,.git,dist,build,coverage,.next,out,target,.terraform,.cursor,logs,temp,tmp,backups,.DS_Store,*.log,*.cache}/**",
+        "INDEX_REBUILD_INTERVAL": "3600",
+        "MAX_RESULTS": "50",
+        "SEARCH_MODE": "exact"
+      }
+    },
+    "ripgrep": {
+      "disabled": false,
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-ripgrep@latest"
+      ],
+      "env": {
+        "NPX_OFFLINE": "true",
+        "npm_config_cache": "~/.npm",
+        "npm_config_prefer_offline": "true",
+        "DEFAULT_PATH": "/Users/a805120/Projects",
+        "DEFAULT_FILE_TYPES": "ts,tsx,js,jsx,py,go,rb,md,tf,yaml,yml",
+        "DEFAULT_HIDDEN": "false"
+      }
+    },
+    "filesystem": {
+      "disabled": false,
+      "type": "stdio",
+      "command": "/Users/a805120/.mcp-venv/filesystem/bin/python",
+      "args": [
+        "/Users/a805120/.mcp-src/mcp-filesystem/run_server.py",
+        "/Users/a805120/Projects",
+        "/Users/a805120/Documents"
+      ]
+    },
+    "terravision-mcp": {
+      "disabled": true,
+      "type": "stdio",
+      "command": "/Users/a805120/develop/workflows/scripts/ssl/mcp-with-ssl-env.sh",
+      "args": [
+        "python3",
+        "/Users/a805120/develop/workflows/tools/terravision/terravision_mcp_bundle/mcp_adapter.py"
+      ],
+      "autoApprove": [
+        "*"
+      ]
+    }
+  }
+}

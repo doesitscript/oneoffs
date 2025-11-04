@@ -1,0 +1,164 @@
+{
+    "Images": [
+        {
+            "PlatformDetails": "Windows",
+            "UsageOperation": "RunInstances:0002",
+            "BlockDeviceMappings": [
+                {
+                    "Ebs": {
+                        "DeleteOnTermination": true,
+                        "Iops": 3000,
+                        "SnapshotId": "snap-0ca6c7a4768dc2854",
+                        "VolumeSize": 100,
+                        "VolumeType": "gp3",
+                        "Throughput": 125,
+                        "Encrypted": true
+                    },
+                    "DeviceName": "/dev/sda1"
+                },
+                {
+                    "DeviceName": "xvdca",
+                    "VirtualName": "ephemeral0"
+                },
+                {
+                    "DeviceName": "xvdcb",
+                    "VirtualName": "ephemeral1"
+                },
+                {
+                    "DeviceName": "xvdcc",
+                    "VirtualName": "ephemeral2"
+                },
+                {
+                    "DeviceName": "xvdcd",
+                    "VirtualName": "ephemeral3"
+                },
+                {
+                    "DeviceName": "xvdce",
+                    "VirtualName": "ephemeral4"
+                },
+                {
+                    "DeviceName": "xvdcf",
+                    "VirtualName": "ephemeral5"
+                },
+                {
+                    "DeviceName": "xvdcg",
+                    "VirtualName": "ephemeral6"
+                },
+                {
+                    "DeviceName": "xvdch",
+                    "VirtualName": "ephemeral7"
+                },
+                {
+                    "DeviceName": "xvdci",
+                    "VirtualName": "ephemeral8"
+                },
+                {
+                    "DeviceName": "xvdcj",
+                    "VirtualName": "ephemeral9"
+                },
+                {
+                    "DeviceName": "xvdck",
+                    "VirtualName": "ephemeral10"
+                },
+                {
+                    "DeviceName": "xvdcl",
+                    "VirtualName": "ephemeral11"
+                },
+                {
+                    "DeviceName": "xvdcm",
+                    "VirtualName": "ephemeral12"
+                },
+                {
+                    "DeviceName": "xvdcn",
+                    "VirtualName": "ephemeral13"
+                },
+                {
+                    "DeviceName": "xvdco",
+                    "VirtualName": "ephemeral14"
+                },
+                {
+                    "DeviceName": "xvdcp",
+                    "VirtualName": "ephemeral15"
+                },
+                {
+                    "DeviceName": "xvdcq",
+                    "VirtualName": "ephemeral16"
+                },
+                {
+                    "DeviceName": "xvdcr",
+                    "VirtualName": "ephemeral17"
+                },
+                {
+                    "DeviceName": "xvdcs",
+                    "VirtualName": "ephemeral18"
+                },
+                {
+                    "DeviceName": "xvdct",
+                    "VirtualName": "ephemeral19"
+                },
+                {
+                    "DeviceName": "xvdcu",
+                    "VirtualName": "ephemeral20"
+                },
+                {
+                    "DeviceName": "xvdcv",
+                    "VirtualName": "ephemeral21"
+                },
+                {
+                    "DeviceName": "xvdcw",
+                    "VirtualName": "ephemeral22"
+                },
+                {
+                    "DeviceName": "xvdcx",
+                    "VirtualName": "ephemeral23"
+                },
+                {
+                    "DeviceName": "xvdcy",
+                    "VirtualName": "ephemeral24"
+                },
+                {
+                    "DeviceName": "xvdcz",
+                    "VirtualName": "ephemeral25"
+                }
+            ],
+            "Description": "AMI distribution from Central Image Management Account",
+            "EnaSupport": true,
+            "Hypervisor": "xen",
+            "Name": "amidistribution-2025-10-31T17-22-51.766Z",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "GoldenAMI"
+                },
+                {
+                    "Key": "CreatedBy",
+                    "Value": "EC2 Image Builder"
+                },
+                {
+                    "Key": "Ec2ImageBuilderArn",
+                    "Value": "arn:aws:imagebuilder:us-east-2:422228628991:image/winserver2025/1.0.3/17"
+                }
+            ],
+            "VirtualizationType": "hvm",
+            "BootMode": "uefi",
+            "ImdsSupport": "v2.0",
+            "SourceInstanceId": "i-0b2148ea286dfd14d",
+            "DeregistrationProtection": "disabled",
+            "LastLaunchedTime": "2025-10-31T18:15:54Z",
+            "SourceImageId": "ami-058cdf62ba6d6cd64",
+            "SourceImageRegion": "us-east-2",
+            "FreeTierEligible": true,
+            "ImageId": "ami-051537eaae7545f75",
+            "ImageLocation": "422228628991/amidistribution-2025-10-31T17-22-51.766Z",
+            "State": "available",
+            "OwnerId": "422228628991",
+            "CreationDate": "2025-10-31T17:44:49.000Z",
+            "Public": false,
+            "Architecture": "x86_64",
+            "ImageType": "machine",
+            "Platform": "windows"
+        }
+    ]
+}
