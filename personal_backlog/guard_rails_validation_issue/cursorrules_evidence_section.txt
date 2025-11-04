@@ -1,0 +1,35 @@
+
+### When This Rule Applies:
+- Making claims about extension functionality
+- Reporting test results or verification status
+- Stating success/failure of operations
+- Describing what "worked" or "didn't work"
+- User requests: "evaluate", "status", "verify", "check", "did it work"
+
+### When This Rule DOESN'T Apply:
+- General coding tasks
+- File operations (create, edit, delete)
+- Command execution (unless claiming results)
+- YOLO mode operations
+- Normal development workflow
+
+### Evidence Requirements (When Applicable):
+- **CLAIM**: [What I'm claiming]
+- **EVIDENCE**: [Exact command + output with timestamp]
+- **STATUS**: [Verified/Unverified/Insufficient Evidence]
+
+### Prohibited Without Evidence:
+- "successful", "working", "fixed", "verified"
+- "extension is functioning"
+- "auto-login worked"
+- Any result claims without proof
+
+### Context-Aware Enforcement:
+- **Triggered by**: User asking for status/verification
+- **Not triggered by**: Normal coding, file ops, YOLO tasks
+- **Preserves**: Existing workflow efficiency
+
+## PLAYWRIGHT USAGE RULE (CRITICAL)
+**MANDATORY: NEVER use Playwright MCP tools unless explicitly instructed by user**
+
+### Playwright Prohibition:

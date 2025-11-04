@@ -1,0 +1,10 @@
+Account Name,OU,VPC Size,App Owner
+Zerto,Shared Services ou-uieo-w14lfx7l,S,Aaron Bennett
+SailPointIsc-prd,Shared Services ou-uieo-w14lfx7l,S /24,Deborah Tedeschi
+SailPointIsc-dev,Shared Services ou-uieo-w14lfx7l,S /24,Deborah Tedeschi
+OpsReporting-prd,Shared Services ou-uieo-w14lfx7l,S /24,Michael Smith
+OpsReporting-qa,Shared Services ou-uieo-w14lfx7l,S /24,Michael Smith
+OpsReporting-dev,Shared Services ou-uieo-w14lfx7l,S /24,Michael Smith
+RPA-prd,Shared Services ou-uieo-w14lfx7l,S /24,Mark Pitsick
+RPA-uat,Shared Services ou-uieo-w14lfx7l,S /24,Mark Pitsick
+PRA-dev,Shared Services ou-uieo-w14lfx7l,S /24,Mark Pitsick
