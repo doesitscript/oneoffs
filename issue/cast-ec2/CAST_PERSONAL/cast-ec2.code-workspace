@@ -1,0 +1,209 @@
+{
+    "folders": [
+        {
+            "name": "CAST-EC2 Project",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "terraform.path": "terraform",
+        "terraform.format.enable": true,
+        "terraform.format.onSave": true,
+        "terraform.languageServer": {
+            "enabled": true,
+            "args": []
+        },
+        "files.associations": {
+            "*.tf": "terraform",
+            "*.tfvars": "terraform",
+            "*.tfstate": "terraform"
+        },
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.formatDocument": "explicit"
+        },
+        "terminal.integrated.cwd": "${workspaceFolder}",
+        "aws.profile": "CASTSoftware_dev_925774240130_admin"
+    },
+    "extensions": {
+        "recommendations": [
+            "hashicorp.terraform",
+            "ms-vscode.vscode-json",
+            "redhat.vscode-yaml",
+            "ms-vscode.powershell"
+        ]
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Terraform: Init",
+                "type": "shell",
+                "command": "terraform",
+                "args": [
+                    "init"
+                ],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "Terraform: Validate",
+                "type": "shell",
+                "command": "terraform",
+                "args": [
+                    "validate"
+                ],
+                "group": "test",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "Terraform: Plan",
+                "type": "shell",
+                "command": "terraform",
+                "args": [
+                    "plan",
+                    "-var-file=dev.tfvars"
+                ],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "env": {
+                        "AWS_PROFILE": "CASTSoftware_dev_925774240130_admin"
+                    }
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "Terraform: Apply",
+                "type": "shell",
+                "command": "terraform",
+                "args": [
+                    "apply",
+                    "-var-file=dev.tfvars"
+                ],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "env": {
+                        "AWS_PROFILE": "CASTSoftware_dev_925774240130_admin"
+                    }
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "Terraform: Apply (Auto-approve)",
+                "type": "shell",
+                "command": "terraform",
+                "args": [
+                    "apply",
+                    "-var-file=dev.tfvars",
+                    "-auto-approve"
+                ],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "options": {
+                    "env": {
+                        "AWS_PROFILE": "CASTSoftware_dev_925774240130_admin"
+                    }
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "Terraform: Console",
+                "type": "shell",
+                "command": "terraform",
+                "args": [
+                    "console"
+                ],
+                "group": "test",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": true,
+                    "panel": "new"
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "Terraform: Format",
+                "type": "shell",
+                "command": "terraform",
+                "args": [
+                    "fmt",
+                    "-recursive"
+                ],
+                "group": "build",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "Terraform: TFLint",
+                "type": "shell",
+                "command": "tflint",
+                "args": [
+                    "--init",
+                    "--recursive"
+                ],
+                "group": "test",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "problemMatcher": []
+            },
+            {
+                "label": "Terraform: Checkov Security Scan",
+                "type": "shell",
+                "command": "checkov",
+                "args": [
+                    "-d",
+                    ".",
+                    "--framework",
+                    "terraform"
+                ],
+                "group": "test",
+                "presentation": {
+                    "echo": true,
+                    "reveal": "always",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "problemMatcher": []
+            }
+        ]
+    }
+}
