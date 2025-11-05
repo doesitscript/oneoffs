@@ -55,6 +55,22 @@ This folder contains documentation and files related to an incident where [brief
 - [ ] File paths with line numbers for code references
 - [ ] Screenshots or logs (if applicable)
 
+## Template Processing Issues
+
+**Purpose**: This section documents any issues encountered while processing the template. This helps improve the template for future use.
+
+### Issues Encountered
+
+[Document any issues here, or if none: "No issues encountered during template processing. All files were successfully filled out using the write tool (not search_replace)."]
+
+**Example format**:
+- **Issue**: [Brief description]
+- **Operation**: [What you were trying to do]
+- **Error**: [Error message or problem]
+- **File/Section**: [Which file or section was affected]
+- **Workaround**: [How you handled it]
+- **Template Improvement**: [What should be fixed in template]
+
 ## How to Use This Template
 
 ### When an Incident Occurs:
