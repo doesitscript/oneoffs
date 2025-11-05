@@ -12,6 +12,8 @@ This folder contains documentation and files related to an incident where [brief
 - `AI_INSTRUCTIONS.md` - Instructions for AI on how to process this template (for reference)
 - `PROMPT_TEMPLATE.md` - Ready-to-use prompts for documenting incidents
 - `TEMPLATE_USAGE.md` - Detailed guide on using this template
+- `TEMPLATE_EVALUATION.md` - Evaluation of template quality and improvement recommendations (based on filled-out example)
+- `TEMPLATE_ACTIONS.md` - **User prompts for triggering actions** (AI should ignore this when filling out template)
 - `[RELEVANT_CONFIG_FILES]` - Related configuration or documentation files
 - `[DATA_FILES]` - Any data files, prompts, or artifacts related to the incident
 
@@ -38,7 +40,20 @@ This folder contains documentation and files related to an incident where [brief
 
 ## Conversation Export
 
-The full conversation about this incident should be exported separately and added to this folder.
+- [ ] Conversation exported to `conversation_export.md` or similar file
+- [ ] Or: Conversation reference included: [Link or identifier if available]
+- [ ] Or: Key conversation excerpts included in ANALYSIS.md
+
+**Note**: At minimum, include key conversation excerpts in ANALYSIS.md showing the problem.
+
+## Evidence Included
+
+- [ ] Conversation excerpts/quotes showing the problem
+- [ ] Actual commands executed
+- [ ] Error messages or unexpected outputs
+- [ ] Before/after comparisons
+- [ ] File paths with line numbers for code references
+- [ ] Screenshots or logs (if applicable)
 
 ## How to Use This Template
 

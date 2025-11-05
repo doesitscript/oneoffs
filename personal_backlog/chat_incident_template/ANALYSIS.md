@@ -25,6 +25,28 @@
 - [What format or structure was used (if applicable)]
 - [What was missing or incorrect]
 
+### Specific Examples
+
+**Example 1**: [What this example shows]
+
+**Conversation excerpt or actual command/output**:
+```
+[Actual quote from conversation, command executed, or output]
+```
+
+**What this demonstrates**: [Why this example matters]
+
+---
+
+**Example 2**: [What this example shows]
+
+**Conversation excerpt or actual command/output**:
+```
+[Actual quote, command, or output]
+```
+
+**What this demonstrates**: [Why this example matters]
+
 ## Why This Happened
 
 ### 1. [Root Cause Category 1]

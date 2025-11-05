@@ -1,7 +1,15 @@
 # [INCIDENT NAME] - Incident Summary
 
-**Date**: [DATE]  
+**Date**: [DATE - Extract from conversation if not provided, use format YYYY-MM-DD]  
+**Time**: [If available from conversation or logs]
 **Context**: [What task or conversation was happening when this occurred]
+
+## Conversation Context
+
+**What was being worked on**: [Main task or goal]
+**Key background**: [Important context that led to incident]
+**Related conversations/tasks**: [Any related work]
+**User's goal**: [What user was trying to accomplish]
 
 ## What Happened
 
@@ -44,10 +52,17 @@
 2. **[Issue Category 2]**: [Description]
 3. **[Issue Category 3]**: [Description]
 
+## Timeline of Events (if applicable)
+
+1. **[Sequence/Time]**: [What happened first]
+2. **[Sequence/Time]**: [What happened next]
+3. **[Sequence/Time]**: [When problem was detected]
+4. **[Sequence/Time]**: [Attempts to fix/resolve]
+
 ## Files Referenced
 
-- `[FILE_PATH]` - [Description of relevance]
-- `[ANOTHER_FILE]` - [Description]
+- `[FILE_PATH]` - [Description of relevance] (see lines X-Y for relevant code/instructions if applicable)
+- `[ANOTHER_FILE]` - [Description] (see lines X-Y if applicable)
 
 ## Questions to Address Later
 
