@@ -1,6 +1,6 @@
-# Guard Rails Fail to Enforce Instructions - Chat Incident Documentation
+# Guard Rails Fail to Enforce Instructions (2nd Pass) - Chat Incident Documentation
 
-This folder contains documentation and files related to an incident where AI guardrails failed to enforce explicit instructions, allowing the AI to add unrequested details to commit messages and struggle with git workflow despite clear step-by-step instructions.
+This folder contains documentation and files related to an incident where AI guardrails failed to enforce explicit instructions when executing a git workflow. The AI added unrequested details to commit messages and struggled with sequential git operations despite explicit step-by-step instructions providing exact text and clear workflow patterns.
 
 ## Contents
 
@@ -12,6 +12,10 @@ This folder contains documentation and files related to an incident where AI gua
 - `AI_INSTRUCTIONS.md` - Instructions for AI on how to process this template (for reference)
 - `PROMPT_TEMPLATE.md` - Ready-to-use prompts for documenting incidents
 - `TEMPLATE_USAGE.md` - Detailed guide on using this template
+- `TEMPLATE_EVALUATION.md` - Evaluation of template quality and improvement recommendations (based on filled-out example)
+- `TEMPLATE_ACTIONS.md` - **User prompts for triggering actions** (AI should ignore this when filling out template)
+- `[RELEVANT_CONFIG_FILES]` - Related configuration or documentation files
+- `[DATA_FILES]` - Any data files, prompts, or artifacts related to the incident
 
 ## Key Documents
 
@@ -20,24 +24,38 @@ This folder contains documentation and files related to an incident where AI gua
 
 ## Key Issue
 
-AI guardrails failed to prevent the AI from adding unrequested details to a commit message when explicit instructions stated "Commit with message: 'Initial account vending'" and from struggling with git workflow despite clear step-by-step instructions.
+AI guardrails failed to enforce explicit textual instructions when the instructions provided exact text (commit message) and clear sequential steps (git workflow). The AI added unrequested details to commit messages and committed multiple files on one branch instead of following the explicit "one file per branch" sequential pattern.
 
 ## Status
 
 - [x] Root cause analysis complete
-- [ ] Solutions identified
+- [x] Solutions identified
+- [x] User observations documented
 - [ ] Implementation needed
 - [ ] Testing required
 
 ## Related Files (Outside This Folder)
 
-- `/Users/a805120/develop/workflows/.scratch/aft-account-request/in_progress/shared-services-account-start-workflow.tf` - Workflow template with git instructions that were not followed
-- `/Users/a805120/develop/workflows/.scratch/aft-account-request/in_progress/GIT_WORKFLOW_INSTRUCTIONS.md` - Improved git workflow instructions created after the incident
-- `/Users/a805120/develop/aft-account-request/terraform/` - Target directory where Terraform files were to be committed
+- `/Users/a805120/develop/workflows/.scratch/aft-account-request/in_progress/shared-services-account-start-workflow.tf` (lines 121-135) - Workflow template with explicit git workflow instructions
+- `/Users/a805120/develop/workflows/.scratch/aft-account-request/in_progress/GIT_WORKFLOW_INSTRUCTIONS.md` - Improved instructions created after incident
+- `/Users/a805120/develop/aft-account-request/terraform/` - Target directory where Terraform files were committed
 
 ## Conversation Export
 
-The full conversation about this incident should be exported separately and added to this folder.
+- [ ] Conversation exported to `conversation_export.md` or similar file
+- [ ] Or: Conversation reference included: [Link or identifier if available]
+- [ ] Or: Key conversation excerpts included in ANALYSIS.md
+
+**Note**: At minimum, include key conversation excerpts in ANALYSIS.md showing the problem.
+
+## Evidence Included
+
+- [x] Conversation excerpts/quotes showing the problem (in ANALYSIS.md)
+- [x] Actual commands executed (in ANALYSIS.md)
+- [x] Error messages or unexpected outputs (in ANALYSIS.md)
+- [x] Before/after comparisons (commit messages in ANALYSIS.md)
+- [x] File paths with line numbers for code references (in INCIDENT_SUMMARY.md and ANALYSIS.md)
+- [ ] Screenshots or logs (if applicable)
 
 ## How to Use This Template
 
@@ -66,3 +84,4 @@ When you drop this template folder with your observations/questions:
 3. Review the briefing to get caught up
 4. Address the questions in `USER_OBSERVATIONS_AND_QUESTIONS.md`
 5. Work on solutions and fixes
+

@@ -27,7 +27,14 @@ I've stopped giving instructions so we can freeze the current state and document
 3. [Issue 3]
 
 **Related Files** (if any):
-- [Path to relevant files]
+- [Path to relevant files with line numbers if applicable]
+
+**Evidence Available** (if applicable):
+- [ ] Conversation excerpts showing the problem
+- [ ] Actual commands/outputs
+- [ ] Error messages
+- [ ] File paths with line numbers
+- [ ] Screenshots or logs
 
 **My Observations and Questions** (to be documented but not explored now - we'll address these later):
 

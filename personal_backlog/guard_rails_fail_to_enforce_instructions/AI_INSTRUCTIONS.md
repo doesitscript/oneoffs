@@ -2,6 +2,8 @@
 
 **For the AI**: When this template folder is dropped into a chat with user observations/questions, follow these instructions:
 
+**IMPORTANT**: Ignore `TEMPLATE_ACTIONS.md` when filling out the template - it is only for user reference to trigger specific actions later.
+
 ## Your Role
 
 You are documenting an incident that occurred in a conversation. The user has **stopped giving instructions** to freeze the current state and wants you to document everything comprehensively.
@@ -10,25 +12,35 @@ You are documenting an incident that occurred in a conversation. The user has **
 
 ### 1. Analyze the Conversation History
 - Review the most recent conversation history
+- **Extract specific examples**: quotes, commands, error messages, outputs
 - Identify what the user asked for
 - Identify what you (the AI) did
 - Identify what went wrong or didn't work as expected
 - Look for patterns, root causes, and contributing factors
+- **Note timestamps or sequence** of events if available
+- **Extract complete dates** from conversation (use format YYYY-MM-DD, not XX)
 
 ### 2. Fill Out the Template Documents
 
 #### INCIDENT_SUMMARY.md
 - Document the high-level overview
+- **Extract complete date** from conversation (format: YYYY-MM-DD, not XX)
+- **Include conversation context**: what was being worked on, user's goal, background
+- **Create timeline** of events if sequence is important
 - List what worked (✅) and what didn't (❌)
 - Identify root causes at a summary level
 - Note key findings
+- **Include file paths with line numbers** when referencing code/instructions
 
 #### ANALYSIS.md
 - Provide detailed technical analysis
+- **Include specific examples**: actual commands, outputs, error messages, conversation excerpts
+- **Show before/after comparisons** when applicable
 - Show what should have happened vs. what actually happened
 - Deep dive into root causes
 - Provide recommendations
 - Consider implementation constraints
+- **Include at least 2-3 concrete examples** (quotes, commands, outputs)
 
 #### NUANCED_FACTORS.md
 - Document philosophical considerations
@@ -58,7 +70,8 @@ You are documenting an incident that occurred in a conversation. The user has **
 ### 4. Update README.md
 - Replace placeholder text with actual incident name and description
 - Update status checkboxes
-- Note related files
+- Note related files with line numbers when applicable
+- Update evidence checklist if applicable
 
 ## What You Should NOT Do
 
@@ -81,6 +94,18 @@ The user may provide observations like:
 
 **Your task**: Document these exactly, preserving the user's voice and concerns, organized clearly in USER_OBSERVATIONS_AND_QUESTIONS.md.
 
+## Specificity Requirements
+
+When filling out the template, ensure:
+- ✅ Include at least 2-3 specific examples (quotes, commands, outputs, error messages)
+- ✅ Include actual file paths with line numbers when referencing code/instructions
+- ✅ Include complete dates extracted from conversation (format: YYYY-MM-DD, not XX)
+- ✅ Include conversation excerpts showing the problem (actual quotes)
+- ✅ Include before/after comparisons when applicable
+- ✅ Include actual commands executed and their outputs
+- ✅ Include error messages or unexpected outputs
+- ✅ Include timeline/sequence of events if important
+
 ## Key Principles
 
 1. **Comprehensive Documentation**: Document everything thoroughly - this is the "freeze state" moment
@@ -88,6 +113,7 @@ The user may provide observations like:
 3. **Preserve User Voice**: Capture user observations/questions exactly as provided
 4. **Defer Analysis**: User questions are for later - just document them now
 5. **Nuanced Thinking**: Consider balance questions, not just "make it stricter"
+6. **Concrete Evidence**: Include specific examples, quotes, commands, and outputs - not just descriptions
 
 ## When User Returns for Analysis
 

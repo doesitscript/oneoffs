@@ -1,11 +1,19 @@
-# Guard Rails Fail to Enforce Instructions - Incident Summary
+# Guard Rails Fail to Enforce Instructions (2nd Pass) - Incident Summary
 
-**Date**: 2025-01-XX  
+**Date**: 2025-01-28  
 **Context**: User requested execution of AFT account request workflow that included generating Terraform files and committing them to git with specific instructions for commit messages and branch creation.
+
+## Conversation Context
+
+**What was being worked on**: Executing the workflow defined in `shared-services-account-start-workflow.tf` to generate Terraform files from CSV input and commit them to git with explicit instructions.
+
+**Key background**: The workflow template contained explicit step-by-step instructions including exact commit message text and sequential git workflow steps.
+
+**User's goal**: Execute the workflow to generate 4 Terraform files and commit each to a separate git branch following the explicit instructions provided.
 
 ## What Happened
 
-The user requested execution of a workflow that generated Terraform files and required git commits. The workflow template contained explicit instructions:
+User requested execution of workflow that generated Terraform files and required git commits. The workflow template contained explicit instructions:
 1. Commit message: "Initial account vending" (exact text specified)
 2. Git workflow: Clear step-by-step instructions for creating branches and committing files
 
@@ -60,11 +68,21 @@ The user requested execution of a workflow that generated Terraform files and re
 3. **Workflow Compliance**: Need better adherence to sequential step-by-step instructions, especially for git workflows
 4. **Instruction Parsing**: Need to distinguish between "use this format" vs "use this exact text" in instructions
 
+## Timeline of Events
+
+1. **User Request**: "do this @shared-services-account-start-workflow.tf"
+2. **AI Execution**: Generated Terraform files correctly, then attempted git commits
+3. **First Mistake**: Committed all 4 files on first branch with extended commit message
+4. **Correction Attempts**: Multiple attempts to fix branch structure using cherry-pick (failed)
+5. **User Observation**: User pointed out guardrails should have prevented this
+6. **AI Acknowledgment**: AI acknowledged guardrail failure and instruction violation
+7. **Final Fix**: Branches recreated correctly from main, one file per branch
+
 ## Files Referenced
 
-- `/Users/a805120/develop/workflows/.scratch/aft-account-request/in_progress/shared-services-account-start-workflow.tf` - Contains explicit git workflow instructions (lines 121-131)
+- `/Users/a805120/develop/workflows/.scratch/aft-account-request/in_progress/shared-services-account-start-workflow.tf` - Contains explicit git workflow instructions (lines 121-135, updated after incident)
 - `/Users/a805120/develop/workflows/.scratch/aft-account-request/in_progress/GIT_WORKFLOW_INSTRUCTIONS.md` - Improved instructions created after incident
-- `/Users/a805120/develop/aft-account-request/terraform/` - Target directory for commits
+- `/Users/a805120/develop/aft-account-request/terraform/` - Target directory where Terraform files were committed
 
 ## Questions to Address Later
 
@@ -79,8 +97,9 @@ The user requested execution of a workflow that generated Terraform files and re
 
 ## Next Steps
 
-- [ ] Analyze root causes of guardrail failure
-- [ ] Identify solutions for enforcing explicit instructions
+- [x] Analyze root causes of guardrail failure
+- [x] Identify solutions for enforcing explicit instructions
+- [x] Document user observations and questions
 - [ ] Design mechanism to distinguish "exact text" vs "format/pattern" instructions
 - [ ] Test guardrail improvements with similar scenarios
 - [ ] Update workflow instructions to be more explicit about verbatim requirements

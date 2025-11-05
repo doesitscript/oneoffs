@@ -1,4 +1,4 @@
-# Guard Rails Fail to Enforce Instructions - Detailed Analysis
+# Guard Rails Fail to Enforce Instructions (2nd Pass) - Detailed Analysis
 
 ## The Problem
 
@@ -34,29 +34,108 @@ When instructions contain:
 
 ## What Actually Happened
 
-**Commit Messages Created**:
+**Commit Messages Created** (Actual Output):
 ```
-git commit -m "Initial account vending: Zerto account
+Initial account vending: Zerto account
 
 Generated from CSV workflow with the following fixes:
-- Properly formatted ManagedOrganizationalUnit: \"Shared Services (ou-uieo-w14lfx7l)\"
+- Properly formatted ManagedOrganizationalUnit: "Shared Services (ou-uieo-w14lfx7l)"
 - account_customizations_name placed outside custom_fields block (correct pattern)
 - All account names converted to lowercase per AFT standards
 - change_requested_by uses actual owner name (aaron bennett) instead of placeholder
-- Empty env handled correctly (no \"-ENV\" suffix for zerto account)
-- VPC configuration with proper regions and subnet settings"
+- Empty env handled correctly (no "-ENV" suffix for zerto account)
+- VPC configuration with proper regions and subnet settings
 ```
 
-**Git Workflow Executed**:
-- Committed all 4 files on first branch (`feat/initial_vending_sharedservices_zerto_account`)
-- Attempted to cherry-pick files to other branches (failed)
-- Required multiple correction attempts with branch resets
-- Eventually corrected by creating branches from main and adding one file at a time
+**Git Workflow Executed** (Actual Sequence):
+1. Committed all 4 files on first branch (`feat/initial_vending_sharedservices_zerto_account`)
+2. Attempted to cherry-pick files to other branches using `git checkout <branch> -- <file>` (failed)
+3. Required multiple correction attempts with branch resets
+4. Eventually corrected by creating branches from main and adding one file at a time
 
-**What Was Missing**:
-- Detection that commit message deviated from explicit instruction
-- Adherence to sequential workflow pattern
-- Recognition that exact text in quotes should be used verbatim
+### Specific Examples
+
+**Example 1**: Commit Message Deviation
+
+**Conversation excerpt**:
+```
+User: "don't our guardrails prevent you from doing this. That's an explicite instruction: 
+'3. Commit with message: \"Initial account vending\"'"
+```
+
+**AI's Response**:
+```
+"You're absolutely right - guardrails should have prevented this. The rules state:
+> 'Follow the user's requirements as given. If the user's instructions are unclear 
+> or ambiguous, ask for clarification rather than making assumptions.'
+
+When I saw:
+```
+3. Commit with message: "Initial account vending"
+```
+
+I should have used exactly that message. I added details that weren't requested, 
+which violated the explicit instruction."
+```
+
+**What this demonstrates**: Guardrails did not detect or prevent deviation from explicit textual instructions. The AI acknowledged the failure but only after the user pointed it out.
+
+---
+
+**Example 2**: Git Workflow Sequence Violation
+
+**Actual Commands Executed** (showing the mistake):
+```bash
+# First attempt - committed all files on one branch
+git checkout -b feat/initial_vending_sharedservices_zerto_account
+git add terraform/sharedservices-zerto-account.tf
+git add terraform/sharedservices-sailpointisc-account.tf  # ❌ Should not have added this
+git add terraform/sharedservices-opsreporting-account.tf  # ❌ Should not have added this
+git add terraform/sharedservices-rpa-account.tf           # ❌ Should not have added this
+git commit -m "Initial account vending: Zerto account..." # ❌ Wrong message + multiple files
+```
+
+**Conversation excerpt**:
+```
+User: "You really had problems, switching to the branches and making sure that you had 
+a file to commit, you really seemed lost, are you using git-mcp-server to help you"
+```
+
+**AI's Response**:
+```
+"Yes, I struggled. The problems I encountered:
+1. Committed all 4 files on the first branch instead of one file per branch
+2. When switching branches, the files weren't there because they were only 
+   committed on one branch
+3. Tried to cherry-pick files from one branch to another, which failed
+4. Should have started from `main` for each branch and added only that branch's file"
+```
+
+**What this demonstrates**: The AI did not follow the sequential workflow pattern correctly. The explicit instruction to process files one at a time (returning to main between each) was not followed.
+
+---
+
+**Example 3**: Explicit Instruction Reference
+
+**Explicit Instruction from Template** (`shared-services-account-start-workflow.tf` lines 125-131, before update):
+```
+#@AINOTE: For each generated file, create a branch and commit:
+#@AINOTE: 1. Create branch: feat/initial_vending_<filename-without-.tf>
+#@AINOTE: 2. Add file to git: git add <filename>
+#@AINOTE: 3. Commit with message: "Initial account vending"
+#@AINOTE: Example for <filename> (convert to lowercase, no dashes):
+#@AINOTE:   git checkout -b feat/initial_vending_<filename-lowercase-no-dashes>
+#@AINOTE:   git add <filename>
+#@AINOTE:   git commit -m "Initial account vending"
+```
+
+**User's Question About Guardrails**:
+```
+User: "Don't you have guard rails that would've kept you more strictly on this path 
+of not inferring things that have been explicitly written out"
+```
+
+**What this demonstrates**: The user expected guardrails to enforce explicit instructions, but they did not. The instruction clearly provided exact text in quotes, but the AI treated it as a format/pattern rather than verbatim text.
 
 ## Why This Happened
 
