@@ -186,3 +186,4 @@ You end up with **25+ MCP server processes** running simultaneously. This is exp
 2. Closing unused workspaces  
 3. Cleaning up orphaned processes
 
+

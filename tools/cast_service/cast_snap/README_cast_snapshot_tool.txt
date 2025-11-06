@@ -29,3 +29,6 @@ ManagedBy = "Terraform"	Ownership indicator	Tells future teams (and your scripts
 Owner = "cast-team"	Accountability	Identifies who should be notified about costs or incidents.
 
 Given those, you don’t need a custom CASTServer tag — that’s effectively duplicating what Application=cast and ManagedBy=Terraform already express.
+
+use 
+uv add package_name

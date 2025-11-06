@@ -1,0 +1,1 @@
+git commit -m "normalize names/tags via locals.tf

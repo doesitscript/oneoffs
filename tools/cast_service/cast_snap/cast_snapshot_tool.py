@@ -184,58 +184,44 @@ def delete_snapshots(ec2, snapshot_ids, dry_run: bool = False):
     return deleted
 
 
-def main():
-    ap = argparse.ArgumentParser(
-        description="Create EBS snapshots for CAST servers with optional retention."
-    )
-    # Environment variables can override defaults, but command-line args take precedence
-    ap.add_argument(
-        "--profile",
-        default=os.getenv("AWS_PROFILE"),
-        help="AWS profile (boto3 session profile_name). Can also set AWS_PROFILE env var.",
-    )
-    ap.add_argument(
-        "--region",
-        default=os.getenv("AWS_REGION", os.getenv("AWS_DEFAULT_REGION")),
-        help="AWS region, e.g., us-east-2. Can also set AWS_REGION or AWS_DEFAULT_REGION env var.",
-    )
-    ap.add_argument("--instance-id", nargs="+", help="One or more instance IDs")
-    ap.add_argument(
-        "--filter",
-        action="append",
-        help="EC2 filter name=value (repeatable). Example: --filter tag:Role=CASTServer",
-    )
-    ap.add_argument(
-        "--policy",
-        required=True,
-        help="Snapshot policy name (e.g., cast-daily, cast-manual-baseline)",
-    )
-    ap.add_argument(
-        "--keep",
-        type=int,
-        default=0,
-        help="Retention: keep the newest N snapshots per volume (older will be deleted). 0 means no deletion.",
-    )
-    ap.add_argument(
-        "--tag", action="append", help="Additional snapshot tag key=value (repeatable)"
-    )
-    ap.add_argument(
-        "--copy-instance-tags",
-        nargs="*",
-        help="Copy these tag keys from the instance to the snapshot",
-    )
-    ap.add_argument(
-        "--copy-volume-tags",
-        nargs="*",
-        help="Copy these tag keys from the volume to the snapshot",
-    )
-    ap.add_argument(
-        "--wait", action="store_true", help="Wait for snapshots to complete"
-    )
-    ap.add_argument(
-        "--dry-run", action="store_true", help="Dry run, print what would happen"
-    )
-    args = ap.parse_args()
+def main(
+    instance_id: Optional[List[str]] = None,
+    policy: Optional[str] = None,
+    region: Optional[str] = None,
+    profile: Optional[str] = None,
+    filter: Optional[List[str]] = None,
+    keep: int = 0,
+    tag: Optional[List[str]] = None,
+    copy_instance_tags: Optional[List[str]] = None,
+    copy_volume_tags: Optional[List[str]] = None,
+    wait: bool = False,
+    dry_run: bool = False,
+):
+    """
+    Main entry point. Can be called with keyword arguments or as CLI (uses argparse).
+    If policy is provided as a kwarg, uses kwargs; otherwise parses sys.argv using argparse.
+    """
+    # If policy is provided, use kwargs; otherwise use argparse (CLI mode)
+    if policy is not None:
+        # Use provided keyword arguments
+        class Args:
+            pass
+
+        args = Args()
+        args.instance_id = instance_id
+        args.policy = policy
+        args.region = region or os.getenv("AWS_REGION", os.getenv("AWS_DEFAULT_REGION"))
+        args.profile = profile or os.getenv("AWS_PROFILE")
+        args.filter = filter
+        args.keep = keep
+        args.tag = tag
+        args.copy_instance_tags = copy_instance_tags
+        args.copy_volume_tags = copy_volume_tags
+        args.wait = wait
+        args.dry_run = dry_run
+    else:
+        # Fall back to argparse for CLI compatibility
+        args = _parse_args()
 
     filters = parse_filters(args.filter) if args.filter else []
 
@@ -312,6 +298,61 @@ def main():
         )
     )
     return 0
+
+
+def _parse_args():
+    """Parse command-line arguments using argparse."""
+    ap = argparse.ArgumentParser(
+        description="Create EBS snapshots for CAST servers with optional retention."
+    )
+    # Environment variables can override defaults, but command-line args take precedence
+    ap.add_argument(
+        "--profile",
+        default=os.getenv("AWS_PROFILE"),
+        help="AWS profile (boto3 session profile_name). Can also set AWS_PROFILE env var.",
+    )
+    ap.add_argument(
+        "--region",
+        default=os.getenv("AWS_REGION", os.getenv("AWS_DEFAULT_REGION")),
+        help="AWS region, e.g., us-east-2. Can also set AWS_REGION or AWS_DEFAULT_REGION env var.",
+    )
+    ap.add_argument("--instance-id", nargs="+", help="One or more instance IDs")
+    ap.add_argument(
+        "--filter",
+        action="append",
+        help="EC2 filter name=value (repeatable). Example: --filter tag:Role=CASTServer",
+    )
+    ap.add_argument(
+        "--policy",
+        required=True,
+        help="Snapshot policy name (e.g., cast-daily, cast-manual-baseline)",
+    )
+    ap.add_argument(
+        "--keep",
+        type=int,
+        default=0,
+        help="Retention: keep the newest N snapshots per volume (older will be deleted). 0 means no deletion.",
+    )
+    ap.add_argument(
+        "--tag", action="append", help="Additional snapshot tag key=value (repeatable)"
+    )
+    ap.add_argument(
+        "--copy-instance-tags",
+        nargs="*",
+        help="Copy these tag keys from the instance to the snapshot",
+    )
+    ap.add_argument(
+        "--copy-volume-tags",
+        nargs="*",
+        help="Copy these tag keys from the volume to the snapshot",
+    )
+    ap.add_argument(
+        "--wait", action="store_true", help="Wait for snapshots to complete"
+    )
+    ap.add_argument(
+        "--dry-run", action="store_true", help="Dry run, print what would happen"
+    )
+    return ap.parse_args()
 
 
 if __name__ == "__main__":

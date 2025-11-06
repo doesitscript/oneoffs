@@ -168,3 +168,4 @@ The accumulation happens because:
 
 This is a **process lifecycle management issue**, not a bug in Cursor or MCP - it's how Unix processes behave by design. The fix requires explicit cleanup either by MCP servers detecting orphaned state, or by manual/system cleanup.
 
+
