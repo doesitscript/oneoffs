@@ -32,31 +32,44 @@ Prereqs
   # uv pip install boto3 botocore
   
 """
+
 import argparse
 import boto3
 import botocore
 import json
+import os
 from datetime import datetime, timezone
 from typing import List, Dict, Any, Optional
 
-def parse_kv_list(items: List[str]) -> Dict[str,str]:
+# Optional: Load .env file if python-dotenv is available
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()  # Loads .env file from current directory
+except ImportError:
+    pass  # python-dotenv not installed, skip
+
+
+def parse_kv_list(items: List[str]) -> Dict[str, str]:
     out = {}
     for item in items or []:
         if "=" not in item:
             raise ValueError(f"Tag must be key=value, got: {item}")
-        k,v = item.split("=",1)
-        out[k]=v
+        k, v = item.split("=", 1)
+        out[k] = v
     return out
+
 
 def parse_filters(filters: List[str]) -> List[Dict[str, Any]]:
     out = []
     for f in filters or []:
         if "=" not in f:
             raise ValueError(f"Filter must be name=value, got: {f}")
-        name, value = f.split("=",1)
+        name, value = f.split("=", 1)
         values = [v for v in value.split(",") if v]
         out.append({"Name": name, "Values": values})
     return out
+
 
 def get_boto3_clients(profile: Optional[str], region: Optional[str]):
     session_kwargs = {}
@@ -65,6 +78,7 @@ def get_boto3_clients(profile: Optional[str], region: Optional[str]):
     session = boto3.Session(**session_kwargs)
     ec2 = session.client("ec2", region_name=region)
     return ec2
+
 
 def list_instances(ec2, instance_ids: List[str], filters: List[Dict[str, Any]]):
     args = {}
@@ -79,21 +93,26 @@ def list_instances(ec2, instance_ids: List[str], filters: List[Dict[str, Any]]):
             instances.append(i)
     return instances
 
+
 def list_attached_ebs_volumes(instance: Dict[str, Any]):
     vols = []
     for m in instance.get("BlockDeviceMappings", []):
         ebs = m.get("Ebs")
         if ebs and "VolumeId" in ebs:
-            vols.append({"DeviceName": m.get("DeviceName"), "VolumeId": ebs["VolumeId"]})
+            vols.append(
+                {"DeviceName": m.get("DeviceName"), "VolumeId": ebs["VolumeId"]}
+            )
     return vols
 
-def ensure_tags(ec2, resource_id: str, tags: Dict[str, str], dry_run: bool=False):
+
+def ensure_tags(ec2, resource_id: str, tags: Dict[str, str], dry_run: bool = False):
     if not tags:
         return
-    tag_list = [{"Key": k, "Value": v} for k,v in tags.items()]
+    tag_list = [{"Key": k, "Value": v} for k, v in tags.items()]
     if dry_run:
         return
     ec2.create_tags(Resources=[resource_id], Tags=tag_list)
+
 
 def copy_subset_tags(source_tags, allowlist):
     result = {}
@@ -106,19 +125,25 @@ def copy_subset_tags(source_tags, allowlist):
             result[k] = v
     return result
 
-def create_snapshot(ec2, volume_id: str, desc: str, tags: Dict[str,str], dry_run: bool=False) -> str:
+
+def create_snapshot(
+    ec2, volume_id: str, desc: str, tags: Dict[str, str], dry_run: bool = False
+) -> str:
     kwargs = {
         "VolumeId": volume_id,
         "Description": desc,
-        "TagSpecifications": [{
-            "ResourceType": "snapshot",
-            "Tags": [{"Key": k, "Value": v} for k,v in tags.items()]
-        }]
+        "TagSpecifications": [
+            {
+                "ResourceType": "snapshot",
+                "Tags": [{"Key": k, "Value": v} for k, v in tags.items()],
+            }
+        ],
     }
     if dry_run:
         return f"snap-dryrun-{volume_id[-8:]}"
     resp = ec2.create_snapshot(**kwargs)
     return resp["SnapshotId"]
+
 
 def wait_for_snapshots(ec2, snapshot_ids):
     if not snapshot_ids:
@@ -126,7 +151,10 @@ def wait_for_snapshots(ec2, snapshot_ids):
     waiter = ec2.get_waiter("snapshot_completed")
     waiter.wait(SnapshotIds=snapshot_ids)
 
-def list_old_snapshots_for_policy(ec2, policy: str, keep: int, instance_id: str, volume_id: str):
+
+def list_old_snapshots_for_policy(
+    ec2, policy: str, keep: int, instance_id: str, volume_id: str
+):
     filters = [
         {"Name": "tag:Policy", "Values": [policy]},
         {"Name": "tag:SourceInstanceId", "Values": [instance_id]},
@@ -134,10 +162,15 @@ def list_old_snapshots_for_policy(ec2, policy: str, keep: int, instance_id: str,
     ]
     res = ec2.describe_snapshots(Filters=filters, OwnerIds=["self"])
     snaps = sorted(res.get("Snapshots", []), key=lambda s: s["StartTime"], reverse=True)
-    old = [s["SnapshotId"] for s in snaps[keep:]] if keep > 0 else [s["SnapshotId"] for s in snaps]
+    old = (
+        [s["SnapshotId"] for s in snaps[keep:]]
+        if keep > 0
+        else [s["SnapshotId"] for s in snaps]
+    )
     return old
 
-def delete_snapshots(ec2, snapshot_ids, dry_run: bool=False):
+
+def delete_snapshots(ec2, snapshot_ids, dry_run: bool = False):
     deleted = []
     for sid in snapshot_ids:
         if dry_run:
@@ -150,19 +183,58 @@ def delete_snapshots(ec2, snapshot_ids, dry_run: bool=False):
                 pass
     return deleted
 
+
 def main():
-    ap = argparse.ArgumentParser(description="Create EBS snapshots for CAST servers with optional retention.")
-    ap.add_argument("--profile", help="AWS profile (boto3 session profile_name)")
-    ap.add_argument("--region", help="AWS region, e.g., us-east-2")
+    ap = argparse.ArgumentParser(
+        description="Create EBS snapshots for CAST servers with optional retention."
+    )
+    # Environment variables can override defaults, but command-line args take precedence
+    ap.add_argument(
+        "--profile",
+        default=os.getenv("AWS_PROFILE"),
+        help="AWS profile (boto3 session profile_name). Can also set AWS_PROFILE env var.",
+    )
+    ap.add_argument(
+        "--region",
+        default=os.getenv("AWS_REGION", os.getenv("AWS_DEFAULT_REGION")),
+        help="AWS region, e.g., us-east-2. Can also set AWS_REGION or AWS_DEFAULT_REGION env var.",
+    )
     ap.add_argument("--instance-id", nargs="+", help="One or more instance IDs")
-    ap.add_argument("--filter", action="append", help="EC2 filter name=value (repeatable). Example: --filter tag:Role=CASTServer")
-    ap.add_argument("--policy", required=True, help="Snapshot policy name (e.g., cast-daily, cast-manual-baseline)")
-    ap.add_argument("--keep", type=int, default=0, help="Retention: keep the newest N snapshots per volume (older will be deleted). 0 means no deletion.")
-    ap.add_argument("--tag", action="append", help="Additional snapshot tag key=value (repeatable)")
-    ap.add_argument("--copy-instance-tags", nargs="*", help="Copy these tag keys from the instance to the snapshot")
-    ap.add_argument("--copy-volume-tags", nargs="*", help="Copy these tag keys from the volume to the snapshot")
-    ap.add_argument("--wait", action="store_true", help="Wait for snapshots to complete")
-    ap.add_argument("--dry-run", action="store_true", help="Dry run, print what would happen")
+    ap.add_argument(
+        "--filter",
+        action="append",
+        help="EC2 filter name=value (repeatable). Example: --filter tag:Role=CASTServer",
+    )
+    ap.add_argument(
+        "--policy",
+        required=True,
+        help="Snapshot policy name (e.g., cast-daily, cast-manual-baseline)",
+    )
+    ap.add_argument(
+        "--keep",
+        type=int,
+        default=0,
+        help="Retention: keep the newest N snapshots per volume (older will be deleted). 0 means no deletion.",
+    )
+    ap.add_argument(
+        "--tag", action="append", help="Additional snapshot tag key=value (repeatable)"
+    )
+    ap.add_argument(
+        "--copy-instance-tags",
+        nargs="*",
+        help="Copy these tag keys from the instance to the snapshot",
+    )
+    ap.add_argument(
+        "--copy-volume-tags",
+        nargs="*",
+        help="Copy these tag keys from the volume to the snapshot",
+    )
+    ap.add_argument(
+        "--wait", action="store_true", help="Wait for snapshots to complete"
+    )
+    ap.add_argument(
+        "--dry-run", action="store_true", help="Dry run, print what would happen"
+    )
     args = ap.parse_args()
 
     filters = parse_filters(args.filter) if args.filter else []
@@ -173,7 +245,11 @@ def main():
 
     instances = list_instances(ec2, args.instance_id or [], filters)
     if not instances:
-        print(json.dumps({"ok": False, "error": "No instances matched the criteria"}, indent=2))
+        print(
+            json.dumps(
+                {"ok": False, "error": "No instances matched the criteria"}, indent=2
+            )
+        )
         return 1
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -207,24 +283,36 @@ def main():
             created.append({"SnapshotId": sid, "InstanceId": iid, "VolumeId": vid})
 
             if args.keep is not None and args.keep >= 0:
-                old = list_old_snapshots_for_policy(ec2, args.policy, args.keep, iid, vid)
+                old = list_old_snapshots_for_policy(
+                    ec2, args.policy, args.keep, iid, vid
+                )
                 deleted_ids = delete_snapshots(ec2, old, dry_run=args.dry_run)
                 for d in deleted_ids:
-                    deleted.append({"SnapshotId": d, "InstanceId": iid, "VolumeId": vid})
+                    deleted.append(
+                        {"SnapshotId": d, "InstanceId": iid, "VolumeId": vid}
+                    )
 
     if args.wait and not args.dry_run:
-        real_ids = [c["SnapshotId"] for c in created if c["SnapshotId"].startswith("snap-")]
+        real_ids = [
+            c["SnapshotId"] for c in created if c["SnapshotId"].startswith("snap-")
+        ]
         if real_ids:
             wait_for_snapshots(ec2, real_ids)
 
-    print(json.dumps({
-        "ok": True,
-        "created_count": len(created),
-        "deleted_count": len(deleted),
-        "created": created,
-        "deleted": deleted
-    }, indent=2))
+    print(
+        json.dumps(
+            {
+                "ok": True,
+                "created_count": len(created),
+                "deleted_count": len(deleted),
+                "created": created,
+                "deleted": deleted,
+            },
+            indent=2,
+        )
+    )
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
