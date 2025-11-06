@@ -1,5 +1,5 @@
 import os
-from _cli_wrapper import parse_args  # optional; allows using CLI style if you want
+from _cli_wrapper import parse_args
 
 profile = os.getenv("AWS_PROFILE")
 region = os.getenv("AWS_REGION")

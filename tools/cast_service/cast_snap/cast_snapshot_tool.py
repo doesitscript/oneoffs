@@ -194,8 +194,9 @@ def main(
     tag: Optional[List[str]] = None,
     copy_instance_tags: Optional[List[str]] = None,
     copy_volume_tags: Optional[List[str]] = None,
-    wait: bool = False,
-    dry_run: bool = False,
+    wait: Optional[bool] = True,
+    bool: Optional[bool] = False,
+    dry_run: Optional[bool]False,
 ):
     """
     Main entry point. Can be called with keyword arguments or as CLI (uses argparse).
