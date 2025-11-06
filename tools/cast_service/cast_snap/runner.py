@@ -1,5 +1,6 @@
 import os
-from _cli_wrapper import parse_args
+
+# from _cli_wrapper import parse_args  # File deleted - uncomment if you recreate _cli_wrapper.py
 
 profile = os.getenv("AWS_PROFILE")
 region = os.getenv("AWS_REGION")
@@ -13,7 +14,7 @@ if __name__ == "__main__":
     # Option A: hardcode params for fast debugging:
     cfg = dict(
         instance_id=["i-054443c7dc4253556"],
-        filter=["tag:Role=server", "tag:Environment=dev, tag:Application=cast"],
+        filter=["tag:Role=srv", "tag:Environment=dev", "tag:Application=cast"],
         policy="cast-manual-baseline",
         region="us-east-2",
         profile=profile,

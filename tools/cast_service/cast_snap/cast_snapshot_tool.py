@@ -37,9 +37,18 @@ import argparse
 import boto3
 import botocore
 import json
+import logging
 import os
 from datetime import datetime, timezone
 from typing import List, Dict, Any, Optional
+
+# Set up logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+)
+logger = logging.getLogger(__name__)
 
 # Optional: Load .env file if python-dotenv is available
 try:
@@ -196,7 +205,7 @@ def main(
     copy_volume_tags: Optional[List[str]] = None,
     wait: Optional[bool] = True,
     bool: Optional[bool] = False,
-    dry_run: Optional[bool]False,
+    dry_run: Optional[bool] = False,
 ):
     """
     Main entry point. Can be called with keyword arguments or as CLI (uses argparse).
@@ -220,6 +229,7 @@ def main(
         args.copy_volume_tags = copy_volume_tags
         args.wait = wait
         args.dry_run = dry_run
+
     else:
         # Fall back to argparse for CLI compatibility
         args = _parse_args()
