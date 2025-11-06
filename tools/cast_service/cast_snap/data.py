@@ -12,20 +12,21 @@ class Args:
     profile: Optional[str]
     wait: bool
     dry_run: bool
+    keep: int
 
     def __init__(
         self,
-        instance_id: List[str],
-        tag: List[str],
-        copy_instance_tags: List[str],
-        copy_volume_tags: List[str],
-        filter: List[str],
-        policy: str,
-        region: str,
-        profile: str,
-        wait: bool,
-        dry_run: bool,
-        keep: int,
+        instance_id: Optional[List[str]] = None,
+        tag: Optional[List[str]] = None,
+        copy_instance_tags: Optional[List[str]] = None,
+        copy_volume_tags: Optional[List[str]] = None,
+        filter: Optional[List[str]] = None,
+        policy: Optional[str] = None,
+        region: Optional[str] = None,
+        profile: Optional[str] = None,
+        wait: bool = False,
+        dry_run: bool = False,
+        keep: int = 0,
     ):
         self.instance_id = instance_id
         self.tag = tag
