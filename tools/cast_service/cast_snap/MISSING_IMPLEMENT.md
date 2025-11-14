@@ -11,5 +11,5 @@ What you need to add:
 x Add the 4 missing attributes to the class definition (lines 5-11)
 x Add them to __init__ parameters (lines 13-22)
 x Assign them in __init__ (lines 23-29)
-Fix the type hints to use List[str] instead of list[str]
+# Fix the type hints to use List[str] instead of list[str]
 Make parameters Optional where appropriate

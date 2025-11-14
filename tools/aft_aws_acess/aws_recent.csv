@@ -1,0 +1,7 @@
+AccountName,AccountID,ADGroupName
+varonis-prd,475936984843,App-AWS-AA-varonis-prd-475936984843-admin
+db2dataconnect-dev,856315922280,App-AWS-AA-db2dataconnect-dev-856315922280-admin
+db2dataconnect-prd,619038613613,App-AWS-AA-db2dataconnect-prd-619038613613-admin
+sectigo-dev,525388274604,App-AWS-AA-sectigo-dev-525388274604-admin
+sectigo-qa,396183525533,App-AWS-AA-sectigo-qa-396183525533-admin
+database-sandbox,941677815499,App-AWS-AA-database-sandbox-941677815499-admin

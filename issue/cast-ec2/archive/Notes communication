@@ -1,0 +1,27 @@
+
+2. **CAST-Specific Admin Group:**
+   - **Group:** `App-AWS-AA-zerto-prd-533462777803-admin`
+   - **Description:** "admin access to a single account"
+   - **Permission Set:** `admin-v20250516`
+   - **Permissions:** `AdministratorAccess` (includes all SSM permissions)
+
+
+zerto-prd
+533462777803
+  |  
+AwsAccount+zerto-prd@breadfinancial.com
+
+I totlaly hear you @per
+if you want to iterate on build/or early deploy states, admitedly the first place to go is more standardly a dev domain but then that the trade off is you mignt not be able to test s sttep that uses a cross account resourcess. And it never hurts to have a few domain names to cycle through when one gets stuck in a unrecoverable state. 
+
+THe cattle topic has a the most fuel especially in a world of app that can be frozen and pinned. As Joden may have implied, we get to support previous design choices that restrict the number of app instances and order they should come up. Truth be told, if there was a chance to identify and our situation it would be when AI is helping with refactorying. The appy may say, This design choice will limit you but I notice you
+
+
+
+
+
+
+
+
+
+
