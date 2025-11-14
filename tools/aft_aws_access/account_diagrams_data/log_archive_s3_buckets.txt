@@ -1,0 +1,10 @@
+2025-11-14 15:25:37 athena-query-results-463470955493-us-east-2
+2025-10-28 23:49:43 aws-aft-logs-463470955493-us-east-2
+2025-10-28 22:49:56 aws-aft-s3-access-logs-463470955493-us-east-2
+2025-10-30 17:15:18 aws-controltower-logs-463470955493-us-east-2
+2025-10-28 22:39:57 aws-controltower-s3-access-logs-463470955493-us-east-2
+2025-06-16 17:45:44 central-logging-463470955493-us-east-2
+2025-06-16 17:45:46 central-logging-463470955493-us-west-2
+2025-06-16 17:45:44 s3accesslogs-central-logs-463470955493-us-east-2
+2025-06-16 17:45:46 s3accesslogs-central-logs-463470955493-us-west-2
+2025-10-30 16:30:33 sra-guardduty-org-delivery-463470955493-us-east-2

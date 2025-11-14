@@ -1,0 +1,15 @@
+{
+    "Events": [
+        {
+            "EventId": "94839f13-c9bd-4f4f-a9a6-c8973b6db65f",
+            "EventName": "CreateGroup",
+            "ReadOnly": "false",
+            "AccessKeyId": "ASIA2OAJUDO2V7HWUIGP",
+            "EventTime": "2025-08-29T12:38:20-05:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO2V7HWUIGP\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-08-29T17:34:51Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-08-29T17:38:20Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"CreateGroup\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.91\",\"userAgent\":\"aws-cli/2.27.12 md/awscrt#0.26.1 ua/2.1 os/macos#23.6.0 md/arch#arm64 lang/python#3.13.3 md/pyimpl#CPython cfg/retry-mode#standard md/installer#source md/prompt#off md/command#identitystore.create-group\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"displayName\":\"HIDDEN_DUE_TO_SECURITY_REASONS\",\"description\":\"HIDDEN_DUE_TO_SECURITY_REASONS\"},\"responseElements\":{\"groupId\":\"31fb6590-a0b1-70ab-9607-3eb0cdae6360\",\"identityStoreId\":\"d-9a6763d7d3\"},\"requestID\":\"fd33bea4-36eb-4bc2-a91a-b13123cd7962\",\"eventID\":\"94839f13-c9bd-4f4f-a9a6-c8973b6db65f\",\"readOnly\":false,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        }
+    ]
+}

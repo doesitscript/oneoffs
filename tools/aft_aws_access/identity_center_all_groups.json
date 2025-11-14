@@ -1,0 +1,304 @@
+{
+    "Groups": [
+        {
+            "GroupId": "018b85f0-5081-7049-421f-e2b6dd17dbba",
+            "DisplayName": "AWSLogArchiveViewers",
+            "Description": "Read-only access to log archive account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "01ab65a0-10a1-70d0-0ec4-ed28a7903ca2",
+            "DisplayName": "App-AWS-AA-MasterDataManagement-preprd-603470018084-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "01fb05a0-4091-706b-0bed-450750217efe",
+            "DisplayName": "App-AWS-AA-sectigo-prd-000767026112-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "01fb2510-70a1-70bf-e88a-fd363fce5fb2",
+            "DisplayName": "App-AWS-SDLC-QA-RTI-149731129395-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "110b3540-e001-7030-2fd5-d5fc74bbf0ba",
+            "DisplayName": "App-AWS-SDLC-UAT-LEGALDOCS-273265662812-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "114b7540-c091-7014-e332-c5813c8cab10",
+            "DisplayName": "global:admin",
+            "Description": "Global access to the admin permission set",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "116b2590-3071-7065-00c7-8a68d400c230",
+            "DisplayName": "App-AWS-A-global-viewer",
+            "Description": "global view access",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "116b9590-b051-70be-abbf-f81ea3a50c81",
+            "DisplayName": "App-AWS-AA-sectigo-qa-396183525533-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "117b25b0-9001-7073-eed0-0ae1a4768b6c",
+            "DisplayName": "App-AWS-AA-CentralAlertsManagement-824274058810-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "118bf570-d001-70ce-d969-cc2967312763",
+            "DisplayName": "App-AWS-SDLC-DEV-Ngac-Api-981476178331-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "210b2560-7091-702a-e663-0573433764dc",
+            "DisplayName": "App-AWS-SDLC-QA-LEGALDOCS-145411223045-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "211b65f0-2011-7048-b737-8b856632bd49",
+            "DisplayName": "App-AWS-AA-CentralizedBackup-CommvaultArchive-770353437842-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "216b0520-60a1-7073-c437-2ff2c5d5229f",
+            "DisplayName": "App-AWS-AA-varonis-prd-475936984843-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "21ab9560-f0e1-703d-c8d3-844bf79a2707",
+            "DisplayName": "App-AWS-AA-db2dataconnect-prd-619038613613-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "21cb3560-c021-701b-e948-2b33a86c71e6",
+            "DisplayName": "App-AWS-SDLC-UAT-REWARDS-API-587210148123-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "21fbc500-b0b1-7006-0071-7812123e8517",
+            "DisplayName": "App-AWS-AA-SDLC-UAT-OnsiteCardIssuance-852100867763-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "310b65a0-3001-7071-fc4b-18f4ba2c105a",
+            "DisplayName": "App-AWS-AA-StrongDM-967660016041-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "317b0550-20a1-7077-769f-e749c521dfce",
+            "DisplayName": "App-AWS-AA-global-viewer",
+            "Description": "global view access",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "31cbe530-30d1-703c-45c4-6f1cce8d51ea",
+            "DisplayName": "App-AWS-SDLC-DEV-Testing-893061506494-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "31fb6590-a0b1-70ab-9607-3eb0cdae6360",
+            "DisplayName": "App-AWS-A-AmazonQDeveloper",
+            "Description": "Amazon Q Developer Group",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "412b95b0-a071-70f5-9ef8-3e19772e6573",
+            "DisplayName": "AWSAuditAccountAdmins",
+            "Description": "Admin rights to cross-account audit account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "416b45c0-60d1-7001-5fbe-7ffe53944317",
+            "DisplayName": "App-AWS-AA-confluent-prod-042417219076-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "416b8510-80d1-70fe-d68a-dbdaebe0866a",
+            "DisplayName": "App-AWS-AA-Secrets-Management-556180171418-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "417b0540-10c1-7066-c22a-9621cf2cfd0a",
+            "DisplayName": "App-AWS-AA-SDLC-QA-Prescreen-972067303227-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "418b65d0-0041-7062-337e-acb7d30d73cd",
+            "DisplayName": "App-AWS-AA-SharedServices-Harness-807379992595-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "41bb4590-6031-706a-6879-cf13f897b786",
+            "DisplayName": "App-AWS-AA-SDLC-DEV-SMARTMART-246881155048-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "41eb5580-a051-70f4-ca14-33efd5877808",
+            "DisplayName": "App-AWS-AA-MasterDataManagement-prd-553455761466-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "516b7560-b041-7016-26b2-33308c6b9940",
+            "DisplayName": "App-AWS-SDLC-QA-NgAC-465733921982-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "518bc5c0-5061-70a8-4426-085942bc3b82",
+            "DisplayName": "App-AWS-AA-SDLC-DEV-CAPEX-REQUESTS-204620195111-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "519b1520-9051-7016-b9f4-2447c0a38fe9",
+            "DisplayName": "App-AWS-AA-SDLC-QA-SMARTMART-075318387613-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "519b35d0-50d1-7029-d30b-bb543aad75b1",
+            "DisplayName": "App-AWS-AA-zerto-prd-533462777803-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "519b6520-8031-7013-30ae-f69d23f43af7",
+            "DisplayName": "App-AWS-SDLC-DEV-Cbc-Api-121899786920-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "51db3540-1001-7086-ab46-4abaa3d62111",
+            "DisplayName": "AWSControlTowerAdmins",
+            "Description": "Admin rights to AWS Control Tower core and provisioned accounts",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "51fb0540-10c1-70cc-2a1f-450870fb11e1",
+            "DisplayName": "global:reader",
+            "Description": "Global access to the reader permission set",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "610b3570-9081-706b-7b7d-e747d114fccb",
+            "DisplayName": "global:standard",
+            "Description": "Global access to the standard permission set",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "610b55b0-8031-707a-66ca-0a2be45137bd",
+            "DisplayName": "user:standard",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "617be550-9011-7014-33f3-9f091d962573",
+            "DisplayName": "App-AWS-AA-confluent-nonprod-081047269091-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "618b7540-6011-702f-0753-1db1baddf78c",
+            "DisplayName": "App-AWS-AA-CloudOperations-920411896753-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "619b5590-c0f1-70be-3d38-a3918fed8c40",
+            "DisplayName": "App-AWS-AA-DataAnalyticsDev-285529797488-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "61ab9570-7011-70d5-d582-a839106f8f88",
+            "DisplayName": "App-AWS-AA-AmazonQDeveloper",
+            "Description": "Group for Amazon Q Developers access for AA account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "61abb590-a021-709c-2dc2-0129d59d0671",
+            "DisplayName": "App-AWS-AA-MasterDataManagement-dev-981686515035-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "61bb05b0-8031-703d-b9e4-b8c1c28cff23",
+            "DisplayName": "App-AWS-AA-CASTSoftware-dev-925774240130-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "710bd5e0-3011-70c2-20ca-6e7b1c760dce",
+            "DisplayName": "App-AWS-AA-FinOps-203236040739-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "711bf5c0-b071-70c1-06da-35d7fbcac52d",
+            "DisplayName": "App-AWS-AA-database-sandbox-941677815499-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "716b4500-7021-7081-099f-b7de17e32fe0",
+            "DisplayName": "App-AWS-AA-InfrastructureSharedServices-185869891420-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "718b5510-f041-70d6-e2da-ec8db5529b46",
+            "DisplayName": "App-AWS-SDLC-QA-REWARDS-API-804055905587-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "719b25d0-6031-7012-f6eb-2ed668877c24",
+            "DisplayName": "App-AWS-AA-db2dataconnect-dev-856315922280-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "71db35e0-a031-70cd-4116-72fdc8eb1eb3",
+            "DisplayName": "App-AWS-AA-IgelUmsDev-273268177664-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "71eb25d0-70c1-7098-5af5-9321d765c87d",
+            "DisplayName": "App-AWS-AA-WellArchitectedFramework-860829110296-WARReader",
+            "Description": "Read-only access to Well-Architected Framework",
+            "IdentityStoreId": "d-9a6763d7d3"
+        },
+        {
+            "GroupId": "816b15d0-e001-7038-bac1-a421faee22eb",
+            "DisplayName": "App-AWS-AA-SDLC-QA-CAPEX-REQUESTS-381293814657-admin",
+            "Description": "admin access to a single account",
+            "IdentityStoreId": "d-9a6763d7d3"
+        }
+    ],
+    "NextToken": "AAQA-EFRSURBSGd3aS8zU05SNUdJMGtvTTNhK2hhZHdZZHNxWkk3MTllR214TmtFMnRkVk1nRk1ha3pSODR1QkI3bWdvWndEeHRWb0FBQUFmakI4QmdrcWhraUc5dzBCQndhZ2J6QnRBZ0VBTUdnR0NTcUdTSWIzRFFFSEFUQWVCZ2xnaGtnQlpRTUVBUzR3RVFRTVlnQi94UVR2aklNR1RDSnlBZ0VRZ0R1Szk0bWpxZU5Nb0VpL2t3SVFzQ3pjQXFUWXVXVy83TFhUMDRXQ3BrV2RzT1Q1dVJCS3cyRm9pS3VHQkdhWk5ZbUxkUmkxRmJVcU8vdEY0UT09NHa8LDUiHLRBR0-oh4BH6hZdJalG57KektVMMmVtILKfHsr7m54jSA8W7b8df4IMZpF2S9TNiqjcAzSnduyemf54gIJ7CO_bdj4y-Kif9dPfFDVAJyAqBWumDV3tMI_SiUjMI4s5cayWLmpaY1DW9kgGMNURoc7H-9s2km_QVmW9nVsrFSsQmR-PvakZ9QlazFGvI5SoOHqI9qc6wpDagCqTga80wBwJrvwY6VIBlzfckHD4ZQGQNxIAXrhM6GVI-kvzYrMi45EavWpFmZ1FNbdHwqKiQqnZujWYsTk_hHyf_oC62Mce-Z4p59BZ22YS3puT8l8Q5rxKdzgsaj8vPbWvPv0="
+}

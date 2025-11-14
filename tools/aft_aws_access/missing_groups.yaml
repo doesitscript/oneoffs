@@ -1,0 +1,34 @@
+- group_name: App-AWS-AA-db2dataconnect-dev-856315922280-admin
+  snow_item: RI____
+  account_id: "856315922280"
+  scope: account
+  permission_set: admin
+  description: admin access to a single account
+
+- group_name: App-AWS-AA-db2dataconnect-prd-619038613613-admin
+  snow_item: RI____
+  account_id: "619038613613"
+  scope: account
+  permission_set: admin
+  description: admin access to a single account
+
+- group_name: App-AWS-AA-sectigo-dev-525388274604-admin
+  snow_item: RI____
+  account_id: "525388274604"
+  scope: account
+  permission_set: admin
+  description: admin access to a single account
+
+- group_name: App-AWS-AA-sectigo-qa-396183525533-admin
+  snow_item: RI____
+  account_id: "396183525533"
+  scope: account
+  permission_set: admin
+  description: admin access to a single account
+
+- group_name: App-AWS-AA-varonis-prd-475936984843-admin
+  snow_item: RI____
+  account_id: "475936984843"
+  scope: account
+  permission_set: admin
+  description: admin access to a single account

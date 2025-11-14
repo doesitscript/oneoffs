@@ -1,0 +1,57 @@
+╔══════════════════════════════════════════════════════════════════╗
+║          AWS IAM Identity Center Group Population               ║
+║                    QUICK REFERENCE CARD                          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+TARGET: App-AWS-AA-database-sandbox-941677815499-admin (EMPTY)
+
+┌──────────────────────────────────────────────────────────────────┐
+│ OPTION 1: AWS DIRECT (WORKS NOW - 5 MINUTES)                    │
+└──────────────────────────────────────────────────────────────────┘
+  ./aws_direct_action.sh
+  
+  → Immediate access
+  → Bypasses governance
+  → Follow up: Add to Okta group
+
+┌──────────────────────────────────────────────────────────────────┐
+│ OPTION 2: OKTA API (15 MINUTES - NEED TOKEN)                    │
+└──────────────────────────────────────────────────────────────────┘
+  1. Get token: Okta Admin → Security → API → Tokens
+  2. export OKTA_API_TOKEN="<token>"
+  3. ./trigger_okta_sync.sh
+  
+  → Uses existing integration
+  → Still bypasses SailPoint
+  → Better than direct AWS
+
+┌──────────────────────────────────────────────────────────────────┐
+│ OPTION 3: SAILPOINT (1-2 HOURS - PROPER WAY)                    │
+└──────────────────────────────────────────────────────────────────┘
+  1. Delete current PAT (has no scopes)
+  2. Create new PAT with scope: sp:scopes:all
+  3. Provide new Client ID + Secret
+  4. Investigation + access profile creation
+  
+  → Full governance
+  → Audit trail
+  → Sustainable
+
+═══════════════════════════════════════════════════════════════════
+
+INVESTIGATION (ALWAYS SAFE):
+  ./investigate_sync.sh
+
+KEY DETAILS:
+  Identity Store: d-9a6763d7d3
+  Group ID: 711bf5c0-b071-70c1-06da-35d7fbcac52d
+  Region: us-east-2
+  SCIM Token Expires: 3/7/2026
+
+DOCUMENTATION:
+  DEFINITIVE_ANSWER.md - Complete guide
+  AWS_SIDE_INTERVENTIONS.md - AWS options
+  HANDS_ON_INVESTIGATION.md - API reference
+  DEFINITIVE_FINDINGS.md - SailPoint PAT analysis
+
+═══════════════════════════════════════════════════════════════════

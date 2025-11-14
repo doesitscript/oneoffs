@@ -1,0 +1,225 @@
+{
+    "Events": [
+        {
+            "EventId": "116b6073-6ed3-4cf1-8cfa-2a66829d065e",
+            "EventName": "ListGroups",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:13:41-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:13:41Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListGroups\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/b,C,Z,E cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.list-groups\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\"},\"responseElements\":null,\"requestID\":\"4a2eed9a-d2d9-4999-922c-168aaac0692e\",\"eventID\":\"116b6073-6ed3-4cf1-8cfa-2a66829d065e\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "fac1824b-ad65-4ef4-9ec7-a5f3cca1f272",
+            "EventName": "ListUsers",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:13:28-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:13:28Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListUsers\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/Z,E,b cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.list-users\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"maxResults\":10},\"responseElements\":null,\"requestID\":\"f0021954-6dc6-4068-90d4-c062deba7947\",\"eventID\":\"fac1824b-ad65-4ef4-9ec7-a5f3cca1f272\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "3a18cef3-0564-4e1c-9619-463a91fbe87a",
+            "EventName": "DescribeGroupMembership",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:13:15-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:13:15Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"DescribeGroupMembership\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/b,E,Z cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.describe-group-membership\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"membershipId\":\"c16b0570-30f1-703e-c73d-2d0c8ba67043\"},\"responseElements\":null,\"requestID\":\"7bdaf1c0-a106-4909-8db7-f0d948edaa92\",\"eventID\":\"3a18cef3-0564-4e1c-9619-463a91fbe87a\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "17682024-8406-429d-9518-1fb500982eb6",
+            "EventName": "ListGroups",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:13:04-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:13:04Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListGroups\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/Z,C,b,E cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.list-groups\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\"},\"responseElements\":null,\"requestID\":\"1817613e-2bdb-4f7c-bf98-80c0ab73f18a\",\"eventID\":\"17682024-8406-429d-9518-1fb500982eb6\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "e38c82f6-6658-44b9-b9f9-0d4fc730964f",
+            "EventName": "ListGroups",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:12:46-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:12:46Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListGroups\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/b,Z,E cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.list-groups\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"maxResults\":5},\"responseElements\":null,\"requestID\":\"a3d4092a-c1b6-48cb-8674-75963aac202c\",\"eventID\":\"e38c82f6-6658-44b9-b9f9-0d4fc730964f\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "7b5dd09f-14df-4871-9559-62136b3ba86a",
+            "EventName": "DescribeGroup",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:12:42-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:12:42Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"DescribeGroup\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/Z,E,b cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.describe-group\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"groupId\":\"c12b25e0-10d1-70b2-07a6-e2464940cce4\"},\"responseElements\":null,\"requestID\":\"52e3910a-55f6-4e0a-8c50-3231b28c7828\",\"eventID\":\"7b5dd09f-14df-4871-9559-62136b3ba86a\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "927dbaa6-f4e4-4459-8237-8a3bcb7d4123",
+            "EventName": "ListUsers",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:12:28-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:12:28Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListUsers\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/Z,C,E,b cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.list-users\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"filters\":[{\"attributePath\":\"UserName\",\"attributeValue\":\"HIDDEN_DUE_TO_SECURITY_REASONS\"}]},\"responseElements\":null,\"requestID\":\"19cb7c07-906d-409e-92b2-7d1486f26355\",\"eventID\":\"927dbaa6-f4e4-4459-8237-8a3bcb7d4123\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "5b89b169-7ce2-4cd4-958b-a19fe0eb7267",
+            "EventName": "DescribeUser",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:12:23-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:12:23Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"DescribeUser\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/b,Z,E cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.describe-user\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"userId\":\"010b6540-7021-7043-de28-27dafc4d592f\"},\"responseElements\":null,\"requestID\":\"1012dce8-2bd1-426f-8cca-5c2a26cdec7e\",\"eventID\":\"5b89b169-7ce2-4cd4-958b-a19fe0eb7267\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "be99faed-2076-4d20-8f7e-27edb635de7b",
+            "EventName": "DescribeGroup",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:12:00-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:12:00Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"DescribeGroup\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/E,Z,b cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.describe-group\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"groupId\":\"711bf5c0-b071-70c1-06da-35d7fbcac52d\"},\"responseElements\":null,\"requestID\":\"bf358ea4-774c-4176-b5ff-c91e8db6ecb8\",\"eventID\":\"be99faed-2076-4d20-8f7e-27edb635de7b\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "59af32b9-bf85-43aa-a86f-76239c777291",
+            "EventName": "ListGroupMemberships",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:09:53-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:09:53Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListGroupMemberships\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/b,E,Z cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.list-group-memberships\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"groupId\":\"c12b25e0-10d1-70b2-07a6-e2464940cce4\",\"maxResults\":3},\"responseElements\":null,\"requestID\":\"6b0fa0c5-c8e0-4f7a-b752-8903a8793f6b\",\"eventID\":\"59af32b9-bf85-43aa-a86f-76239c777291\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "c5c643ba-1de7-473c-83be-d440a99e8e95",
+            "EventName": "ListGroups",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:09:46-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:09:46Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListGroups\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/E,b,C,Z cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.list-groups\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\"},\"responseElements\":null,\"requestID\":\"d94b3314-22a8-49f4-9e60-8f034969a393\",\"eventID\":\"c5c643ba-1de7-473c-83be-d440a99e8e95\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "ef9426c8-0d42-4c34-be74-3881c1895330",
+            "EventName": "ListUsers",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:09:40-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:09:40Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListUsers\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/Z,E,b cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.list-users\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"maxResults\":5},\"responseElements\":null,\"requestID\":\"bf2f3289-a79a-45d1-a651-d11b48406e7c\",\"eventID\":\"ef9426c8-0d42-4c34-be74-3881c1895330\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "bad84263-2e8e-48ce-9950-c6026d0c97ce",
+            "EventName": "ListGroupMemberships",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:09:13-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:09:13Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListGroupMemberships\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/E,b,Z,C cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.list-group-memberships\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"groupId\":\"711bf5c0-b071-70c1-06da-35d7fbcac52d\"},\"responseElements\":null,\"requestID\":\"80a2ba6e-a98e-4e72-837c-936afef39b3f\",\"eventID\":\"bad84263-2e8e-48ce-9950-c6026d0c97ce\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "55f2c780-2bfd-49ad-8016-72d449d2f571",
+            "EventName": "ListGroups",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO25TC4453F",
+            "EventTime": "2025-11-14T12:09:09-06:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO25TC4453F\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-11-14T18:09:00Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-11-14T18:09:09Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListGroups\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.76\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#24.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/E,C,Z,b cfg/retry-mode#standard md/installer#source sid/ba92942cfd7a md/prompt#off md/command#identitystore.list-groups\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"filters\":[{\"attributePath\":\"DisplayName\",\"attributeValue\":\"HIDDEN_DUE_TO_SECURITY_REASONS\"}]},\"responseElements\":null,\"requestID\":\"42b9f483-77bf-4402-9089-df833dce4019\",\"eventID\":\"55f2c780-2bfd-49ad-8016-72d449d2f571\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "68c24de5-028f-4c11-be05-d6b809f63eb5",
+            "EventName": "ListUsers",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO2RKEZHN2U",
+            "EventTime": "2025-10-17T07:02:55-05:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO2RKEZHN2U\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-10-17T11:42:43Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-10-17T12:02:55Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListUsers\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.63\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#23.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/b,E,Z,C cfg/retry-mode#standard md/installer#source sid/0af6afca7b8e md/prompt#off md/command#identitystore.list-users\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\"},\"responseElements\":null,\"requestID\":\"b61baf72-4f17-4c8e-ad64-7af0c51c9802\",\"eventID\":\"68c24de5-028f-4c11-be05-d6b809f63eb5\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "bc40f2db-7924-4b98-a15f-16f9db206464",
+            "EventName": "ListUsers",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO2RKEZHN2U",
+            "EventTime": "2025-10-17T07:02:55-05:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO2RKEZHN2U\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-10-17T11:42:43Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-10-17T12:02:55Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListUsers\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.63\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#23.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/b,E,Z,C cfg/retry-mode#standard md/installer#source sid/0af6afca7b8e md/prompt#off md/command#identitystore.list-users\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"nextToken\":\"AAQA-EFRSURBSGdrQit2NG8wei9wakx6ZFh0LzF3TkRaUEpjZ2RyK3hsT3FIME1IT3pHZnRnRUphWmNkNmFSRExGN000U3NzWGpBS0FBQUFmakI4QmdrcWhraUc5dzBCQndhZ2J6QnRBZ0VBTUdnR0NTcUdTSWIzRFFFSEFUQWVCZ2xnaGtnQlpRTUVBUzR3RVFRTVpoZi83andRa1VYempyNVZBZ0VRZ0RzSS8wSERSYkN0Yy9tRFZxQ1ppU1lPRGVNdFNlRDZtQnZhUmxBOFUvdnFDZGZRR2w2Q2lHNDRxTzVxelF0bjNJeFZMV2lHcWFQWGtQM2lXZz09fVMjTNnyLusaxoJI2oqpxHaFh9c-Nu-zvCuxdIcEWNVsfHQEeap1K2uolU7x9gbavrlKNDfMfmx8GOMR3vG1rubynFce8r7kN1glvU--L6HlCHhfOW5lCbjbbRQ6vzEsVRJKrm6qUiUITP4GVd3D_BL_vtVNAiYOGKD3z4PoDjI_m16bYRJCsn9t-w62IAm758Rz0kR8V-FeC4s_WEEuBxtFiwK80Vj-CehUenJ5iG1RyC_SQPizgnWTzlCvh7gKK4X36MxPWViky81L_RWI4vtO8dQeDiUCscIcv-f5YTuJfzpGH_A-I_A751sz_W-oIN9CdmSX00P0j7Xgqhy4xg==\"},\"responseElements\":null,\"requestID\":\"2d9ca3cc-6bbd-436f-952f-cdaea018b85a\",\"eventID\":\"bc40f2db-7924-4b98-a15f-16f9db206464\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "c76e86a6-60b9-4cd8-ab95-685252ad437f",
+            "EventName": "ListUsers",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO2RKEZHN2U",
+            "EventTime": "2025-10-17T07:02:55-05:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO2RKEZHN2U\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-10-17T11:42:43Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-10-17T12:02:55Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListUsers\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.63\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#23.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/b,E,Z,C cfg/retry-mode#standard md/installer#source sid/0af6afca7b8e md/prompt#off md/command#identitystore.list-users\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"nextToken\":\"AAQA-EFRSURBSGdrQit2NG8wei9wakx6ZFh0LzF3TkRaUEpjZ2RyK3hsT3FIME1IT3pHZnRnRU04S3FEWGlDOSsrK0ZpSzhieHEyZkFBQUFmakI4QmdrcWhraUc5dzBCQndhZ2J6QnRBZ0VBTUdnR0NTcUdTSWIzRFFFSEFUQWVCZ2xnaGtnQlpRTUVBUzR3RVFRTUw2aEhYeTFmMWk5eFphaEVBZ0VRZ0R0M1hsMkpjT0VQQVRrQVBhZkJ2Q3NLNE81UnZkVXppakJWKzJTR0d5RUptM0REMG9mK2IwYkJpSGFXU242cU9ZdHdrZnd4SXpjS1czZ3RqZz09znkeD4UifSYG3OUFTWrmKlRHOGx2cIZF6GaznnjXg_cFbRvN3ixDtXgXtcuac3KKoufg_YGpmzR_JFna8rai-T6PlzPgWgdQ6RABYlTe2xJcRl8V4rwILhC6XA3EoOe9ITIIPLKE5b_O1EHgGFoOkkjh--W75dYYGF9PPxBC9e4zNaWO9LGm_ABoyw8FOOxlEGqRk9-A7QhIQICAQWKdNdw1Dct-Z5qljVXmXbJ-4HmzKb3ebfvKfABspFxsuQNgVZiQobwFpAJnNVgQOO4D_CFsQxCnRc4118cHiZaltBLKpz6473AmnqY18sb4EJ9H61eFzwlMwVXUkBRfodnk5Q==\"},\"responseElements\":null,\"requestID\":\"f0db7393-8eac-4212-bcac-fdd8a975eddb\",\"eventID\":\"c76e86a6-60b9-4cd8-ab95-685252ad437f\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "1491b48a-8bf2-4844-a90a-dc20e446f2ec",
+            "EventName": "ListUsers",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO2RKEZHN2U",
+            "EventTime": "2025-10-17T07:01:11-05:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO2RKEZHN2U\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-10-17T11:42:43Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-10-17T12:01:11Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListUsers\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.63\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#23.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/Z,C,E,b cfg/retry-mode#standard md/installer#source sid/0af6afca7b8e md/prompt#off md/command#identitystore.list-users\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\"},\"responseElements\":null,\"requestID\":\"4d26864d-a80e-4cac-92b5-4786637b4b74\",\"eventID\":\"1491b48a-8bf2-4844-a90a-dc20e446f2ec\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "1f23ac95-c8d9-43b4-8f6a-deefd353ea8f",
+            "EventName": "ListUsers",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO2RKEZHN2U",
+            "EventTime": "2025-10-17T07:01:11-05:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO2RKEZHN2U\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-10-17T11:42:43Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-10-17T12:01:11Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListUsers\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.63\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#23.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/Z,C,E,b cfg/retry-mode#standard md/installer#source sid/0af6afca7b8e md/prompt#off md/command#identitystore.list-users\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"nextToken\":\"AAQA-EFRSURBSGdrQit2NG8wei9wakx6ZFh0LzF3TkRaUEpjZ2RyK3hsT3FIME1IT3pHZnRnRUphWmNkNmFSRExGN000U3NzWGpBS0FBQUFmakI4QmdrcWhraUc5dzBCQndhZ2J6QnRBZ0VBTUdnR0NTcUdTSWIzRFFFSEFUQWVCZ2xnaGtnQlpRTUVBUzR3RVFRTVpoZi83andRa1VYempyNVZBZ0VRZ0RzSS8wSERSYkN0Yy9tRFZxQ1ppU1lPRGVNdFNlRDZtQnZhUmxBOFUvdnFDZGZRR2w2Q2lHNDRxTzVxelF0bjNJeFZMV2lHcWFQWGtQM2lXZz09asVj4Jjqi_-Jnd8yizEUd6PQCf4_sSSyY7gsyB7szaBR9KzZvivFiZCcnT0hC3dxWO8mUTaGp0CKNsZtvASM4S6N9aHsaUWem-Uhfg_eg_y-KsaAvzd1LOURPxEGRQPPSGcbHr7fC-WZQX-msYgojsdYykt_UmPfQKf8kgNzxtdRIVIZLAZNEO0va0feoXN4-KG0U5hL-UHbsrxvedS4C_FfuDM59tqBtslVImkYwyWwyjsoB9GevJqkaiNuigUpwSnFoiDOkkDB-b0adp8SetX9BTwd0DuzaVd9LRPX2fSgdPmYHuAGPBP8pkcN3bbkpvpADKdIBYV_nFnq1yMtgA==\"},\"responseElements\":null,\"requestID\":\"9ada8cbf-49a7-4fa3-a1d3-56c1e452afc6\",\"eventID\":\"1f23ac95-c8d9-43b4-8f6a-deefd353ea8f\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        },
+        {
+            "EventId": "4ced8565-16c1-4b5d-a156-5ae26be54329",
+            "EventName": "ListUsers",
+            "ReadOnly": "true",
+            "AccessKeyId": "ASIA2OAJUDO2RKEZHN2U",
+            "EventTime": "2025-10-17T07:01:11-05:00",
+            "EventSource": "identitystore.amazonaws.com",
+            "Username": "a805120",
+            "Resources": [],
+            "CloudTrailEvent": "{\"eventVersion\":\"1.11\",\"userIdentity\":{\"type\":\"AssumedRole\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN:a805120\",\"arn\":\"arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120\",\"accountId\":\"717279730613\",\"accessKeyId\":\"ASIA2OAJUDO2RKEZHN2U\",\"sessionContext\":{\"sessionIssuer\":{\"type\":\"Role\",\"principalId\":\"AROA2OAJUDO2Z7QFXRBTN\",\"arn\":\"arn:aws:iam::717279730613:role/aws-reserved/sso.amazonaws.com/us-east-2/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\",\"accountId\":\"717279730613\",\"userName\":\"AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e\"},\"attributes\":{\"creationDate\":\"2025-10-17T11:42:43Z\",\"mfaAuthenticated\":\"false\"}}},\"eventTime\":\"2025-10-17T12:01:11Z\",\"eventSource\":\"identitystore.amazonaws.com\",\"eventName\":\"ListUsers\",\"awsRegion\":\"us-east-2\",\"sourceIPAddress\":\"163.116.249.63\",\"userAgent\":\"aws-cli/2.31.3 md/awscrt#0.27.6 ua/2.1 os/macos#23.6.0 md/arch#arm64 lang/python#3.13.7 md/pyimpl#CPython m/Z,C,E,b cfg/retry-mode#standard md/installer#source sid/0af6afca7b8e md/prompt#off md/command#identitystore.list-users\",\"requestParameters\":{\"identityStoreId\":\"d-9a6763d7d3\",\"nextToken\":\"AAQA-EFRSURBSGdrQit2NG8wei9wakx6ZFh0LzF3TkRaUEpjZ2RyK3hsT3FIME1IT3pHZnRnRnpBZ0NuZXp1bURsZVRTbTBteXlwcUFBQUFmakI4QmdrcWhraUc5dzBCQndhZ2J6QnRBZ0VBTUdnR0NTcUdTSWIzRFFFSEFUQWVCZ2xnaGtnQlpRTUVBUzR3RVFRTVhxTzRJaWNPMTZnWHBmcS9BZ0VRZ0RzMzkrVUNaMkdaSk9JU0JpSG45dmplQ0ZYc243ZzBRcDBlK3ZCZ05VRzVRenNlL1AyTW1OZitzRmJXRnVtbGJudlhqRHYrVXBoMFkzakZSZz09O0rk4VbnV-255Do4UhkcDdld90RuGu8JFfGsgPW5QzlgPvxroW1rDFEc8cZpGHXOg4WcLtkx0_MFNneUiqXoCCCbsVhozvLyPjGa2xWgIpUGsfYyZC6F4G9HEayUGYXdHtmOJ3rbKbTNKBk5Y8dJASO3tK3Z6_RWoMrwVPtTEhBWQkeiErPo9cn54NZGR4MCalNu9_f0oW1YIGNipRhR0cGn-knOokdfyQ-x-m_tLWX02u0dPQRonbcLqqPyjV8EZ2ejLnx4vrsA8sK5k5sd8OjHlCiK8pSOLA6qCdOnIg0b63HWb3VksfKHqp1uFVG1jSmIHBSjymyu-uQO8MEF1w==\"},\"responseElements\":null,\"requestID\":\"0c02c180-eac0-4df7-b74e-9a2805617e43\",\"eventID\":\"4ced8565-16c1-4b5d-a156-5ae26be54329\",\"readOnly\":true,\"eventType\":\"AwsApiCall\",\"managementEvent\":true,\"recipientAccountId\":\"717279730613\",\"eventCategory\":\"Management\",\"tlsDetails\":{\"tlsVersion\":\"TLSv1.3\",\"cipherSuite\":\"TLS_AES_128_GCM_SHA256\",\"clientProvidedHostHeader\":\"identitystore.us-east-2.amazonaws.com\"}}"
+        }
+    ],
+    "NextToken": "1/PnHR8j5EqY6S2MGyQuf4KLXB/qV7zcybFWKMLrR0wxyNp+GynKwf7e7Xj55wok"
+}

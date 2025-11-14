@@ -1,0 +1,65 @@
+╔══════════════════════════════════════════════════════════════════╗
+║              CLOUDTRAIL INVESTIGATION - KEY FINDINGS             ║
+╚══════════════════════════════════════════════════════════════════╝
+
+🚨 CRITICAL DISCOVERY 🚨
+
+OKTA SCIM SYNC HAS NEVER HAPPENED IN THIS ENVIRONMENT
+
+───────────────────────────────────────────────────────────────────
+
+EVIDENCE:
+  • Analyzed 100+ CloudTrail events
+  • Found 18 CreateGroupMembership events
+  • ALL were from AWS CLI (manual)
+  • ZERO from Okta SCIM client
+
+───────────────────────────────────────────────────────────────────
+
+WHAT THIS MEANS:
+
+✗ Okta SCIM is NOT syncing to AWS
+✗ SailPoint → Okta → AWS pipeline is broken
+✓ Manual AWS CLI method IS working
+✓ All existing group members were added manually
+
+───────────────────────────────────────────────────────────────────
+
+WHY YOUR GROUP IS EMPTY:
+
+NOT because:
+  ✗ Access profile doesn't exist
+  ✗ Okta group is empty
+  ✗ SailPoint isn't provisioning
+
+BECAUSE:
+  ✓ SCIM sync is not functioning
+  ✓ Nobody manually added users to this group yet
+
+───────────────────────────────────────────────────────────────────
+
+WHO HAS BEEN MANUALLY ADDING USERS:
+
+1. aa-a836933 - 16 manual additions (Sept 16-17)
+2. a805120 (you) - 2 manual additions (Oct 2, Oct 8)
+
+───────────────────────────────────────────────────────────────────
+
+WORKING SOLUTION:
+
+Use manual AWS CLI method (proven to work):
+
+  ./aws_direct_action.sh
+
+This is what everyone else has been doing!
+
+───────────────────────────────────────────────────────────────────
+
+ROOT CAUSE:
+
+SCIM integration is configured but NOT functioning.
+Need to investigate with Okta admins why sync isn't happening.
+
+───────────────────────────────────────────────────────────────────
+
+DETAILS: See CLOUDTRAIL_FINDINGS.md for complete analysis

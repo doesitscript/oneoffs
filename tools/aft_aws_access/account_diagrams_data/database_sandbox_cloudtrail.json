@@ -1,0 +1,21 @@
+{
+    "trailList": [
+        {
+            "Name": "aws-controltower-BaselineCloudTrail",
+            "S3BucketName": "aws-controltower-logs-463470955493-us-east-2",
+            "S3KeyPrefix": "o-6wrht8pxbo",
+            "SnsTopicName": "arn:aws:sns:us-east-2:825765384428:aws-controltower-AllConfigNotifications",
+            "SnsTopicARN": "arn:aws:sns:us-east-2:825765384428:aws-controltower-AllConfigNotifications",
+            "IncludeGlobalServiceEvents": true,
+            "IsMultiRegionTrail": true,
+            "HomeRegion": "us-east-2",
+            "TrailARN": "arn:aws:cloudtrail:us-east-2:739275453939:trail/aws-controltower-BaselineCloudTrail",
+            "LogFileValidationEnabled": true,
+            "CloudWatchLogsLogGroupArn": "arn:aws:logs:us-east-2:739275453939:log-group:aws-controltower/CloudTrailLogs:*",
+            "CloudWatchLogsRoleArn": "arn:aws:iam::739275453939:role/service-role/AWSControlTowerCloudTrailRole",
+            "HasCustomEventSelectors": false,
+            "HasInsightSelectors": false,
+            "IsOrganizationTrail": true
+        }
+    ]
+}

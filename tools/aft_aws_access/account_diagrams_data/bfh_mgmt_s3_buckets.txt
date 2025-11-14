@@ -1,0 +1,8 @@
+2025-02-20 11:37:31 739275453939-aftbootstrap-tfstate
+2025-11-04 00:57:56 aws-athena-query-results-739275453939-us-east-2
+2025-04-03 08:38:59 cf-templates-owojwl36vdff-us-east-2
+2025-10-28 22:59:04 cid-739275453939-data-local
+2025-10-30 17:29:46 cs-abi-739275453939-us-east-2-0a4c11c54a3d
+2025-03-31 12:39:55 sra-easy-setup-739275453939-us-east-2
+2025-10-30 16:17:12 sra-staging-739275453939-us-east-2
+2025-11-03 20:15:51 sra-staging-739275453939-us-west-2
