@@ -386,7 +386,7 @@ source .venv/bin/activate
 
 # Verify
 which python
-# Should show: /Users/a805120/develop/oneoffs/tools/aft_aws_acess/.venv/bin/python
+# Should show: /Users/a805120/develop/oneoffs/tools/aft_aws_access/.venv/bin/python
 ```
 
 ---

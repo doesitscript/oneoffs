@@ -1,7 +1,7 @@
 # AWS Account Architecture Diagrams - Documentation
 
 **Date:** November 14, 2025  
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`  
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/`  
 **Purpose:** Visual documentation of AWS account architecture and provisioning flows
 
 ---
@@ -613,5 +613,5 @@ CloudTrail Event: CreateGroupMembership
 ---
 
 **Created:** November 14, 2025  
-**Diagrams Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`  
+**Diagrams Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/`  
 **Last Updated:** November 14, 2025

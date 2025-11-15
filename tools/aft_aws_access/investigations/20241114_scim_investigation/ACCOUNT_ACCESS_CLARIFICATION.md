@@ -58,7 +58,7 @@
 aws sts get-caller-identity --profile bfh_mgmt_739275453939_admin
 
 # You could export the config yourself!
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 
 # Because YOU have the profile on your system!
@@ -214,7 +214,7 @@ Group IDs:         Different per account
 ### Today (You Can Do This Now):
 ```bash
 # 1. Export bfh_mgmt working config
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 
 # 2. Review what you get

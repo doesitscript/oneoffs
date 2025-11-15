@@ -1,7 +1,7 @@
 # Lifecycle Diagrams - Implementation & Safety Guide
 
 **Created:** November 14, 2025  
-**Diagrams Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/lifecycle_bfh_mgmt/`
+**Diagrams Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/lifecycle_bfh_mgmt/`
 
 ---
 
@@ -136,7 +136,7 @@ aws identitystore create-group-membership \
 
 ### THIS WEEK (1 hour) - Export Config
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 ```
 **See:** Diagram 8, Step 1
@@ -227,7 +227,7 @@ SailPoint → Assume IAM Role → AWS SDK (Go v2) → IAM Identity Center API
 
 ### Diagrams
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/lifecycle_bfh_mgmt/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/lifecycle_bfh_mgmt/
 ├── 01_bfh_mgmt_current_solution.png      (How it works)
 ├── 02_database_sandbox_broken_state.png  (Current problem)
 ├── 03_implementation_phases.png          (3-phase plan)
@@ -241,7 +241,7 @@ SailPoint → Assume IAM Role → AWS SDK (Go v2) → IAM Identity Center API
 
 ### Related Investigation Files
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 ├── PICKUP_SUMMARY.md                     (Complete state)
 ├── EXPLAINED_FOR_USER.md                 (All questions answered)
 ├── BFH_MGMT_QUICK_START.md              (Quick start guide)
@@ -348,7 +348,7 @@ SailPoint → Assume IAM Role → AWS SDK (Go v2) → IAM Identity Center API
 
 ---
 
-**Complete diagram documentation:** `generated-diagrams/lifecycle_bfh_mgmt/README.md`  
+**Complete diagram documentation:** `diagrams/lifecycle_bfh_mgmt/README.md`  
 **Investigation summary:** `investigations/20241114_scim_investigation/PICKUP_SUMMARY.md`  
 **Questions answered:** `investigations/20241114_scim_investigation/EXPLAINED_FOR_USER.md`
 

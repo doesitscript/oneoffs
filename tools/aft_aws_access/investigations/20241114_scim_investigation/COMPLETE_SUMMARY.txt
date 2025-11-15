@@ -9,10 +9,10 @@
 ══════════════════════════════════════════════════════════════════════
 
 All files organized in:
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 
 Diagrams in:
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/
 
 🎯 WHAT WE DISCOVERED
 ══════════════════════════════════════════════════════════════════════
@@ -181,7 +181,7 @@ Copy this to new chat:
 
 I investigated AWS IAM Identity Center group provisioning.
 
-Location: /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+Location: /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 
 Read: NEW_CONVERSATION_STARTER.md
 

@@ -148,7 +148,7 @@ Okta SCIM ever did. You can have the same thing!
 ═══════════════════════════════════════════════════════════════════════
 
 All files:
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 
 🚀 GET STARTED
 ═══════════════════════════════════════════════════════════════════════

@@ -73,4 +73,4 @@
 
 ---
 
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`

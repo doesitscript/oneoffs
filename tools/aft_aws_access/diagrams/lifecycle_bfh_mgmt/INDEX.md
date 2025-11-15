@@ -1,6 +1,6 @@
 # Lifecycle Diagrams - Complete Index
 
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/lifecycle_bfh_mgmt/`  
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/lifecycle_bfh_mgmt/`  
 **Created:** November 14, 2025  
 **Purpose:** Visual proof that implementing bfh_mgmt solution is safe and proven
 
@@ -100,7 +100,7 @@
 
 **Investigation:**
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 ├── PICKUP_SUMMARY.md
 ├── LIFECYCLE_DIAGRAMS_GUIDE.md
 └── BFH_MGMT_INSPECT_YOUR_SETUP.sh
@@ -108,7 +108,7 @@
 
 **Other Diagrams:**
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/
 ├── bfh_mgmt_account.png
 ├── database_sandbox_account.png
 ├── sailpoint_flow_comparison.png

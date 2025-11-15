@@ -62,7 +62,7 @@ Comprehensive investigation of AWS IAM Identity Center group provisioning across
 
 ### For Checking Current Status:
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./QUICK_CHECK_COMMANDS.sh
 ```
 
@@ -313,4 +313,4 @@ Identity_Center (Manual CLI):
 **Last Updated:** November 14, 2025  
 **Next Review:** As needed (use `QUICK_CHECK_COMMANDS.sh`)  
 **Maintained By:** AI Investigation Team  
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`

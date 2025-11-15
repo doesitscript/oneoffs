@@ -10,7 +10,7 @@ I previously investigated AWS IAM Identity Center group provisioning across 21 a
 
 ### Location:
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 ```
 
 ### What Was Discovered:
@@ -29,7 +29,7 @@ I previously investigated AWS IAM Identity Center group provisioning across 21 a
 
 ### Diagrams Generated:
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/
 ├── log_archive_account.png (Log Archive architecture)
 ├── bfh_mgmt_account.png (Working SailPoint integration) ⭐
 ├── database_sandbox_account.png (My empty group)
@@ -130,7 +130,7 @@ Identity Store:    d-9a6763d7d3
 
 ### Export bfh_mgmt Config:
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 ```
 
@@ -155,7 +155,7 @@ aws identitystore create-group-membership \
 
 **Architecture & Visual:**
 - `DIAGRAM_DOCUMENTATION.md` - Complete diagram guide (19KB, comprehensive)
-- `generated-diagrams/README.md` - Diagram index
+- `diagrams/README.md` - Diagram index
 - 8 PNG diagrams showing architecture and flows
 
 **Investigation Reports:**
@@ -190,7 +190,7 @@ aws identitystore create-group-membership \
 5. Roll out to other accounts
 
 **For Understanding Architecture:**
-1. View diagrams in `generated-diagrams/` directory
+1. View diagrams in `diagrams/` directory
 2. Read `DIAGRAM_DOCUMENTATION.md`
 3. Focus on `bfh_mgmt_account.png` and `sailpoint_flow_comparison.png`
 

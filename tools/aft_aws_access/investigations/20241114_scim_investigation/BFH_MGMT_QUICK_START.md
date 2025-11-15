@@ -17,7 +17,7 @@ You have the **ONLY working automated AWS provisioning** in the entire organizat
 
 **Run this script to export your configuration:**
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 ```
 

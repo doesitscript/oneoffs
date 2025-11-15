@@ -471,7 +471,7 @@ SailPoint → AWS SDK (Go v2) → IAM Identity Center API
 
 **Investigation Files:**
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 ├── PICKUP_SUMMARY.md (Start here for new conversations)
 ├── EXPLAINED_FOR_USER.md (All questions answered)
 ├── BFH_MGMT_QUICK_START.md (bfh_mgmt team guide)
@@ -481,7 +481,7 @@ SailPoint → AWS SDK (Go v2) → IAM Identity Center API
 
 **Other Diagram Sets:**
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/
 ├── log_archive_account.png
 ├── bfh_mgmt_account.png
 ├── database_sandbox_account.png
@@ -553,6 +553,6 @@ SailPoint → AWS SDK (Go v2) → IAM Identity Center API
 ---
 
 **Created:** November 14, 2025  
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/lifecycle_bfh_mgmt/`  
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/lifecycle_bfh_mgmt/`  
 **Purpose:** Visual implementation guide for bfh_mgmt solution replication  
 **Status:** ✅ Complete - Ready for implementation

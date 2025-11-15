@@ -2,8 +2,8 @@
 
 **Date:** November 14, 2025  
 **Status:** ✅ Complete Investigation + Architecture Diagrams  
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`  
-**Diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`  
+**Diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/`
 
 ---
 
@@ -15,7 +15,7 @@
 - Working vs broken provisioning paths
 - CloudTrail evidence patterns
 
-**View diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`  
+**View diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/`  
 **Documentation:** See `DIAGRAM_DOCUMENTATION.md` in this directory
 
 ---
@@ -200,7 +200,7 @@ Groups you see in Identity Center were created by:
 
 ## 📁 ALL INVESTIGATION FILES
 
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`
 
 ### Visual Diagrams (NEW!):
 
@@ -215,7 +215,7 @@ Groups you see in Identity Center were created by:
 | `identity_center_architecture.png` | Shared Identity Store model |
 | `cloudtrail_evidence_patterns.png` | CloudTrail evidence analysis |
 
-**All diagrams in:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`
+**All diagrams in:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/`
 
 ### Key Files to Read:
 
@@ -363,7 +363,7 @@ Identity_Center (717279730613):
 - 🟡 Orange lines = Manual workarounds
 - ⚫ Dashed lines = Monitoring/logging
 
-**View all diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`
+**View all diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/`
 
 ---
 
@@ -392,7 +392,7 @@ Identity_Center (717279730613):
 
 **Quick Check:**
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./QUICK_CHECK_COMMANDS.sh
 ```
 
@@ -460,11 +460,11 @@ aws cloudtrail lookup-events \
 
 **For New AI Conversation:** 
 ```
-Location: /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+Location: /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 
 Files to share:
 - PICKUP_SUMMARY.md (this file)
-- Diagrams in: /Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/
+- Diagrams in: /Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/
 
 Context:
 - I have admin access to ALL 88 AWS accounts (not just database_sandbox)
@@ -506,7 +506,7 @@ See: `ACCOUNT_ACCESS_CLARIFICATION.md` for complete details
 
 **Export bfh_mgmt config right now:**
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 # YOU have bfh_mgmt_739275453939_admin profile - run it yourself!
 ```

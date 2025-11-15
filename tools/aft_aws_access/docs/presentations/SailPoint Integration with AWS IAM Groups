@@ -27,7 +27,7 @@ Status: Completed
 {
     "UserId": "AROA2OAJUDO2Z7QFXRBTN:a805120",
     "Account": "717279730613",
-    "Arn": "arn:aws:sts::717279730613:assumed-role/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120"
+    "Arn": "arn:aws:sts::717279730613:assumed-rol e/AWSReservedSSO_admin-v20250516_b8f7c7a70223bf4e/a805120"
 }
 ```
 
@@ -447,7 +447,7 @@ In **SailPoint IdentityIQ**:
 Name: AWS Database Sandbox Admin Access
 Entitlements:
   - AD Group: App-AWS-AA-database-sandbox-941677815499-admin
-  
+
 Description: Admin access to AWS Database Sandbox (941677815499)
 ```
 
@@ -456,7 +456,7 @@ Description: Admin access to AWS Database Sandbox (941677815499)
 Name: AWS - Database Sandbox Admin
 Access Profiles:
   - AWS Database Sandbox Admin Access
-  
+
 Assignment Rules:
   - Manual assignment
   - Or based on business logic (department, job title, etc.)
@@ -1319,4 +1319,3 @@ Provisioning → Sync Details → Restart provisioning
 ---
 
 **Would you like me to help you with any specific step, or do you have access to check any of these components?**
-

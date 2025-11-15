@@ -95,10 +95,10 @@ A: YES - Same Identity Store, proven replicable
 📁 FILES & LOCATIONS:
 
 Diagrams:
-  /Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/lifecycle_bfh_mgmt/
+  /Users/a805120/develop/oneoffs/tools/aft_aws_access/diagrams/lifecycle_bfh_mgmt/
 
 Investigation:
-  /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+  /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 
 Complete Guide:
   → lifecycle_bfh_mgmt/README.md (detailed)
