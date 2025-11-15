@@ -22,7 +22,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 2. Create a virtual environment and install dependencies:
 ```bash
-cd aft_aws_acess
+cd aft_aws_access
 uv venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 uv pip install -e .
@@ -31,7 +31,7 @@ uv pip install -e .
 ### Using pip
 
 ```bash
-cd aft_aws_acess
+cd aft_aws_access
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -e .

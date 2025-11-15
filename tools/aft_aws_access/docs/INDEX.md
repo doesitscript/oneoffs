@@ -126,7 +126,7 @@ make help                                # Make commands
 ## 🗂️ Complete File Listing
 
 ```
-aft_aws_acess/
+aft_aws_access/
 ├── Documentation (6 files)
 │   ├── GET_STARTED.md          # 60-second quickstart
 │   ├── QUICKSTART.md           # 5-minute tutorial

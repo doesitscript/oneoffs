@@ -184,7 +184,7 @@ YAML_PATH="/Users/a805120/develop/aws-access/conf/sso_groups.yaml"
 DATE=$(date +%Y%m%d)
 OUTPUT_FILE="missing_groups_${DATE}.yaml"
 
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access
 source .venv/bin/activate
 
 # Generate template

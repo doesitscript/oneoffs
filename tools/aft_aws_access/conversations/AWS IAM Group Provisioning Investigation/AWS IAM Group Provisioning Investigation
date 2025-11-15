@@ -4113,7 +4113,7 @@ trigger_okta_sync.sh
 ```
 
 
-**Tool Call: `mkdir -p ../aft_aws_acess/investigations/20241114_scim_investigation`**
+**Tool Call: `mkdir -p ../aft_aws_access/investigations/20241114_scim_investigation`**
 Status: Completed
 
 Terminal:
@@ -4131,15 +4131,15 @@ Status: Completed
 
 Terminal:
 ```
-mv: cannot move 'investigate_20_accounts.sh' to '../aft_aws_acess/investigations/20241114_scim_investigation/scripts/': No such file or directory
-mv: cannot move 'investigate_scim_sync.sh' to '../aft_aws_acess/investigations/20241114_scim_investigation/scripts/': No such file or directory
-mv: cannot move 'find_identity_center_accounts.sh' to '../aft_aws_acess/investigations/20241114_scim_investigation/scripts/': No such file or directory
-mv: cannot move 'manual_aws_investigation.sh' to '../aft_aws_acess/investigations/20241114_scim_investigation/scripts/': No such file or directory
-mv: cannot move 'aws_direct_action.sh' to '../aft_aws_acess/investigations/20241114_scim_investigation/scripts/': No such file or directory
-mv: cannot move 'trigger_okta_sync.sh' to '../aft_aws_acess/investigations/20241114_scim_investigation/scripts/': No such file or directory
-mv: cannot move 'investigate_sync.sh' to '../aft_aws_acess/investigations/20241114_scim_investigation/scripts/': No such file or directory
-mv: cannot move 'investigation_output.txt' to '../aft_aws_acess/investigations/20241114_scim_investigation/logs/': No such file or directory
-mv: cannot move 'scim_investigation_output.txt' to '../aft_aws_acess/investigations/20241114_scim_investigation/logs/': No such file or directory
+mv: cannot move 'investigate_20_accounts.sh' to '../aft_aws_access/investigations/20241114_scim_investigation/scripts/': No such file or directory
+mv: cannot move 'investigate_scim_sync.sh' to '../aft_aws_access/investigations/20241114_scim_investigation/scripts/': No such file or directory
+mv: cannot move 'find_identity_center_accounts.sh' to '../aft_aws_access/investigations/20241114_scim_investigation/scripts/': No such file or directory
+mv: cannot move 'manual_aws_investigation.sh' to '../aft_aws_access/investigations/20241114_scim_investigation/scripts/': No such file or directory
+mv: cannot move 'aws_direct_action.sh' to '../aft_aws_access/investigations/20241114_scim_investigation/scripts/': No such file or directory
+mv: cannot move 'trigger_okta_sync.sh' to '../aft_aws_access/investigations/20241114_scim_investigation/scripts/': No such file or directory
+mv: cannot move 'investigate_sync.sh' to '../aft_aws_access/investigations/20241114_scim_investigation/scripts/': No such file or directory
+mv: cannot move 'investigation_output.txt' to '../aft_aws_access/investigations/20241114_scim_investigation/logs/': No such file or directory
+mv: cannot move 'scim_investigation_output.txt' to '../aft_aws_access/investigations/20241114_scim_investigation/logs/': No such file or directory
 Files moved successfully
 
 ```
@@ -4213,14 +4213,14 @@ Good, they're already moved. Now let me check what's in the Identity_Center acco
 **Tool Call: ` - 6 more lines`**
 Status: Failed
 
-`cd` directory "/Users/a805120/develop/aft_aws_acess" was not in any of the project's worktrees.
+`cd` directory "/Users/a805120/develop/aft_aws_access" was not in any of the project's worktrees.
 
 **Tool Call: `pwd && ls -la`**
 Status: Completed
 
 Terminal:
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess
+/Users/a805120/develop/oneoffs/tools/aft_aws_access
 total 464
 drwxr-xr-x  3 a805120 staff     96 Nov 14 07:16  __pycache__
 drwxr-xr-x 43 a805120 staff   1376 Nov 14 13:34  .
@@ -4291,7 +4291,7 @@ Status: Completed
 
 Terminal:
 ```
-/Users/a805120/develop/aft_aws_acess/investigations/20241114_scim_investigation/FINAL_20_ACCOUNT_INVESTIGATION_REPORT.md
+/Users/a805120/develop/aft_aws_access/investigations/20241114_scim_investigation/FINAL_20_ACCOUNT_INVESTIGATION_REPORT.md
 
 
 
@@ -4658,7 +4658,7 @@ Desc: admin access to a single account
 
 Now let me create a comprehensive explanation document for you:
 
-**Tool Call: aft_aws_acess/investigations/20241114_scim_investigation/EXPLAINED_FOR_USER.md**
+**Tool Call: aft_aws_access/investigations/20241114_scim_investigation/EXPLAINED_FOR_USER.md**
 Status: Completed
 
 Diff: investigations/20241114_scim_investigation/EXPLAINED_FOR_USER.md
@@ -5095,7 +5095,7 @@ All evidence and raw CloudTrail data is preserved in the `raw_data/` directory.
 
 Now let me create an organized index file for the investigation directory:
 
-**Tool Call: aft_aws_acess/investigations/20241114_scim_investigation/README.md**
+**Tool Call: aft_aws_access/investigations/20241114_scim_investigation/README.md**
 Status: Completed
 
 Diff: investigations/20241114_scim_investigation/README.md
@@ -5164,7 +5164,7 @@ Comprehensive investigation of AWS IAM Identity Center group provisioning across
 
 ### For Checking Current Status:
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./QUICK_CHECK_COMMANDS.sh
 ```
 
@@ -5415,7 +5415,7 @@ Identity_Center (Manual CLI):
 **Last Updated:** November 14, 2025  
 **Next Review:** As needed (use `QUICK_CHECK_COMMANDS.sh`)  
 **Maintained By:** AI Investigation Team  
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`
 
 ```
 
@@ -5494,7 +5494,7 @@ Perfect! Now let me create a final summary for you:
 
 ## ✅ **All Files Organized! Here's Your Complete Setup:**
 
-### 📁 **New Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`
+### 📁 **New Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`
 
 ### 📊 **What's Organized:**
 
@@ -5606,7 +5606,7 @@ SailPoint → AWS SDK → AWS ✅ WORKING
 ---
 
 ## 📖 **Read This First:**
-`/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/EXPLAINED_FOR_USER.md`
+`/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/EXPLAINED_FOR_USER.md`
 
 This file has EVERYTHING explained with examples, diagrams, and step-by-step instructions! 🎉
 
@@ -5614,7 +5614,7 @@ This file has EVERYTHING explained with examples, diagrams, and step-by-step ins
 
 I am the bfg_mgmt team, show me what i can do
 
-**Tool Call: aft_aws_acess/investigations/20241114_scim_investigation/FOR_BFH_MGMT_TEAM.md**
+**Tool Call: aft_aws_access/investigations/20241114_scim_investigation/FOR_BFH_MGMT_TEAM.md**
 Status: Completed
 
 Diff: investigations/20241114_scim_investigation/FOR_BFH_MGMT_TEAM.md
@@ -5992,7 +5992,7 @@ If we replicate your setup across all accounts:
 ## 📞 Contact Information
 
 **Investigation Team:**
-- Location: `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`
+- Location: `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`
 - Evidence: All CloudTrail logs and analysis available
 - Reports: Comprehensive documentation created
 
@@ -6383,7 +6383,7 @@ You have the **ONLY working automated AWS provisioning** in the entire organizat
 
 **Run this script to export your configuration:**
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 ```
 
@@ -6572,7 +6572,7 @@ Out of **21 AWS accounts** we investigated:
 
 Run this script - it automatically captures everything:
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 ```
 
@@ -6650,7 +6650,7 @@ SailPoint → AWS SDK → AWS  ✅ WORKING (only in your account!)
 ## 📁 **All Your Files Are Here:**
 
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 
 ├── BFH_MGMT_QUICK_START.md              ← Start here (you are here!)
 ├── FOR_BFH_MGMT_TEAM.md                 ← Complete detailed guide
@@ -6675,7 +6675,7 @@ SailPoint → AWS SDK → AWS  ✅ WORKING (only in your account!)
 
 can you give me a brief less than 1/2 page of how you mapped my profiles to accounts and used the write ones when using yoru cmds (for future ai chats)
 
-**Tool Call: aft_aws_acess/investigations/20241114_scim_investigation/PROFILE_MAPPING_METHOD.md**
+**Tool Call: aft_aws_access/investigations/20241114_scim_investigation/PROFILE_MAPPING_METHOD.md**
 Status: Completed
 
 Diff: investigations/20241114_scim_investigation/PROFILE_MAPPING_METHOD.md
@@ -6881,7 +6881,7 @@ Terminal:
 
 ---
 
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`
 
 ```
 
@@ -6896,7 +6896,7 @@ Perfect! Let me create one final visual summary:
 
 ### 📍 **Location:**
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 ```
 
 ---
@@ -6905,7 +6905,7 @@ Perfect! Let me create one final visual summary:
 
 ### **Option 1: Export Your Setup (15 min) ⭐**
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 ```
 This exports your `sailpoint-read-write` IAM role config automatically!
@@ -6968,7 +6968,7 @@ bfh_mgmt_739275453939_admin
 
 give me a summary of where we are at, specifically with things i can do, i'm alsso very interegested in the bfh-mgmt discovery. outline things so i can pickup in a new conversation
 
-**Tool Call: aft_aws_acess/investigations/20241114_scim_investigation/PICKUP_SUMMARY.md**
+**Tool Call: aft_aws_access/investigations/20241114_scim_investigation/PICKUP_SUMMARY.md**
 Status: Completed
 
 Diff: investigations/20241114_scim_investigation/PICKUP_SUMMARY.md
@@ -6977,7 +6977,7 @@ Diff: investigations/20241114_scim_investigation/PICKUP_SUMMARY.md
 
 **Date:** November 14, 2025  
 **Status:** ✅ Complete Investigation  
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`
 
 ---
 
@@ -7161,7 +7161,7 @@ Groups you see in Identity Center were created by:
 
 ## 📁 ALL INVESTIGATION FILES
 
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`
 
 ### Key Files to Read:
 
@@ -7307,7 +7307,7 @@ Identity_Center (717279730613):
 
 **Quick Check:**
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./QUICK_CHECK_COMMANDS.sh
 ```
 
@@ -7535,7 +7535,7 @@ Okta SCIM ever did. You can have the same thing!
 ═══════════════════════════════════════════════════════════════════════
 
 All files:
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 
 🚀 GET STARTED
 ═══════════════════════════════════════════════════════════════════════
@@ -7564,7 +7564,7 @@ Perfect! Let me create one final summary:
 
 ### 📍 **Everything is organized in:**
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 ```
 
 ---
@@ -7651,7 +7651,7 @@ Status:           ✅ ONLY working automation
 ```
 I need to continue investigating AWS IAM Identity Center group provisioning.
 
-Location: /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+Location: /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 
 Please read: PICKUP_SUMMARY.md
 
@@ -7678,7 +7678,7 @@ IS this key or confining, due to the fact that all accounts are mine, and i have
 
 Great question! Let me update the documentation to clarify this:
 
-**Tool Call: aft_aws_acess/investigations/20241114_scim_investigation/ACCOUNT_ACCESS_CLARIFICATION.md**
+**Tool Call: aft_aws_access/investigations/20241114_scim_investigation/ACCOUNT_ACCESS_CLARIFICATION.md**
 Status: Completed
 
 Diff: investigations/20241114_scim_investigation/ACCOUNT_ACCESS_CLARIFICATION.md
@@ -7743,7 +7743,7 @@ Diff: investigations/20241114_scim_investigation/ACCOUNT_ACCESS_CLARIFICATION.md
 aws sts get-caller-identity --profile bfh_mgmt_739275453939_admin
 
 # You could export the config yourself!
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 
 # Because YOU have the profile on your system!
@@ -7899,7 +7899,7 @@ Group IDs:         Different per account
 ### Today (You Can Do This Now):
 ```bash
 # 1. Export bfh_mgmt working config
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 
 # 2. Review what you get
@@ -7956,7 +7956,7 @@ Terminal:
 
 **Export bfh_mgmt config right now:**
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 # YOU have bfh_mgmt_739275453939_admin profile - run it yourself!
 ```
@@ -8007,7 +8007,7 @@ Perfect! Now let me create a final visual summary:
 
 ### **Export bfh_mgmt Working Config Yourself:**
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 
 # YOU have this profile on your system!
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
@@ -8100,7 +8100,7 @@ cat bfh_mgmt_setup_export_*/policy_*.json
 
 **Read:** `ACCOUNT_ACCESS_CLARIFICATION.md` for complete explanation
 
-**All files in:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`
+**All files in:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`
 
 ## User (checkpoint)
 
@@ -8879,8 +8879,8 @@ Status: Completed
 
 {
   "status": "success",
-  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/log_archive_account.png.png",
-  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/log_archive_account.png.png"
+  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/log_archive_account.png.png",
+  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/log_archive_account.png.png"
 }
 
 ## Assistant
@@ -8901,8 +8901,8 @@ Status: Completed
 
 {
   "status": "success",
-  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/bfh_mgmt_account.png.png",
-  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/bfh_mgmt_account.png.png"
+  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/bfh_mgmt_account.png.png",
+  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/bfh_mgmt_account.png.png"
 }
 
 ## Assistant
@@ -8914,8 +8914,8 @@ Status: Completed
 
 {
   "status": "success",
-  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/database_sandbox_account.png.png",
-  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/database_sandbox_account.png.png"
+  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/database_sandbox_account.png.png",
+  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/database_sandbox_account.png.png"
 }
 
 ## Assistant
@@ -8927,8 +8927,8 @@ Status: Completed
 
 {
   "status": "success",
-  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/multi_account_integration.png.png",
-  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/multi_account_integration.png.png"
+  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/multi_account_integration.png.png",
+  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/multi_account_integration.png.png"
 }
 
 ## Assistant
@@ -8940,8 +8940,8 @@ Status: Completed
 
 {
   "status": "success",
-  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/sailpoint_flow_comparison.png.png",
-  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/sailpoint_flow_comparison.png.png"
+  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/sailpoint_flow_comparison.png.png",
+  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/sailpoint_flow_comparison.png.png"
 }
 
 ## Assistant
@@ -8953,8 +8953,8 @@ Status: Completed
 
 {
   "status": "success",
-  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/complete_environment_usage.png.png",
-  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/complete_environment_usage.png.png"
+  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/complete_environment_usage.png.png",
+  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/complete_environment_usage.png.png"
 }
 
 ## Assistant
@@ -8966,8 +8966,8 @@ Status: Completed
 
 {
   "status": "success",
-  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/identity_center_architecture.png.png",
-  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/identity_center_architecture.png.png"
+  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/identity_center_architecture.png.png",
+  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/identity_center_architecture.png.png"
 }
 
 ## Assistant
@@ -8979,15 +8979,15 @@ Status: Completed
 
 {
   "status": "success",
-  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/cloudtrail_evidence_patterns.png.png",
-  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/cloudtrail_evidence_patterns.png.png"
+  "path": "/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/cloudtrail_evidence_patterns.png.png",
+  "message": "Diagram generated successfully at /Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/cloudtrail_evidence_patterns.png.png"
 }
 
 ## Assistant
 
 Perfect! Now let me create a comprehensive documentation file explaining all the diagrams:
 
-**Tool Call: aft_aws_acess/investigations/20241114_scim_investigation/DIAGRAM_DOCUMENTATION.md**
+**Tool Call: aft_aws_access/investigations/20241114_scim_investigation/DIAGRAM_DOCUMENTATION.md**
 Status: Completed
 
 Diff: investigations/20241114_scim_investigation/DIAGRAM_DOCUMENTATION.md
@@ -8995,7 +8995,7 @@ Diff: investigations/20241114_scim_investigation/DIAGRAM_DOCUMENTATION.md
 # AWS Account Architecture Diagrams - Documentation
 
 **Date:** November 14, 2025  
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`  
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/`  
 **Purpose:** Visual documentation of AWS account architecture and provisioning flows
 
 ---
@@ -9607,7 +9607,7 @@ CloudTrail Event: CreateGroupMembership
 ---
 
 **Created:** November 14, 2025  
-**Diagrams Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`  
+**Diagrams Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/`  
 **Last Updated:** November 14, 2025
 ```
 
@@ -9761,7 +9761,7 @@ Documentation files: 2
 
 Excellent! Now let me create a final pickup guide with all the diagram information:
 
-**Tool Call: aft_aws_acess/investigations/20241114_scim_investigation/PICKUP_SUMMARY.md**
+**Tool Call: aft_aws_access/investigations/20241114_scim_investigation/PICKUP_SUMMARY.md**
 Status: Completed
 
 Diff: investigations/20241114_scim_investigation/PICKUP_SUMMARY.md
@@ -9770,8 +9770,8 @@ Diff: investigations/20241114_scim_investigation/PICKUP_SUMMARY.md
 
 **Date:** November 14, 2025  
 **Status:** ✅ Complete Investigation + Architecture Diagrams  
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`  
-**Diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`  
+**Diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/`
 
 ---
 
@@ -9783,7 +9783,7 @@ Diff: investigations/20241114_scim_investigation/PICKUP_SUMMARY.md
 - Working vs broken provisioning paths
 - CloudTrail evidence patterns
 
-**View diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`  
+**View diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/`  
 **Documentation:** See `DIAGRAM_DOCUMENTATION.md` in this directory
 
 ---
@@ -9968,7 +9968,7 @@ Groups you see in Identity Center were created by:
 
 ## 📁 ALL INVESTIGATION FILES
 
-**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/`
+**Location:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/`
 
 ### Visual Diagrams (NEW!):
 
@@ -9983,7 +9983,7 @@ Groups you see in Identity Center were created by:
 | `identity_center_architecture.png` | Shared Identity Store model |
 | `cloudtrail_evidence_patterns.png` | CloudTrail evidence analysis |
 
-**All diagrams in:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`
+**All diagrams in:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/`
 
 ### Key Files to Read:
 
@@ -10131,7 +10131,7 @@ Identity_Center (717279730613):
 - 🟡 Orange lines = Manual workarounds
 - ⚫ Dashed lines = Monitoring/logging
 
-**View all diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/`
+**View all diagrams:** `/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/`
 
 ---
 
@@ -10160,7 +10160,7 @@ Identity_Center (717279730613):
 
 **Quick Check:**
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./QUICK_CHECK_COMMANDS.sh
 ```
 
@@ -10228,11 +10228,11 @@ aws cloudtrail lookup-events \
 
 **For New AI Conversation:** 
 ```
-Location: /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+Location: /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 
 Files to share:
 - PICKUP_SUMMARY.md (this file)
-- Diagrams in: /Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/
+- Diagrams in: /Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/
 
 Context:
 - I have admin access to ALL 88 AWS accounts (not just database_sandbox)
@@ -10274,7 +10274,7 @@ See: `ACCOUNT_ACCESS_CLARIFICATION.md` for complete details
 
 **Export bfh_mgmt config right now:**
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 # YOU have bfh_mgmt_739275453939_admin profile - run it yourself!
 ```
@@ -10312,7 +10312,7 @@ I previously investigated AWS IAM Identity Center group provisioning across 21 a
 
 ### Location:
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 ```
 
 ### What Was Discovered:
@@ -10331,7 +10331,7 @@ I previously investigated AWS IAM Identity Center group provisioning across 21 a
 
 ### Diagrams Generated:
 ```
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/
 ├── log_archive_account.png (Log Archive architecture)
 ├── bfh_mgmt_account.png (Working SailPoint integration) ⭐
 ├── database_sandbox_account.png (My empty group)
@@ -10432,7 +10432,7 @@ Identity Store:    d-9a6763d7d3
 
 ### Export bfh_mgmt Config:
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation
 ./BFH_MGMT_INSPECT_YOUR_SETUP.sh
 ```
 
@@ -10523,10 +10523,10 @@ Terminal:
 ══════════════════════════════════════════════════════════════════════
 
 All files organized in:
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 
 Diagrams in:
-/Users/a805120/develop/oneoffs/tools/aft_aws_acess/generated-diagrams/
+/Users/a805120/develop/oneoffs/tools/aft_aws_access/generated-diagrams/
 
 🎯 WHAT WE DISCOVERED
 ══════════════════════════════════════════════════════════════════════
@@ -10695,7 +10695,7 @@ Copy this to new chat:
 
 I investigated AWS IAM Identity Center group provisioning.
 
-Location: /Users/a805120/develop/oneoffs/tools/aft_aws_acess/investigations/20241114_scim_investigation/
+Location: /Users/a805120/develop/oneoffs/tools/aft_aws_access/investigations/20241114_scim_investigation/
 
 Read: NEW_CONVERSATION_STARTER.md
 

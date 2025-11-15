@@ -14,7 +14,7 @@ Complete installation instructions for AFT AWS Access Tools.
 
 ### 1. Navigate to Project Directory
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access
 ```
 
 ### 2. Run Setup Script
@@ -60,7 +60,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 #### Step 2: Create Virtual Environment
 ```bash
-cd aft_aws_acess
+cd aft_aws_access
 uv venv
 ```
 
@@ -95,7 +95,7 @@ uv pip install -e ".[dev]"
 
 #### Step 1: Create Virtual Environment
 ```bash
-cd aft_aws_acess
+cd aft_aws_access
 python -m venv .venv
 ```
 
@@ -227,7 +227,7 @@ pip install -e .
 **macOS/Linux:**
 ```bash
 # Make sure you're in the project directory
-cd aft_aws_acess
+cd aft_aws_access
 
 # Check if .venv exists
 ls -la .venv
@@ -260,12 +260,12 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 # Check current directory
 pwd
 
-# Should be in aft_aws_acess directory
+# Should be in aft_aws_access directory
 # Verify CSV file exists
 ls -l aws_recent.csv
 
 # If not, make sure you're in the correct directory
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access
 ```
 
 ### Issue: "FileNotFoundError: YAML file not found"
@@ -312,7 +312,7 @@ For contributors or advanced users who want to modify the code:
 
 ```bash
 # 1. Clone/navigate to project
-cd aft_aws_acess
+cd aft_aws_access
 
 # 2. Create virtual environment
 uv venv

@@ -4,7 +4,7 @@
 
 ```bash
 # 1. Navigate to the project
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access
 
 # 2. Run setup (installs everything)
 ./setup.sh
@@ -121,7 +121,7 @@ uv pip install -e .
 ```bash
 # Check you're in the right directory
 pwd
-# Should show: /Users/a805120/develop/oneoffs/tools/aft_aws_acess
+# Should show: /Users/a805120/develop/oneoffs/tools/aft_aws_access
 
 # Verify files exist
 ls -l aws_recent.csv

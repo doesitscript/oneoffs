@@ -18,7 +18,7 @@ A professional, reusable Python module for comparing AWS AD group names from CSV
 
 ### Project Structure
 ```
-aft_aws_acess/
+aft_aws_access/
 ├── compare_ad_groups.py        # Core module (291 lines)
 ├── example_usage.py            # 7 usage examples (222 lines)
 ├── pyproject.toml              # Python project config (65 lines)

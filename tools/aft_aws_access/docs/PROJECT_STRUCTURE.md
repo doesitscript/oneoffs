@@ -5,7 +5,7 @@ This document provides an overview of the AFT AWS Access Tools project structure
 ## Directory Layout
 
 ```
-aft_aws_acess/
+aft_aws_access/
 ├── README.md                    # Comprehensive documentation
 ├── QUICKSTART.md               # Quick start guide
 ├── PROJECT_STRUCTURE.md        # This file

@@ -7,7 +7,7 @@
 ## Installation (One-Time Setup)
 
 ```bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access
 ./setup.sh
 source .venv/bin/activate
 ```
@@ -167,7 +167,7 @@ python compare_ad_groups.py \
 ### 4. Automation Script
 ```bash
 #!/bin/bash
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access
 source .venv/bin/activate
 
 # Generate YAML template if missing groups found
@@ -368,7 +368,7 @@ uv pip install pyyaml
 ### "FileNotFoundError: CSV file not found"
 ```bash
 # Make sure you're in the project directory
-cd /Users/a805120/develop/oneoffs/tools/aft_aws_acess
+cd /Users/a805120/develop/oneoffs/tools/aft_aws_access
 ls -l aws_recent.csv
 ```
 

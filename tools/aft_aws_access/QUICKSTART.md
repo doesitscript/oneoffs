@@ -12,7 +12,7 @@ Get up and running with AFT AWS Access Tools in 5 minutes.
 ### Option 1: Automated Setup (Recommended)
 
 ```bash
-cd aft_aws_acess
+cd aft_aws_access
 chmod +x setup.sh
 ./setup.sh
 ```
@@ -26,7 +26,7 @@ The script will:
 ### Option 2: Manual Setup
 
 ```bash
-cd aft_aws_acess
+cd aft_aws_access
 
 # Install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -46,8 +46,8 @@ uv pip install -e .
 ### 1. Run with default settings
 
 ```bash
-# Make sure you're in the aft_aws_acess directory
-cd aft_aws_acess
+# Make sure you're in the aft_aws_access directory
+cd aft_aws_access
 
 # Activate virtual environment if not already active
 source .venv/bin/activate
