@@ -1,0 +1,28 @@
+digraph "Terraform Module Relationships" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="Terraform Module Relationships" nodesep=0.60 pad=2.0 rankdir=TB ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	"339c54c418f34ca99a1ad44e4cf48715" [label=Engineer height=1.9 image="/Users/a805120/.mcp-venv/aws-diagram/lib/python3.13/site-packages/resources/aws/general/user.png" shape=none]
+	"071e4d5e128e49c387b35f7af0c60612" [label="S3 Backend State" height=1.9 image="/Users/a805120/.mcp-venv/aws-diagram/lib/python3.13/site-packages/resources/aws/storage/simple-storage-service-s3.png" shape=none]
+	subgraph "cluster_Root Configuration" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="Root Configuration" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		debc0cdbfefe4d149594719e5306bb15 [label="main.tf" height=1.9 image="/Users/a805120/.mcp-venv/aws-diagram/lib/python3.13/site-packages/resources/aws/management/cloudwatch-logs.png" shape=none]
+		subgraph cluster_Modules {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label=Modules labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			"41454c64647a42ed931724a4d95bbb19" [label="networking (sg)" height=1.9 image="/Users/a805120/.mcp-venv/aws-diagram/lib/python3.13/site-packages/resources/aws/security/identity-and-access-management-iam-role.png" shape=none]
+			"99aedc946d884441b94d7a2db8a20fca" [label="iam-instance-profile" height=1.9 image="/Users/a805120/.mcp-venv/aws-diagram/lib/python3.13/site-packages/resources/aws/security/identity-and-access-management-iam-role.png" shape=none]
+			c521aa7ae96d4734a01d5be4048f3e9a [label="ec2-windows" height=1.9 image="/Users/a805120/.mcp-venv/aws-diagram/lib/python3.13/site-packages/resources/aws/compute/ec2-instance.png" shape=none]
+		}
+	}
+	"6e80844a153f4fc0bb3c16ecf6670a46" [label="Secrets Policy" height=1.9 image="/Users/a805120/.mcp-venv/aws-diagram/lib/python3.13/site-packages/resources/aws/security/secrets-manager.png" shape=none]
+	"63db188775f647edb7d12110ed2c132e" [label="KMS Key" height=1.9 image="/Users/a805120/.mcp-venv/aws-diagram/lib/python3.13/site-packages/resources/aws/security/key-management-service.png" shape=none]
+	"339c54c418f34ca99a1ad44e4cf48715" -> debc0cdbfefe4d149594719e5306bb15 [label="runs terraform" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	debc0cdbfefe4d149594719e5306bb15 -> "41454c64647a42ed931724a4d95bbb19" [label=instantiates dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	debc0cdbfefe4d149594719e5306bb15 -> "99aedc946d884441b94d7a2db8a20fca" [label=instantiates dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	debc0cdbfefe4d149594719e5306bb15 -> c521aa7ae96d4734a01d5be4048f3e9a [label=instantiates dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"99aedc946d884441b94d7a2db8a20fca" -> c521aa7ae96d4734a01d5be4048f3e9a [label="provides instance_profile" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"41454c64647a42ed931724a4d95bbb19" -> c521aa7ae96d4734a01d5be4048f3e9a [label="sg id" dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	c521aa7ae96d4734a01d5be4048f3e9a -> "6e80844a153f4fc0bb3c16ecf6670a46" [label=reads dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"6e80844a153f4fc0bb3c16ecf6670a46" -> "63db188775f647edb7d12110ed2c132e" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"071e4d5e128e49c387b35f7af0c60612" -> debc0cdbfefe4d149594719e5306bb15 [dir=back fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}

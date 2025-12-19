@@ -1,0 +1,165 @@
+@startuml
+' CAST Terraform Architecture (PlantUML)
+' Direction and styles
+left to right direction
+skinparam componentStyle rectangle
+skinparam rectangle {
+  BackgroundColor #FDFDFD
+  BorderColor #999999
+}
+skinparam package {
+  BackgroundColor #FFFFFF
+  BorderColor #888888
+  FontStyle bold
+}
+skinparam note {
+  BackgroundColor #FFFDE7
+  BorderColor #BDB76B
+}
+
+title CAST Terraform Architecture (Modules + AWS)
+
+actor "Admins / DevOps" as Admin
+
+package "Terraform Project: components/terraform/cast" as TF {
+  component "Root Stack\n(main.tf)" as Root
+  component "Module: networking_sg\n(./modules/networking)" as ModSG
+  component "Module: iam-instance-profile\n(./modules/iam-instance-profile)" as ModIAM
+  component "Module: ec2-windows\n(./modules/ec2-windows)" as ModEC2
+
+  Admin --> Root : plan/apply
+
+  Root --> ModSG
+  Root --> ModIAM
+  Root --> ModEC2
+}
+
+' Terraform State Backend
+cloud "Terraform State Backend" as Backend {
+  storage "S3 Bucket\ncast-terraform-state-wip-925774240130\nkey: wip-cast-dev/terraform.tfstate\nregion: us-east-2" as S3Backend
+}
+Root ..> S3Backend : terraform { backend "s3" {...} }
+
+' AWS environment
+cloud "AWS Account (us-east-2)" as AWS {
+  package "Networking" as Net {
+    database "SSM Parameters" as SSMParams
+    rectangle "VPC (ID from SSM)\n/ platform/vpc/castsoftwaredev/vpc-id" as VPC
+    rectangle "Subnets (AZ-ordered)\n/ platform/vpc/castsoftwaredev/subnet-ids" as Subnets
+    component "Security Group\n${org}-${region_code}-${env}-${app}-${role}-${instance_number}-sg\nRDP(3389), HTTPS(443)\nIngress: var.security_group_cidr_blocks\nEgress: 0.0.0.0/0" as SG
+  }
+
+  package "Compute" as Compute {
+    component "EC2 Instance (Windows)\nName: ${org}-${region_code}-${env}-${app}-${role}-${instance_number}\ninstance_type=var.instance_type\nIMDSv2 required\nAPI termination disabled" as EC2
+    storage "EBS Volume (C:)\nroot_block_device\nsize=var.root_volume_size\ntype=var.root_volume_type\nencrypted=true\nDoT=true" as EBS_C
+    storage "EBS Volume (D:)\nextra gp3 by default\nsize=var.second_drive_size\niops=var.second_drive_iops\nthroughput=var.second_drive_throughput\nencrypted=true\nprevent_destroy=true" as EBS_D
+  }
+
+  package "Identity (IAM)" as Identity {
+    component "IAM Role + Instance Profile\nname_prefix=${var.app}-${var.env}\nassume: ec2.amazonaws.com" as IAMRole
+    rectangle "Attached Policies" as IAMPolicies
+    component "AmazonSSMManagedInstanceCore" as SSMCore
+    component "CloudWatch Logs Policy\nlogs:Create*, PutLogEvents\nscope: /aws/${name_prefix}/*" as CWLogsPol
+    component "Secrets Access Policy\nsecretsmanager:GetSecretValue,DescribeSecret\nscope: arn:aws:secretsmanager:us-east-2:422228628991:secret:BreadDomainSecret-CORP*" as SecretsPol
+    component "KMS Decrypt\nkms:Decrypt,DescribeKey\nkey: mrk-6fa2ef2f323e4121a715a6a05fe1cec4\nCondition: kms:ViaService=secretsmanager.us-east-2.amazonaws.com" as KMSPol
+  }
+
+  package "AWS Services" as Svc {
+    component "Systems Manager" as SSM
+    component "CloudWatch Logs\n/log-group:/aws/${name_prefix}/*" as CWLogs
+    component "Secrets Manager\nBreadDomainSecret-CORP*" as Secrets
+    component "KMS\nmrk-6fa2ef2f323e4121a715a6a05fe1cec4" as KMS
+  }
+}
+
+' Data sources wiring
+ModSG ..> SSMParams : reads VPC/Subnets via data sources
+ModEC2 ..> SSMParams : selects first available subnet
+SSMParams --> VPC
+SSMParams --> Subnets
+
+' Module to AWS resource mapping
+ModSG --> SG : create
+ModEC2 --> EC2 : create
+ModEC2 ..> EBS_C : manage root volume
+ModEC2 ..> EBS_D : create + attach
+
+' Networking relationships
+EC2 -[hidden]-> VPC
+EC2 -[hidden]-> Subnets
+EC2 --> SG : vpc_security_group_ids=[SG]
+
+' IAM instance profile and policies
+ModIAM --> IAMRole : create role + instance profile
+IAMRole -down-> IAMPolicies
+IAMPolicies -down-> SSMCore
+IAMPolicies -down-> CWLogsPol
+IAMPolicies -down-> SecretsPol
+IAMPolicies -down-> KMSPol
+
+' Instance uses instance profile
+EC2 ..> IAMRole : iam_instance_profile
+
+' Service interactions via policies
+EC2 ..> SSM : managed instance (SSMCore)
+EC2 ..> CWLogs : app/OS logs
+EC2 ..> Secrets : read domain secret
+Secrets ..> KMS : decrypt secret data
+KMSPol ..> KMS
+SecretsPol ..> Secrets
+CWLogsPol ..> CWLogs
+SSMCore ..> SSM
+
+' AMI selection note
+note right of EC2
+  AMI selection:
+  - If var.ami_id != null, use it
+  - Else data.aws_ami.selected_ami (owner=422228628991)
+  Lifecycle:
+  - ignore_changes = [ami, ebs_block_device]
+  - prevent_destroy (instance + D: volume)
+end note
+
+' Networking note
+note right of SG
+  Ingress:
+  - TCP 3389 (RDP)
+  - TCP 443 (HTTPS)
+  CIDRs from var.security_group_cidr_blocks
+  Egress:
+  - All protocols to 0.0.0.0/0
+end note
+
+' SSM data source note
+note bottom of SSMParams
+  SSM Parameters:
+  - /platform/vpc/castsoftwaredev/vpc-id
+  - /platform/vpc/castsoftwaredev/subnet-ids
+  Subnet selection:
+  - AZ order: [us-east-2a, 2b, 2c]
+  - Pick first available
+end note
+
+' Tagging and naming
+note top of Root
+  Naming:
+  ${org}-${region_code}-${env}-${app}-${role}-${instance_number}
+  Common tags:
+  - Application, Environment, Role, ManagedBy
+  Additional tags:
+  - Org, RegionCode, InstanceNumber
+  Optional:
+  - Hostname (from domain_join_user_data)
+end note
+
+legend left
+  |= Layer |= Description |
+  | Terraform | Root stack orchestrates modules (networking, IAM, EC2) |
+  | Networking | Security Group in VPC/subnet (resolved via SSM) |
+  | Compute | EC2 Windows instance with C: (root) and D: (gp3) volumes |
+  | Identity | EC2 role + instance profile + attached policies |
+  | Services | SSM, CloudWatch Logs, Secrets Manager, KMS |
+  | State | S3 backend for Terraform state (server-side encrypted) |
+endlegend
+
+@enduml

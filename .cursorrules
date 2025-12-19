@@ -50,5 +50,37 @@ When providing fixes, explanations, or quick fixes (Cmd+. or Problems panel), AL
 - Follow established workflow patterns
 - Reference iteration files when relevant
 
+## Rule: prefer_user_configured_tools_in_listings
+name: prefer_user_configured_tools_in_listings
+description: Always answer tool-related prompts using the user's configured MCP servers and their tools; avoid generic capability lists.
+priority: critical
+when: before_response
+conditions:
+  - any_of:
+      - user_query_matches:
+          - "(?i)what (tools|can you use|do you have|are available)"
+      - user_query_mentions: "tools"
+      - user_query_mentions: "mcp"
+      - user_query_mentions: "server"
+      - user_query_mentions: "extension"
+      - user_query_mentions: "configured"
+      - user_query_mentions: "available"
+actions:
+  - inject_context:
+      - "Use the user's configured MCP servers as the single source of truth for tool availability."
+      - "Enumerate servers by name and include tool counts when known (e.g., MCP_Guardrail — 4 tools; evidence-validator — 2; playwright-mcp — 21)."
+      - "If server details are available from the Zed MCP list, prefer those over assumptions."
+      - "Do not list generic capabilities or hypothetical tools that are not configured."
+      - "Answer in concise, human-friendly language. No runtime health checks unless explicitly requested."
+  - enforce_style:
+      - tone: "direct"
+      - verbosity: "low"
+      - structure: "short bulleted lists when helpful"
+  - allow: true
+otherwise:
+  actions:
+    - allow: true
+    - note: "If the query is not about tools, proceed normally."
+
 
 

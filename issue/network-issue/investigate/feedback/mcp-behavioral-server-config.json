@@ -1,0 +1,250 @@
+{
+  "name": "behavioral-enforcement-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server configuration for enforcing pause-and-verify behavioral patterns",
+  "schema_version": "2024-11-05",
+  "mcpServers": {
+    "behavioral-enforcer": {
+      "command": "node",
+      "args": ["behavioral-enforcer-server.js"],
+      "cwd": "./behavioral-enforcement",
+      "env": {
+        "ENFORCEMENT_LEVEL": "maximum",
+        "EVIDENCE_REQUIRED": "true",
+        "PAUSE_ON_UNCERTAINTY": "true"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "validate_evidence_claim",
+      "description": "Validates claims only when evidence is required (context-aware)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "context": {
+            "type": "string",
+            "enum": ["evaluation", "status", "verification", "normal_task"],
+            "description": "Context of the request"
+          },
+          "claim": {
+            "type": "string",
+            "description": "The claim being made"
+          },
+          "evidence": {
+            "type": "string",
+            "description": "The evidence supporting the claim"
+          },
+          "trigger_phrases": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "User phrases that triggered evidence requirement"
+          }
+        },
+        "required": ["context", "claim"]
+      }
+    },
+    {
+      "name": "check_evidence_required",
+      "description": "Checks if evidence is required based on user request context",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "user_request": {
+            "type": "string",
+            "description": "The user's request or question"
+          }
+        },
+        "required": ["user_request"]
+      }
+    },
+    {
+      "name": "pause_and_verify",
+      "description": "Enforces pause-and-verify behavior when uncertainty is detected",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "uncertainty_type": {
+            "type": "string",
+            "enum": ["missing_tool", "unknown_capability", "ambiguous_requirement", "insufficient_evidence"]
+          },
+          "available_alternatives": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "List of available alternative tools or approaches"
+          },
+          "clarification_questions": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Specific questions to ask for clarification"
+          }
+        },
+        "required": ["uncertainty_type"]
+      }
+    },
+    {
+      "name": "report_non_terminating_error",
+      "description": "Reports errors that don't halt execution but need user awareness",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "error_type": {
+            "type": "string",
+            "description": "Category of non-terminating error"
+          },
+          "error_message": {
+            "type": "string",
+            "description": "Full error message"
+          },
+          "context": {
+            "type": "string",
+            "description": "What was being attempted"
+          },
+          "impact": {
+            "type": "string",
+            "description": "How this affects the current task"
+          },
+          "remediation": {
+            "type": "string",
+            "description": "Suggested steps to fix or work around"
+          }
+        },
+        "required": ["error_type", "error_message", "context", "impact", "remediation"]
+      }
+    }
+  ],
+  "behavioral_rules": {
+    "evidence_based_claims": {
+      "enabled": true,
+      "priority": "critical",
+      "enforcement": "block_response_without_evidence",
+      "triggers": [
+        "status_inquiry",
+        "verification_request",
+        "capability_confirmation",
+        "system_state_assertion"
+      ],
+      "required_evidence_types": [
+        "command_output",
+        "tool_execution_result",
+        "file_content",
+        "api_response"
+      ]
+    },
+    "speculation_prevention": {
+      "enabled": true,
+      "priority": "high",
+      "enforcement": "flag_and_require_correction",
+      "banned_phrases": [
+        "should work",
+        "probably",
+        "likely",
+        "appears to",
+        "seems like",
+        "might be",
+        "could be",
+        "presumably"
+      ],
+      "exceptions": {
+        "user_explicitly_requests_speculation": true,
+        "design_discussion_context": true
+      }
+    },
+    "transparency_on_uncertainty": {
+      "enabled": true,
+      "priority": "high",
+      "enforcement": "require_explicit_statement",
+      "uncertainty_triggers": [
+        "tool_not_found",
+        "capability_missing",
+        "ambiguous_instructions",
+        "insufficient_information"
+      ],
+      "required_actions": [
+        "state_what_is_unknown",
+        "list_available_alternatives",
+        "ask_specific_clarification_questions",
+        "avoid_assumption_based_workarounds"
+      ]
+    },
+    "educational_communication": {
+      "enabled": true,
+      "priority": "medium",
+      "enforcement": "encourage_contextual_explanation",
+      "requirements": [
+        "explain_why_not_just_what",
+        "provide_broader_context",
+        "avoid_unexplained_jargon",
+        "include_learning_opportunities"
+      ]
+    },
+    "error_transparency": {
+      "enabled": true,
+      "priority": "critical",
+      "enforcement": "mandatory_immediate_reporting",
+      "error_types": [
+        "tool_execution_failure",
+        "expected_resource_not_found",
+        "permission_denied",
+        "configuration_mismatch",
+        "unexpected_api_response"
+      ],
+      "reporting_format": {
+        "error_type_required": true,
+        "full_error_message_required": true,
+        "context_required": true,
+        "impact_assessment_required": true,
+        "remediation_steps_required": true
+      }
+    }
+  },
+  "response_templates": {
+    "pause_and_verify": {
+      "template": "I don't see {missing_capability} in my available tools.\n\nAvailable related tools: {available_tools}\n\nCould you clarify:\n{clarification_questions}\n\nThis ensures I use the correct tools rather than making assumptions.",
+      "variables": ["missing_capability", "available_tools", "clarification_questions"]
+    },
+    "evidence_based_response": {
+      "template": "**Evidence:** {evidence}\n**Conclusion:** {conclusion}\n**Confidence:** {confidence_level}",
+      "variables": ["evidence", "conclusion", "confidence_level"]
+    },
+    "error_report": {
+      "template": "**NON-TERMINATING ERROR DETECTED:**\n- **ERROR TYPE**: {error_type}\n- **ERROR MESSAGE**: {error_message}\n- **CONTEXT**: {context}\n- **IMPACT**: {impact}\n- **REMEDIATION**: {remediation}",
+      "variables": ["error_type", "error_message", "context", "impact", "remediation"]
+    }
+  },
+  "integration_settings": {
+    "auto_load_on_startup": true,
+    "enforce_all_responses": true,
+    "user_feedback_enabled": true,
+    "violation_logging": true,
+    "success_metrics_tracking": true
+  },
+  "compatibility": {
+    "claude_desktop": true,
+    "cursor_ide": true,
+    "vscode": true,
+    "custom_mcp_implementations": true
+  },
+  "deployment": {
+    "installation_path": "~/.mcp/servers/behavioral-enforcer",
+    "config_file_location": "~/.mcp/settings.json",
+    "startup_command": "npm start",
+    "dependencies": ["node", "npm"],
+    "environment_variables": {
+      "BEHAVIORAL_ENFORCEMENT_ENABLED": "true",
+      "EVIDENCE_VALIDATION_STRICT": "true",
+      "PAUSE_VERIFY_PATTERN": "true"
+    }
+  },
+  "monitoring": {
+    "track_pause_instances": true,
+    "measure_user_clarification_requests": true,
+    "count_evidence_validation_passes": true,
+    "log_speculation_prevention_triggers": true
+  },
+  "maintenance": {
+    "update_behavioral_rules": "manual",
+    "rule_effectiveness_review": "monthly",
+    "user_feedback_integration": "continuous"
+  }
+}

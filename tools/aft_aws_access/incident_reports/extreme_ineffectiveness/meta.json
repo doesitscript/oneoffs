@@ -1,0 +1,24 @@
+{
+  "profile": "bfh_mgmt_739275453939_admin",
+  "region": "us-east-2",
+  "bucket_name": "devonly-tf-backend-temp-colab-todo-tfe-backend",
+  "first_request_timestamp": 1763241314,
+  "blocking_error": "SSO session expired",
+  "error_message": "The SSO session associated with this profile has expired or is otherwise invalid.",
+  "final_execution_time_approx": "2025-11-15 17:09:57",
+  "execution_steps": [
+    "aws s3api create-bucket --bucket <name> --create-bucket-configuration LocationConstraint=us-east-2 --region us-east-2 --profile bfh_mgmt_739275453939_admin",
+    "aws s3api head-bucket --bucket <name> --region us-east-2 --profile bfh_mgmt_739275453939_admin",
+    "echo test | aws s3 cp - s3://<name>/ping.txt --region us-east-2 --profile bfh_mgmt_739275453939_admin",
+    "aws s3 ls s3://<name>/ --region us-east-2 --profile bfh_mgmt_739275453939_admin"
+  ],
+  "signals_detected": {
+    "minimalism": true,
+    "banter_unwelcome": true,
+    "executed_only": true,
+    "default_region": "us-east-2",
+    "explicit_profile_required": true
+  },
+  "posture_change": "From security-first verbosity to commands-only explicit execution",
+  "success": true
+}
